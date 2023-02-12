@@ -1,0 +1,98 @@
+\ProvidesPackage{res/lections}
+
+\usepackage{wrapfig}
+
+\usepackage{newtxsf}
+\usepackage{fontspec}%[no-math]
+\usepackage{minted}
+\usepackage{ragged2e}
+\usepackage{xcolor,colortbl}
+\usepackage{xparse}
+\usepackage{svg}
+\usepackage{polyglossia}
+\setdefaultlanguage[babelshorthands=true]{russian}
+\setotherlanguages{english}
+
+\usepackage{res/extlink}
+
+
+%\usepackage{libertinus}
+
+\def\sff{Cuprum}
+%\def\ttf{Iosevka Extended}
+\def\ttf{JetBrains Mono NL}
+%\def\ttf{osifont}
+
+\newfontfamily\cyrillicfonttt{\ttf}[Scale=MatchLowercase]
+\setmonofont{\ttf}[Scale=MatchLowercase]
+\newfontfamily\cyrillicfontsf{\sff}[Ligatures=TeX,Scale=MatchLowercase]
+\setsansfont{\sff}[Ligatures=TeX,Scale=MatchLowercase]
+\newfontfamily\cyrillicfont{\sff}[Ligatures=TeX,Scale=MatchLowercase]
+\setmainfont{\sff}[Ligatures=TeX,Scale=MatchLowercase]
+
+%\newfontfamily\cyrillicfont{Times New Roman}[Scale=MatchLowercase]
+%\setromanfont[Ligatures=TeX,Scale=MatchLowercase]{Liberation Serif}
+%\newfontfamily{\tnr}{Times New Roman}[Scale=MatchUppercase]
+
+\usemintedstyle{borland}
+
+%\usetheme{/../res/beamerthemeSPbU}
+%\usecolortheme{/../res/beamercolorthemeSPbU}
+%\usetheme{SPbU}
+%\usecolortheme{SPbU}
+
+\input{./res/beamerthemeSPbU.sty}
+\input{./res/beamercolorthemeSPbU.sty}
+
+\newcommand{\preamble}{
+
+\titlegraphic{%
+	\includegraphics[height=15mm]{res/spbu_grey.pdf}\hfill%
+	\includegraphics[height=10mm]{res/yadro_logo.png}
+}
+
+\author[Д.~В.~Луцив]{
+	Луцив Дмитрий Вадимович
+}
+
+\institute[СПбГУ, Ядро]{\large Кафедра системного программирования СПбГУ}
+
+% , при поддержке Группы компаний <<Ядро>>
+
+\date{}
+}
+
+\newcommand{\defn}[2]{\textbf{#1}~---~#2}
+
+\newcommand{\tocslide}{
+	\begin{frame}{Содержание}
+		\tableofcontents
+	\end{frame}
+}
+
+\newcommand{\titleslide}{
+	\thispagestyle{empty}
+	\maketitle
+}
+
+\newcommand{\postamble}{
+\section*{}
+
+
+\begin{frame}[plain]
+	
+	\vfill
+	
+	\begin{center}
+		\textbf{\Huge Вопросы}
+		
+		\includegraphics[height=5cm]{res/qr-edu-dluciv-name.png}\\
+		
+		\href{http://edu.dluciv.name/}{\beamergotobutton{EDU.DLUCIV.NAME}}
+	\end{center}
+	
+	\vfill
+	
+\end{frame}
+
+}
