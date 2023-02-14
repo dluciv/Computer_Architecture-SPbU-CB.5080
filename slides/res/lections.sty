@@ -58,11 +58,23 @@
 	Луцив Дмитрий Вадимович
 }
 
-\institute[СПбГУ, Ядро]{\large Кафедра системного программирования СПбГУ}
+\institute[СПбГУ]{\large Кафедра системного программирования СПбГУ}
 
 % , при поддержке Группы компаний <<Ядро>>
 
 \date{}
+}
+
+\AtBeginSection[]{%
+	\begin{frame}<beamer>
+		%\thispagestyle{empty}
+		%\frametitle{Содержание}
+		\begin{center}
+			\textbf{\Large \insertsection{}}
+		\end{center}
+		\tableofcontents[currentsection,sectionstyle=hide,subsectionstyle=hede/show/hide]
+	\end{frame}
+	%\addtocounter{framenumber}{-1}% If you don't want them to affect the slide number
 }
 
 \newcommand{\defn}[2]{\textbf{#1}~---~#2}
