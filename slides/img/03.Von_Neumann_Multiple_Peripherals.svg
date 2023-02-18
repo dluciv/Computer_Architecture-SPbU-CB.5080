@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="986.08154"
+   height="465.37262"
+   id="svg2"
+   version="1.1"
+   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   sodipodi:docname="03.Von_Neumann_Multiple_Peripherals.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title6263">computer system bus</title>
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 192.83874 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="743.61053 : 192.83874 : 1"
+       inkscape:persp3d-origin="371.80527 : 101.99412 : 1"
+       id="perspective72" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.72752096"
+     inkscape:cx="417.17011"
+     inkscape:cy="193.12158"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="847"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <sodipodi:guide
+       position="262.43521,-45.861073"
+       orientation="0,744.09448"
+       id="guide2940"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="733.99582,-435.54752"
+       orientation="-1052.3622,0"
+       id="guide2942"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="671.85263,497.9735"
+       orientation="0,-744.09448"
+       id="guide2944"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-10.098665,616.81468"
+       orientation="1052.3622,0"
+       id="guide2946"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="-650.1217,-290.03169"
+       id="guide2948"
+       inkscape:locked="false" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid4173"
+       originx="-8.8654855"
+       originy="-35.067225" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>computer system bus</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-10.098665,-151.44204)">
+    <polygon
+       points="0,44.144 26.488,44.144 26.488,211.891 44.144,211.891 44.144,44.144 70.631,44.144 35.316,0 "
+       id="polygon4660-7-2-6"
+       transform="matrix(0.3333289,0,0,-0.56462685,392.83329,549.74169)"
+       style="marker-end:none" />
+    <polygon
+       points="0,44.144 26.488,44.144 26.488,211.891 44.144,211.891 44.144,44.144 70.631,44.144 35.316,0 "
+       id="polygon4660-7-1-3-8"
+       transform="matrix(0.3333289,0,0,0.79425959,392.83329,265.8258)" />
+    <polygon
+       points="26.488,44.144 26.488,211.891 44.144,211.891 44.144,44.144 70.631,44.144 35.316,0 0,44.144 "
+       id="polygon4660-7-1-3-2"
+       transform="matrix(0.3333289,0,0,0.91782306,331.79375,267.56979)" />
+    <rect
+       style="fill:#00b4b5;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="CPU"
+       width="170.00545"
+       height="114.56889"
+       x="46.197132"
+       y="152.44205">
+      <title
+         id="title2878">CPU</title>
+    </rect>
+    <rect
+       y="153.42499"
+       x="254.43732"
+       height="114.4509"
+       width="190.85161"
+       id="Memory"
+       style="fill:#00b4b5;fill-opacity:1;stroke:#000000;stroke-width:2.11798;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <title
+         id="title2880">Memory</title>
+    </rect>
+    <switch
+       style="font-style:normal;font-weight:normal;font-size:40px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+       id="switch23"
+       transform="translate(18)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="269.47443"
+         y="217.11426"
+         id="text2864-bs"
+         systemLanguage="bs"><tspan
+           sodipodi:role="line"
+           id="tspan2866-bs"
+           x="269.47443"
+           y="217.11426"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Memorija</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="269.47443"
+         y="217.11426"
+         id="text2864"><tspan
+           sodipodi:role="line"
+           id="tspan2866"
+           x="269.47443"
+           y="217.11426"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">ОЗУ</tspan></text>
+    </switch>
+    <rect
+       y="152.52766"
+       x="476.84003"
+       height="114.39765"
+       width="200.66383"
+       id="IO"
+       style="fill:#00b4b5;fill-opacity:1;stroke:#000000;stroke-width:2.17124;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <title
+         id="title2882">IO</title>
+    </rect>
+    <switch
+       style="font-style:normal;font-weight:normal;font-size:33.7252px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+       id="switch33"
+       transform="translate(18,18)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="465.85843"
+         y="206.86366"
+         id="text2864-7-bs"
+         transform="scale(1.057555,0.94557729)"
+         systemLanguage="bs"><tspan
+           sodipodi:role="line"
+           id="tspan2866-4-bs"
+           x="465.85843"
+           y="206.86366"
+           style="font-size:33.7252px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Ulaz i </tspan><tspan
+           sodipodi:role="line"
+           x="465.85843"
+           y="249.02016"
+           id="tspan2896-bs"
+           style="font-size:33.7252px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">izlaz</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="465.85843"
+         y="206.86366"
+         id="text2864-7"
+         transform="scale(1.057555,0.94557729)"><tspan
+           sodipodi:role="line"
+           x="465.85843"
+           y="206.86366"
+           style="font-size:33.7252px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana"
+           id="tspan1756">Устр. 1</tspan></text>
+    </switch>
+    <rect
+       y="366.37482"
+       x="31.233185"
+       height="50.000004"
+       width="880"
+       id="Control"
+       style="fill:#7bffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <switch
+       style="font-style:normal;font-weight:normal;font-size:40px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+       id="switch40"
+       transform="translate(-50)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="238.51543"
+         y="411.17532"
+         id="text2864-9-bs"
+         systemLanguage="bs"><tspan
+           sodipodi:role="line"
+           id="tspan2866-48-bs"
+           x="238.51543"
+           y="411.17532"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Kontrolna sab.</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="237.32693"
+         y="405.45685"
+         id="text2864-9"><tspan
+           sodipodi:role="line"
+           id="tspan2866-48"
+           x="237.32693"
+           y="405.45685"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Шина управления</tspan></text>
+    </switch>
+    <rect
+       y="456.37482"
+       x="31.233185"
+       height="50.000004"
+       width="880"
+       id="rect2862-0-8"
+       style="fill:#7bffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="-524.88263"
+       y="893.18628"
+       id="text6199-2"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan6197-3"
+         x="-524.88263"
+         y="893.18628"
+         style="fill:#ff0000">Адр. 2</tspan></text>
+    <switch
+       style="font-style:normal;font-weight:normal;font-size:40px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+       id="switch47"
+       transform="translate(-1.6504516,-3.489682)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="238.97739"
+         y="498.94653"
+         id="text2864-9-2-bs"
+         systemLanguage="bs"><tspan
+           sodipodi:role="line"
+           id="tspan2866-48-4-bs"
+           x="238.97739"
+           y="498.94653"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Adresna sab.</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="238.97739"
+         y="498.94653"
+         id="text2864-9-2"><tspan
+           sodipodi:role="line"
+           id="tspan2866-48-4"
+           x="238.97739"
+           y="498.94653"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Шина адреса</tspan></text>
+    </switch>
+    <rect
+       y="546.37482"
+       x="31.233185"
+       height="50.000057"
+       width="879.99994"
+       id="rect2862-0-8-5"
+       style="fill:#7bffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <switch
+       style="font-style:normal;font-weight:normal;font-size:40px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+       id="switch54"
+       transform="translate(1.1213838,-1.4952362)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="236.20555"
+         y="586.95209"
+         id="text2864-9-2-5-bs"
+         systemLanguage="bs"><tspan
+           sodipodi:role="line"
+           id="tspan2866-48-4-1-bs"
+           x="236.20555"
+           y="586.95209"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Podatkovna sab.</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="236.20555"
+         y="586.95209"
+         id="text2864-9-2-5"><tspan
+           sodipodi:role="line"
+           id="tspan2866-48-4-1"
+           x="236.20555"
+           y="586.95209"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Шина данных</tspan></text>
+    </switch>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.902;stroke-miterlimit:4;stroke-dasharray:3.80401, 3.80401;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect6265"
+       width="984.17957"
+       height="270.1655"
+       x="11.049665"
+       y="345.69818" />
+    <switch
+       style="font-style:normal;font-weight:normal;font-size:40px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+       id="switch61">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="-604.06744"
+         y="700.77258"
+         id="text7707-bs"
+         transform="rotate(-90)"
+         systemLanguage="bs"><tspan
+           sodipodi:role="line"
+           id="tspan7709-bs"
+           x="-604.06744"
+           y="700.77258"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Sistemska sab.</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="-594.20197"
+         y="957.27509"
+         id="text7707"
+         transform="rotate(-90)"><tspan
+           sodipodi:role="line"
+           id="tspan7709"
+           x="-594.20197"
+           y="957.27509"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Сист. шина</tspan></text>
+    </switch>
+    <polygon
+       points="70.631,44.144 35.316,0 0,44.144 26.488,44.144 26.488,211.891 44.144,211.891 44.144,44.144 "
+       id="polygon4660-7-2-6-1-4"
+       transform="matrix(0.3333289,0,0,-0.56462685,602.35444,549.36439)"
+       style="marker-end:none" />
+    <polygon
+       points="70.631,44.144 35.316,0 0,44.144 26.488,44.144 26.488,211.891 44.144,211.891 44.144,44.144 "
+       id="polygon4660-7-1-3-8-7-0"
+       transform="matrix(0.3333289,0,0,0.79425959,602.35444,265.4485)" />
+    <g
+       transform="matrix(4.946192,0,0,4.1914614,-440.09057,-47.639859)"
+       id="g9944">
+      <path
+         id="path6981"
+         d="M 107.25,97.483491 V 77.516509"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         transform="matrix(1.5402903,0.5632735,-0.6140475,1.4129276,-24.164829,-52.6389)"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="2.25082"
+         sodipodi:arg1="1.2036225"
+         sodipodi:r2="0.87052429"
+         sodipodi:r1="1.7410485"
+         sodipodi:cy="62.375"
+         sodipodi:cx="110.125"
+         sodipodi:sides="3"
+         id="path6985"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path7956"
+         sodipodi:sides="3"
+         sodipodi:cx="110.125"
+         sodipodi:cy="62.375"
+         sodipodi:r1="1.7410485"
+         sodipodi:r2="0.87052429"
+         sodipodi:arg1="1.2036225"
+         sodipodi:arg2="2.25082"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         transform="matrix(1.5402903,-0.5632735,-0.6140475,-1.4129276,-24.164829,228.18091)" />
+    </g>
+    <g
+       transform="matrix(4.946192,0,0,4.1914614,-235.38187,-48.038447)"
+       id="g9944-1">
+      <path
+         id="path6981-7"
+         d="M 107.25,97.483491 V 77.516509"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         transform="matrix(1.5402903,0.5632735,-0.6140475,1.4129276,-24.164829,-52.6389)"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="2.25082"
+         sodipodi:arg1="1.2036225"
+         sodipodi:r2="0.87052429"
+         sodipodi:r1="1.7410485"
+         sodipodi:cy="62.375"
+         sodipodi:cx="110.125"
+         sodipodi:sides="3"
+         id="path6985-4"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path7956-0"
+         sodipodi:sides="3"
+         sodipodi:cx="110.125"
+         sodipodi:cy="62.375"
+         sodipodi:r1="1.7410485"
+         sodipodi:r2="0.87052429"
+         sodipodi:arg1="1.2036225"
+         sodipodi:arg2="2.25082"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         transform="matrix(1.5402903,-0.5632735,-0.6140475,-1.4129276,-24.164829,228.18091)" />
+    </g>
+    <g
+       transform="matrix(4.946192,0,0,4.1914614,-17.108129,-48.038447)"
+       id="g9944-4">
+      <path
+         id="path6981-8"
+         d="M 107.25,97.483491 V 77.516509"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         transform="matrix(1.5402903,0.5632735,-0.6140475,1.4129276,-24.164829,-52.6389)"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="2.25082"
+         sodipodi:arg1="1.2036225"
+         sodipodi:r2="0.87052429"
+         sodipodi:r1="1.7410485"
+         sodipodi:cy="62.375"
+         sodipodi:cx="110.125"
+         sodipodi:sides="3"
+         id="path6985-8"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path7956-2"
+         sodipodi:sides="3"
+         sodipodi:cx="110.125"
+         sodipodi:cy="62.375"
+         sodipodi:r1="1.7410485"
+         sodipodi:r2="0.87052429"
+         sodipodi:arg1="1.2036225"
+         sodipodi:arg2="2.25082"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         transform="matrix(1.5402903,-0.5632735,-0.6140475,-1.4129276,-24.164829,228.18091)" />
+    </g>
+    <g
+       transform="matrix(4.946192,0,0,7.8214006,34.68564,-321.63061)"
+       id="g9944-4-4">
+      <path
+         id="path6981-8-5"
+         d="M 107.25,97.483491 V 77.516509"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         transform="matrix(1.5402903,0.5632735,-0.6140475,1.4129276,-24.164829,-52.6389)"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="2.25082"
+         sodipodi:arg1="1.2036225"
+         sodipodi:r2="0.87052429"
+         sodipodi:r1="1.7410485"
+         sodipodi:cy="62.375"
+         sodipodi:cx="110.125"
+         sodipodi:sides="3"
+         id="path6985-8-5"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path7956-2-1"
+         sodipodi:sides="3"
+         sodipodi:cx="110.125"
+         sodipodi:cy="62.375"
+         sodipodi:r1="1.7410485"
+         sodipodi:r2="0.87052429"
+         sodipodi:arg1="1.2036225"
+         sodipodi:arg2="2.25082"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         transform="matrix(1.5402903,-0.5632735,-0.6140475,-1.4129276,-24.164829,228.18091)" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:6.5294;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 139.71592,439.89294 V 267.78988"
+       id="path6981-8-5-1" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="path6985-8-5-1"
+       sodipodi:sides="3"
+       sodipodi:cx="110.125"
+       sodipodi:cy="62.375"
+       sodipodi:r1="1.7410485"
+       sodipodi:r2="0.87052429"
+       sodipodi:arg1="1.2036225"
+       sodipodi:arg2="2.25082"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+       transform="matrix(7.6185716,4.4055877,-3.0371968,11.051073,-510.28705,-733.95712)" />
+    <switch
+       style="font-style:normal;font-weight:normal;font-size:40px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+       id="switch85"
+       transform="translate(18)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="85.467583"
+         y="218.97112"
+         id="text2864-2"><tspan
+           sodipodi:role="line"
+           id="tspan2866-3"
+           x="85.467583"
+           y="218.97112"
+           style="font-size:40px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">ЦП</tspan></text>
+    </switch>
+    <polygon
+       points="0,44.144 26.488,44.144 26.488,211.891 44.144,211.891 44.144,44.144 70.631,44.144 35.316,0 "
+       id="polygon4660-7-2-6-8"
+       transform="matrix(0.3333289,0,0,-0.56462685,175.67244,550.5976)"
+       style="marker-end:none" />
+    <polygon
+       points="0,44.144 26.488,44.144 26.488,211.891 44.144,211.891 44.144,44.144 70.631,44.144 35.316,0 "
+       id="polygon4660-7-1-3-8-5"
+       transform="matrix(0.3333289,0,0,0.79425959,175.67244,266.68171)" />
+    <rect
+       y="153.29691"
+       x="707.40228"
+       height="114.39765"
+       width="200.66383"
+       id="IO-3"
+       style="fill:#00b4b5;fill-opacity:1;stroke:#000000;stroke-width:2.17124;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <title
+         id="title2882-9">IO</title>
+    </rect>
+    <switch
+       style="font-style:normal;font-weight:normal;font-size:33.7252px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+       id="switch33-0"
+       transform="translate(248.56227,18.769238)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="465.85843"
+         y="206.86366"
+         id="text2864-7-bs-5"
+         transform="scale(1.057555,0.94557729)"
+         systemLanguage="bs"><tspan
+           sodipodi:role="line"
+           id="tspan2866-4-bs-5"
+           x="465.85843"
+           y="206.86366"
+           style="font-size:33.7252px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">Ulaz i </tspan><tspan
+           sodipodi:role="line"
+           x="465.85843"
+           y="249.02016"
+           id="tspan2896-bs-6"
+           style="font-size:33.7252px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana">izlaz</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         x="465.85843"
+         y="206.86366"
+         id="text2864-7-3"
+         transform="scale(1.057555,0.94557729)"><tspan
+           sodipodi:role="line"
+           x="465.85843"
+           y="206.86366"
+           style="font-size:33.7252px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana"
+           id="tspan1756-2">Устр. 2</tspan></text>
+    </switch>
+    <polygon
+       points="0,44.144 26.488,44.144 26.488,211.891 44.144,211.891 44.144,44.144 70.631,44.144 35.316,0 "
+       id="polygon4660-7-2-6-1-4-6"
+       transform="matrix(0.3333289,0,0,-0.56462685,832.91671,550.13363)"
+       style="marker-end:none" />
+    <polygon
+       points="0,44.144 26.488,44.144 26.488,211.891 44.144,211.891 44.144,44.144 70.631,44.144 35.316,0 "
+       id="polygon4660-7-1-3-8-7-0-8"
+       transform="matrix(0.3333289,0,0,0.79425959,832.91671,266.21774)" />
+    <g
+       transform="matrix(4.946192,0,0,4.1914614,213.45414,-47.269212)"
+       id="g9944-4-9">
+      <path
+         id="path6981-8-1"
+         d="M 107.25,97.483491 V 77.516509"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         transform="matrix(1.5402903,0.5632735,-0.6140475,1.4129276,-24.164829,-52.6389)"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="2.25082"
+         sodipodi:arg1="1.2036225"
+         sodipodi:r2="0.87052429"
+         sodipodi:r1="1.7410485"
+         sodipodi:cy="62.375"
+         sodipodi:cx="110.125"
+         sodipodi:sides="3"
+         id="path6985-8-4"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path7956-2-8"
+         sodipodi:sides="3"
+         sodipodi:cx="110.125"
+         sodipodi:cy="62.375"
+         sodipodi:r1="1.7410485"
+         sodipodi:r2="0.87052429"
+         sodipodi:arg1="1.2036225"
+         sodipodi:arg2="2.25082"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         transform="matrix(1.5402903,-0.5632735,-0.6140475,-1.4129276,-24.164829,228.18091)" />
+    </g>
+    <g
+       transform="matrix(4.946192,0,0,7.8214006,265.24791,-320.86137)"
+       id="g9944-4-4-8">
+      <path
+         id="path6981-8-5-7"
+         d="M 107.25,97.483491 V 77.516509"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         transform="matrix(1.5402903,0.5632735,-0.6140475,1.4129276,-24.164829,-52.6389)"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="2.25082"
+         sodipodi:arg1="1.2036225"
+         sodipodi:r2="0.87052429"
+         sodipodi:r1="1.7410485"
+         sodipodi:cy="62.375"
+         sodipodi:cx="110.125"
+         sodipodi:sides="3"
+         id="path6985-8-5-19"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path7956-2-1-3"
+         sodipodi:sides="3"
+         sodipodi:cx="110.125"
+         sodipodi:cy="62.375"
+         sodipodi:r1="1.7410485"
+         sodipodi:r2="0.87052429"
+         sodipodi:arg1="1.2036225"
+         sodipodi:arg2="2.25082"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 110.75,64 -2.34479,-1.896234 2.81458,-1.082532 z"
+         transform="matrix(1.5402903,-0.5632735,-0.6140475,-1.4129276,-24.164829,228.18091)" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="-524.37482"
+       y="661.23315"
+       id="text6199"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan6197"
+         x="-524.37482"
+         y="661.23315"
+         style="fill:#ff0000">Адр. 1</tspan></text>
+  </g>
+</svg>
