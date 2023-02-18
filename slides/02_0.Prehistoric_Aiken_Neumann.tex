@@ -22,10 +22,10 @@
 		\begin{itemize}
 			\item
 			\href{https://en.wikipedia.org/wiki/Pascal\%27s_calculator\#Addition}{Сумматор
-				Паскаля~\extlink} --- складывал; вычитал при помощи дополнительного кода
+				Паскаля} --- складывал; вычитал при помощи дополнительного кода
 			\item
 			\href{https://en.wikipedia.org/wiki/Stepped_reckoner\#Operation}{Арифмометр
-				Лейбница~\extlink} --- складывал, вычитал, сдвигал; при помощи этого позволял
+				Лейбница} --- складывал, вычитал, сдвигал; при помощи этого позволял
 			умножать и делить
 		\end{itemize}
 	\end{block}
@@ -38,11 +38,11 @@
 			\begin{itemize}
 				\item
 				\href{https://en.wikipedia.org/wiki/Charles_Babbage\#Computing_pioneer}{Машины
-					Беббиджа~\extlink}
-	
+					Беббиджа}
+
 				\item
 				\href{https://en.wikipedia.org/wiki/Odhner_Arithmometer}{Арифмометр
-					Однера~\extlink} --- изобретён в Санкт-Петербурге шведом Однером. Умеет то же,
+					Однера} --- изобретён в Санкт-Петербурге шведом Однером. Умеет то же,
 				что и арифмометр Лейбница, но компактный и дешёвый
 			\end{itemize}
 		\end{column}
@@ -54,21 +54,21 @@
 \end{frame}
 
 \begin{frame}{Вычислительная техника конца XIX -- начала XX в.}
-	\href{https://en.wikipedia.org/wiki/Tabulating_machine}{Табуляторы~\extlink}
-	
+	\href{https://en.wikipedia.org/wiki/Tabulating_machine}{Табуляторы}
+
 	\begin{itemize}
 		\item
 		Hollerith
 		\item
 		IBM
-		
+
 		\begin{itemize}
 			\item
-			\href{https://en.wikipedia.org/wiki/IBM_407}{IВM 407~\extlink} выпускался до
+			\href{https://en.wikipedia.org/wiki/IBM_407}{IВM 407} выпускался до
 			1976 г.!
 		\end{itemize}
 	\end{itemize}
-	
+
 	Табуляторы могли обрабатывать (сортировать, фильтровать) массивы данных,
 	но они не программировались.
 \end{frame}
@@ -78,10 +78,10 @@
 \subsection{Специализированные вычислительные устройства}
 
 \begin{frame}{Colossus}
-	
-		1940-е \href{https://en.wikipedia.org/wiki/Colossus_computer}{Colossus~\extlink}
+
+		1940-е \href{https://en.wikipedia.org/wiki/Colossus_computer}{Colossus}
 		--- машина для взлома шифра Лоренца (продолжение Энигмы).
-		
+
 		Ламповая ЭВМ, по производительности универсальные микропроцессоры
 		обогнали её только в конце 1980-х. Рассекречена в 2000 г.
 
@@ -92,17 +92,17 @@
 \begin{frame}{1930-е -- 1940-е, <<Гарвардская>> (Эйкена) архитектура}
 		\begin{itemize}
 			\item
-			\href{https://en.wikipedia.org/wiki/Z1_(computer)}{Z1~\extlink}
+			\href{https://en.wikipedia.org/wiki/Z1_(computer)}{Z1}
 		\pause
 			\item
-			\href{https://en.wikipedia.org/wiki/Harvard_Mark_I}{Harvard Mark I~\extlink}.
+			\href{https://en.wikipedia.org/wiki/Harvard_Mark_I}{Harvard Mark I}.
 			Говард Эйкен. Фактически, вычислитель, управляемый перфолентой.
 		\end{itemize}
-				
+
 		\begin{figure}
 			\includesvg[height=0.5\textheight]{img/02.Harvard.svg}
 		\end{figure}
-		
+
 		\pause
 		А управляемый ли?.. Переходов нет, циклы --- при помощи склеивания перфоленты в кольцо.
 \end{frame}
@@ -124,9 +124,9 @@
 	\begin{figure}
 		\includesvg[height=0.5\textheight]{img/02.Von_Neumann_Architecture.svg}
 	\end{figure}
-	
+
 	\pause
-	
+
 	\begin{enumerate}
 		\item
 		Программное управление работой ЭВМ
@@ -143,11 +143,11 @@
 
 \begin{frame}{Системная шина фон Неймановских машин}
 		\begin{figure}
-			\includesvg[height=0.5\textheight]{img/02.Von_Neumann_System_Bus.svg}			
+			\includesvg[height=0.5\textheight]{img/02.Von_Neumann_System_Bus.svg}
 		\end{figure}
-		
+
 		\pause
-		
+
 		Системная шина --- узкое место с точки зрения производительности. В
 		процессорах современных ЭВМ используются элементы гарвардской
 		архитектуры --- отдельные виды кэш-памяти для данных и машинного кода.
@@ -160,14 +160,14 @@
 		\item
 		Специализированные устройства
 	\end{itemize}
-		
+
 		Т.е. устройства, которые не надо часто перепрограммировать. Для них нет
 		смысла рассматривать программу, как данные. Например, у некоторых
 		микроконтроллеров производства компании Microchip память для кода
 		делится на 12-битные ячейки.
 
 	\pause
-	
+
 	\begin{itemize}
 		\item Контроллеры (например, Serial ATA) в <<традиционных>> компьютерах
 		\item Шейдеры в графических адаптерах
@@ -175,13 +175,13 @@
 
 	Т.е. устройства, от которых требуется высокая производительность на единицу цены,
 	но не требуется возможности <<самостоятельно>> программироваться.
-		
+
 \end{frame}
 
 \section{Поколения ЭВМ}
 
 \begin{frame}{I поколение: 1940-е, в основном физические вычисления}
-	
+
 	\begin{block}{Свойства}
 		\begin{itemize}
 			\item
@@ -189,15 +189,15 @@
 			\item
 			Память на электромагнитных реле
 		\end{itemize}
-		
+
 		Процессор на реле --- слишком медленно, частота срабатывания реле ---
-		несколько Гц. \href{https://youtu.be/5hhbGBlP3_4}{Современный пример~\extlink}
+		несколько Гц. \href{https://youtu.be/5hhbGBlP3_4}{Современный пример}
 	\end{block}
-	
+
 	\begin{block}{Примеры}
 		ENIAC, EDVAC, Z4, МЭСМ, «Урал», «Стрела»
 	\end{block}
-	
+
 	\begin{block}{Масштабы}
 		\begin{itemize}
 			\item
@@ -218,14 +218,14 @@
 			\item
 			Память на транзисторах или
 			\href{https://en.wikipedia.org/wiki/Magnetic-core_memory}{материалах с
-				магнитной памятью~\extlink}
+				магнитной памятью}
 		\end{itemize}
 	\end{block}
-	
+
 	\begin{block}{Примеры}
 		IBM 7094, CDC 1604, CDC 3600, БЭСМ-6
 	\end{block}
-	
+
 	\begin{block}{Масштабы}
 		\begin{itemize}
 			\item
@@ -238,21 +238,21 @@
 \end{frame}
 
 \begin{frame}{III поколение: 1960-е -- 1970-е, вычисления, «офисная» работа}
-	
-	
+
+
 	\begin{block}{Свойства}
 		\begin{itemize}
 			\item
 			Использование интегральных схем
 		\end{itemize}
-		
+
 		\textbf{Интегральная схема} --- неразборная электронная схема на
 		полупроводниковой подложке.
-		
+
 		Технология изготовления (упрощённо) --- фотолитография
-		
+
 		Степень интеграции и количество элементов в кристалле:
-		
+
 		\begin{itemize}
 			\tightlist
 			\item
@@ -265,7 +265,7 @@
 			сверхбольшая интегральная схема (СБИС) --- \(> 10^4\)
 		\end{itemize}
 	\end{block}
-	
+
 	\begin{columns}
 		\begin{column}{0.25\textwidth}
 			\begin{block}{Примеры}
@@ -275,7 +275,7 @@
 			\end{block}
 		\end{column}
 		%\begin{column}{0.0\textwidth}\end{column}
-		\begin{column}{0.75\textwidth}	
+		\begin{column}{0.75\textwidth}
 			\begin{block}{Масштабы}
 				\begin{itemize}
 					\item
@@ -294,16 +294,16 @@
 	\begin{block}{Свойства}
 		\textbf{Микропроцессор} --- процессор, реализованный в виде одной
 		интегральной схемы
-		
+
 		\emph{Важно}: переход количества в качество. Цена ЭВМ была принципиально
 		снижена и достигла уровня цены автомобиля, а позже --- обычной бытовой
 		техники.
 	\end{block}
-	
+
 	\begin{block}{Примеры}
 		Apple (разные), IBM PC, Commodore, ZX Spectrum
 	\end{block}
-	
+
 	\begin{block}{Масштабы}
 		\begin{itemize}
 			\item
@@ -318,14 +318,14 @@
 
 \begin{frame}{Закон Мура}
 	Г. Мур, Intel 1965, эмпирическая закономерность
-	
+
 	\defn{Закон Мура}{
 		количество полупроводниковых элементов в
-		интегральных схемах каждые два года удваивается, т.е. \href{https://en.wikipedia.org/wiki/Moore\%27s_law}{растёт экспоненциально~\extlink}
+		интегральных схемах каждые два года удваивается, т.е. \href{https://en.wikipedia.org/wiki/Moore\%27s_law}{растёт экспоненциально}
 	}
-	
+
 	\pause
-	
+
 	Увеличение схем --- не самоцель, оно даёт увеличение производительности.
 	Но в последние годы пределы, установленные физическими законами, всё
 	ближе. Сейчас закон Мура выполняется уже за счёт распараллеливания.
@@ -359,7 +359,7 @@
 		Найдите информацию об различных исторически значимых ЭВМ, сделайте обзор
 		одной-двух понравившихся вам
 	\end{block}
-	
+
 	\begin{block}{Вопросы}
 		\begin{itemize}
 			\tightlist

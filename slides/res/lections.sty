@@ -82,6 +82,10 @@
 
 \newcommand{\defn}[2]{\alert{\textbf{#1}}~---~#2}
 
+\let\zzhrefzz\href
+\renewcommand{\href}[2]{\zzhrefzz{#1}{#2~\extlink}}
+
+
 \newcommand{\tocslide}{
 	\begin{frame}{Содержание}
 		\tableofcontents
@@ -98,19 +102,19 @@
 
 
 \begin{frame}[plain]
-	
+
 	\vfill
-	
+
 	\begin{center}
 		\textbf{\Huge Вопросы}
-		
+
 		\includegraphics[height=5cm]{res/qr-edu-dluciv-name.png}\\
-		
-		\href{http://edu.dluciv.name/}{\beamergotobutton{EDU.DLUCIV.NAME}}
+
+		\href{http://edu.dluciv.name/}{EDU.DLUCIV.NAME}
 	\end{center}
-	
+
 	\vfill
-	
+
 \end{frame}
 
 }
