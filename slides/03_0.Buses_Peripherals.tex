@@ -388,28 +388,89 @@
 
 \section{Современные многоуровневые шины}
 
-\begin{frame}{Зачем и почему?}
-	TODO
+\subsection{Устаревшие шины ISA и PCI}
+
+\begin{frame}{Industry Standard Architecture (ISA)}
+    \begin{itemize}
+        \item «Родная» шина IBM PC: \href{https://en.wikipedia.org/wiki/Industry_Standard_Architecture}{разъёмы ISA} позволяли непосредственно подключить устройство к системной шине
+        \item 8, затем 16-разрядная
+        \item В компьютерах с 32-битной шиной данных (процессоры 80386 и новее) для общения с 16- и 8-разрядными устройствами шина переходила в специальный режим
+        \item Поздние версии уже поддерживали Plug-and-Play, хотя и с трудом
+        \pause
+        \item Изредка используется до сих пор
+    \end{itemize}
 \end{frame}
 
-\subsection{PCI}
 
-\begin{frame}{PCI, северный и южный мосты}
-	TODO % https://superuser.com/a/1037720
+\begin{frame}{Peripheral Component Interconnect (PCI)}
+    \begin{itemize}
+        \item \href{https://en.wikipedia.org/wiki/Peripheral_Component_Interconnect}{32-разрядная} (немногие реализации --- 64-разрядные)
+        \item \alert<2->{Отделена от процессора:}
+        \begin{itemize}
+            \item Взаимодействие с устройствами по специальному протоколу
+            \item Поддерживаются \emph{арбитраж}, связь нескольких шин друг с другом
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Северный и южный мосты в машине с шиной PCI}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            Доосмысление принципа фон Неймана: иерархия запоминающих устройств \( \rightarrow \) \href{https://en.wikipedia.org/wiki/Northbridge_(computing)}{иерархия шин}:
+            \begin{itemize}
+                \item Ближе к процессору --- через северный мост, быстро и немного
+                \item Дальше от процессора --- через южный мост, медленно, много, и «зоопарк»
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \vspace{-5mm}
+            \begin{figure}
+                \includegraphics[height=0.9\textheight]{img/03.Motherboard_diagram.pdf}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \subsection{PCI Express}
 
-\begin{frame}{Зачем нужны асинхронные последовательные шины}
-	TODO
+\begin{frame}{PCI Express: Root Complex}
+	\begin{figure}
+        \includegraphics[height=0.5\textheight]{img/03.Example_PCI_Express_Topology.pdf}
+    \end{figure}
+    \begin{itemize}
+        \item Северный мост трансформироавлся в \href{https://en.wikipedia.org/wiki/Root_complex}{Root Complex}, в современные процессоры обычно встраивается на кристалл, реже --- отдельным кристаллом в том же корпусе
+        \item Южный мост «размазался»
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Root Complex, полосы}
-	TODO
+\begin{frame}{PCI Express: Полосы, Совместимость разъёмов разной ширины}
+	\begin{figure}
+        \includegraphics[height=0.5\textheight]{img/03.PCI-E_PCI_slots.jpg}
+        \caption{\href{https://en.wikipedia.org/wiki/PCI_Express}{Разные разъёмы PCI-E (+ 1 PCI)}}
+    \end{figure}
+    \begin{itemize}
+        \item Разные версии стандарта --- разные скорости
+        \item Передача данных \emph{пакетами}, в зависимости от длины разъёма --- от 1 до 16 пакетов одновременно
+        \begin{itemize}
+            \item Устройства и разъёмы разной длины [обычно] совместимы друг с другом, если их можно соединить механически
+        \end{itemize}
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Совместимость разъёмов разной ширины}
-	TODO
+\subsection{Асинхронные последовательные шины}
+
+\begin{frame}{А зачем нужны асинхронные последовательные шины}
+    \begin{enumerate}
+        \item 1 наносекунда --- это много или мало? \href{https://youtu.be/gYqF6-h9Cvg}{Нам поможет} \href{https://en.wikipedia.org/wiki/Grace_Hopper}{Грейс Хоппер}
+        \pause
+        \item Но длина дорожек на платах сравнима с таким расстоянием. Что же делать?
+        \pause
+        \item \href{https://www.electromaker.io/blog/article/7-ways-to-quickly-judge-the-quality-of-your-printed-circuit-board-pcb-design}{Выровнять длину!}
+        \begin{figure}
+            \includegraphics[height=0.5\textheight]{img/03.length_equiv.jpg}
+        \end{figure}
+        \item А на какой шине легче выровнять длину, на широкой или на узкой? На узкой. До сих пор <<держатся>> дорожки к ОЗУ, и то с оговорками, но об этом позже
+    \end{enumerate}
 \end{frame}
 
 
