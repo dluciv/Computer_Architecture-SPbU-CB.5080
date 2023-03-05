@@ -369,7 +369,7 @@
 	\end{itemize}
 \end{frame}
 
-\section{Современные многоуровневые шины}
+\section{Исторически значимые синхронные шины}
 
 \subsection{Устаревшие шины ISA и PCI}
 
@@ -393,6 +393,8 @@
             \item Взаимодействие с устройствами по специальному протоколу
             \item Поддерживаются \emph{арбитраж}, связь нескольких шин друг с другом
         \end{itemize}
+    \pause
+    \item Есть вариант разъёма для ноутбуков --- \href{https://en.wikipedia.org/wiki/Peripheral\_Component\_Interconnect\#Mini_PCI}{Mini PCI}
     \end{itemize}
 \end{frame}
 
@@ -414,35 +416,9 @@
     \end{columns}
 \end{frame}
 
-\subsection{PCI Express}
+\subsection{Проблемы }
 
-\begin{frame}{PCI Express: Root Complex}
-	\begin{figure}
-        \includegraphics[height=0.5\textheight]{img/03.Example_PCI_Express_Topology.pdf}
-    \end{figure}
-    \begin{itemize}
-        \item Северный мост трансформироавлся в \href{https://en.wikipedia.org/wiki/Root_complex}{Root Complex}, в современные процессоры обычно встраивается на кристалл, реже --- отдельным кристаллом в том же корпусе
-        \item Южный мост «размазался»
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{PCI Express: Полосы, Совместимость разъёмов разной ширины}
-	\begin{figure}
-        \includegraphics[height=0.5\textheight]{img/03.PCI-E_PCI_slots.jpg}
-        \caption{\href{https://en.wikipedia.org/wiki/PCI_Express}{Разные разъёмы PCI-E (+ 1 PCI)}}
-    \end{figure}
-    \begin{itemize}
-        \item Разные версии стандарта --- разные скорости
-        \item Передача данных \emph{пакетами}, в зависимости от длины разъёма --- от 1 до 16 пакетов одновременно
-        \begin{itemize}
-            \item Устройства и разъёмы разной длины [обычно] совместимы друг с другом, если их можно соединить механически
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\subsection{Асинхронные последовательные шины}
-
-\begin{frame}{А зачем нужны асинхронные последовательные шины}
+\begin{frame}{Дорожки разной длины --- это серьёзно!}
     \begin{enumerate}
         \item 1 наносекунда --- это много или мало? \href{https://youtu.be/gYqF6-h9Cvg}{Нам поможет} \href{https://en.wikipedia.org/wiki/Grace_Hopper}{Грейс Хоппер}
         \pause
@@ -452,7 +428,6 @@
         \begin{figure}
             \includegraphics[height=0.5\textheight]{img/03.length_equiv.jpg}
         \end{figure}
-        \item А на какой шине легче выровнять длину, на широкой или на узкой? На узкой. До сих пор <<держатся>> дорожки к ОЗУ, и то с оговорками, но об этом позже
     \end{enumerate}
 \end{frame}
 
@@ -484,8 +459,6 @@
 			Опишите принцип работы механизма DMA
 			\item
 			Каковы особенности DMA для устройств реального времени?
-            \item
-            В чём смысл использования последовательных шин расширения?
             \item
             Что такое северный и южный мосты?
             \item
