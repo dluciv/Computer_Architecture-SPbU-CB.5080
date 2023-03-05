@@ -371,6 +371,19 @@
 
 \section{Исторически значимые синхронные шины}
 
+\subsection{Протокол}
+
+\begin{frame}{Что такое протокол?}
+    \defn{Протокол}{набор соглашений о способах передачи данных различных видов}
+    \pause
+    \begin{itemize}
+        \item Определение аналогично определению кодировки
+        \item Протоколы могут \em{инкапсулировать} и \em{расширять} друг друга
+    \end{itemize}
+    \pause
+    Пример: \href{https://en.wikipedia.org/wiki/OSI_model\#Layer_architecture}{модель ISO/OSI}, в которой высокоуровневые протоколы инкапсулированы в низкоуровневые
+\end{frame}
+
 \subsection{Устаревшие шины ISA и PCI}
 
 \begin{frame}{Industry Standard Architecture (ISA)}
@@ -398,6 +411,21 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Протокол PCI}
+    \begin{itemize}
+        \item PCI поддерживает несколько видов сообщений, биты каждого из которых передаются смешанно последовательно-параллельно: по много битов, но несколькими последовательными сигналами
+        \item \href{https://en.wikipedia.org/wiki/Peripheral_Component_Interconnect\#PCI_command_codes}{Примеры сообщений}:
+        \begin{itemize}
+            \item Чтение или запись в ОЗУ
+            \item Чтение или запись в порт
+            \item Сообщения для настройки устройства
+            \item \ldots
+        \end{itemize}
+    \end{itemize}
+    \pause
+    \alert{А зачем последовательные сигналы? Для экономии количества проводов и контактов.} А почему это важно? А об этом позже =)
+\end{frame}
+
 \begin{frame}{Северный и южный мосты в машине с шиной PCI}
     \begin{columns}
         \begin{column}{0.5\textwidth}
@@ -415,22 +443,6 @@
         \end{column}
     \end{columns}
 \end{frame}
-
-\subsection{Проблемы }
-
-\begin{frame}{Дорожки разной длины --- это серьёзно!}
-    \begin{enumerate}
-        \item 1 наносекунда --- это много или мало? \href{https://youtu.be/gYqF6-h9Cvg}{Нам поможет} \href{https://en.wikipedia.org/wiki/Grace_Hopper}{Грейс Хоппер}
-        \pause
-        \item Но длина дорожек на платах сравнима с таким расстоянием. Что же делать?
-        \pause
-        \item \href{https://www.electromaker.io/blog/article/7-ways-to-quickly-judge-the-quality-of-your-printed-circuit-board-pcb-design}{Выровнять длину!}
-        \begin{figure}
-            \includegraphics[height=0.5\textheight]{img/03.length_equiv.jpg}
-        \end{figure}
-    \end{enumerate}
-\end{frame}
-
 
 \section*{}
 
@@ -462,7 +474,8 @@
             \item
             Что такое северный и южный мосты?
             \item
-            Что такое Root Complex?
+            Что такое протокол?
+            \item Чем отличаются шины PCI и ISA?
 		\end{itemize}
 	\end{block}
 \end{frame}

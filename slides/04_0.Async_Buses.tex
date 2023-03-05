@@ -12,9 +12,23 @@
 
 \tocslide
 
-\section{Что делать с выравниванием длины дорожек?}
+\section{Проблемы параллельных шин}
 
-\begin{frame}{А зачем нужны асинхронные последовательные шины}
+\begin{frame}{Длины дорожек важны}
+    \begin{enumerate}
+        \item 1 наносекунда --- это много или мало? \href{https://youtu.be/gYqF6-h9Cvg}{Нам поможет} \href{https://en.wikipedia.org/wiki/Grace_Hopper}{Грейс Хоппер}
+        \pause
+        \item Но длина дорожек на платах сравнима с таким расстоянием. Что же делать?
+        \pause
+        \item \href{https://www.electromaker.io/blog/article/7-ways-to-quickly-judge-the-quality-of-your-printed-circuit-board-pcb-design}{Выровнять длину!}
+        \begin{figure}
+            \includegraphics[height=0.5\textheight]{img/03.length_equiv.jpg}
+        \end{figure}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{... и длины дорожек должны быть равны!}
     \begin{enumerate}
         \item Что нам мешает?
         \begin{enumerate}
@@ -22,7 +36,9 @@
             \item «Широкая» шина
         \end{enumerate}
         \pause
-        \item На <<узкой>> шине выровнять дорожки легче. До сих пор <<держатся>> параллельными дорожки к ОЗУ, и то с оговорками, но об этом позже
+        \item \alert{Решение: снизить разрядность шины, а если нужно передавать больше данных --- сделать несколько независимых (асинхронных) параллельных шин.}
+
+        На <<узкой>> шине выровнять дорожки легче. До сих пор <<держатся>> параллельными дорожки к ОЗУ, и то с оговорками, но об этом позже
     \end{enumerate}
 \end{frame}
 
@@ -51,7 +67,7 @@
             \item Устройства и разъёмы разной длины [обычно] совместимы друг с другом, если их можно соединить механически
             \begin{itemize}
                 \item Короткое устройство будет работать в длинном разъёме
-                \item Длинное устройство может иметь пропилы на контактной площадке, либо вставляться в «открытый» разъём
+                \item Длинное устройство может иметь вырезы на контактной площадке, либо вставляться в «открытый» разъём
             \end{itemize}
         \end{itemize}
     \end{itemize}
@@ -79,7 +95,9 @@
 
 \section{Интерфейсные шины USB и Thunderbolt}
 
-\begin{frame}{История USB}
+\subsection{Universal Serial Bus}
+
+\begin{frame}{Universal Serial Bus}
 
 \begin{itemize}
     \item Используется с середины 1990-х
@@ -88,12 +106,58 @@
         \item Универсальность
         \item Возможность под/отключения на ходу
         \item Механически прочный разъём c мощным питанием
+        \item \alert<2->{Последовательная передача данных (1 линия на 2 контактах и 2 проводах)}
         \item Изначально — не очень высокая скорость: у хорошо настроенного параллельного порта IEEE 1284 (LPT) скорость выше, чем у USB 1.X
     \end{itemize}
-\end{itemize}
-\pause
-\href{https://en.wikipedia.org/wiki/USB\#Connector_type_quick_reference}{Разъёмы за более, чем 25-летнюю историю}
+    \pause
 
+    \item За более, чем 25-летнюю историю:
+    \begin{itemize}
+        \item \href{https://en.wikipedia.org/wiki/USB\#Connector_type_quick_reference}{Не смог сохранить простоту}
+        \item \alert{USB 3+ по сравнению с USB 2- дополнился двумя высокоскоростными линиями данных}, \href{https://electronics.stackexchange.com/a/587798}{т.е. стал уже не совсем последовательным}
+        \item Потеснил или вытеснил почти все «повседневные» цифровые интерфейсы: COM (RS-232), LPT, AT и PS/2, Twain, FireWire\ldots
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{USB DisplayPotr Alt Mode}
+    USB 3.1+ c разъёмом Type C позволяют инкапсулировать протокол DisplayPort
+\end{frame}
+
+\subsection{Thunderbolt}
+
+\begin{frame}{Thunderbolt 1, 2}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Высокоскоростной интерфейс, появился в 2011
+                \item Использовал разъём Mini DisplayPort и был совместим с протоколом DisplayPort на уровне электрических контактов и сигналов
+                \item Мог инкапсулировать DisplayPort или работать в режиме DisplayPort
+                \item \alert{Мог даже инкапсулировать PCI Express} (через него даже подключали внешние графические адаптеры)
+                \item Версии 1 и 2 отличались скоростями и версиями инкапуслируемых протоколов
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.8\textheight]{img/04.Thunderbolt_1.png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Thunderbolt 3}
+    \begin{itemize}
+        \item Использует разъём Type C
+        \item Практически является расширением USB 3
+        \item \href{https://market.yandex.ru/product--usb-kontsentrator-baseus-thunderbolt-c-pro-cahub-l0g-razemov-5/424956176}{Поддерживает параллельную работу двух портов} (почти как PCI Express lanes), как одного ускоренного (расстояние стандартизовано)
+    \end{itemize}
+\end{frame}
+
+\subsection{Современные USB и Thunderbolt}
+
+\begin{frame}{Кто на ком основан?..}
+    USB 3.2 $\rightarrow$ Thunderbolt 3 $\rightarrow$ USB 4 (ещё быстрее + открытая спецификация инкапсуляции PCI Ecpress)  \ldots Thunderbolt 4, 5
+
+    Общая тенденция к тому, что оба протокола унифицируются друг с другом, ускоряются и добавляют больше функциональности
 \end{frame}
 
 \section*{}
@@ -115,7 +179,7 @@
             \item
             В чём смысл использования последовательных шин расширения?
             \item
-            Приведите примеры протоколов, использующих одинаковые электрические и сигнальные интерфейсы
+            Приведите примеры различных протоколов, использующих одинаковые электрические и сигнальные интерфейсы
 		\end{itemize}
 	\end{block}
 \end{frame}
