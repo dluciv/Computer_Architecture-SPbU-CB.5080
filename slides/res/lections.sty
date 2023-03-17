@@ -20,31 +20,38 @@
 
 \usepackage{res/extlink}
 
+\usepackage{xltxtra}
 
-%\usepackage{libertinus}
+\defaultfontfeatures{Ligatures=TeX,Mapping=tex-text,Scale=MatchLowercase}
 
-\def\sff{Cuprum}
-%\def\ttf{Iosevka Extended}
-\def\ttf{JetBrains Mono NL}
-%\def\ttf{osifont}
+\def\SetCuprumFont#1{\expandafter#1
+	[
+    Ligatures=TeX,Scale=MatchLowercase,Kerning=On,
+	Path=res/fonts/Cuprum/,
+	BoldFont=Cuprum-Bold,
+	ItalicFont=Cuprum-Italic,
+	BoldItalicFont=Cuprum-BoldItalic
+	]{Cuprum-Regular}
+}
 
-\newfontfamily\cyrillicfonttt{\ttf}[Scale=MatchLowercase]
-\setmonofont{\ttf}[Scale=MatchLowercase]
-\newfontfamily\cyrillicfontsf{\sff}[Ligatures=TeX,Scale=MatchLowercase]
-\setsansfont{\sff}[Ligatures=TeX,Scale=MatchLowercase]
-\newfontfamily\cyrillicfont{\sff}[Ligatures=TeX,Scale=MatchLowercase]
-\setmainfont{\sff}[Ligatures=TeX,Scale=MatchLowercase]
+\def\SetJBMonoNLFont#1{\expandafter#1
+	[
+    Scale=MatchLowercase,
+	Path=res/fonts/JBMonoNL/,
+	BoldFont=JetBrainsMonoNL-SemiBold,
+	ItalicFont=JetBrainsMonoNL-Italic,
+	BoldItalicFont=JetBrainsMonoNL-SemiBoldItalic
+	]{JetBrainsMonoNL-Regular}
+}
 
-%\newfontfamily\cyrillicfont{Times New Roman}[Scale=MatchLowercase]
-%\setromanfont[Ligatures=TeX,Scale=MatchLowercase]{Liberation Serif}
-%\newfontfamily{\tnr}{Times New Roman}[Scale=MatchUppercase]
+\SetCuprumFont{\newfontfamily{\cyrillicfontsf}}
+\SetCuprumFont{\setsansfont}
+\SetCuprumFont{\setmainfont}
+
+\SetJBMonoNLFont{\newfontfamily{\cyrillicfonttt}}
+\SetJBMonoNLFont{\setmonofont}
 
 \usemintedstyle{borland}
-
-%\usetheme{/../res/beamerthemeSPbU}
-%\usecolortheme{/../res/beamercolorthemeSPbU}
-%\usetheme{SPbU}
-%\usecolortheme{SPbU}
 
 \input{./res/beamerthemeSPbU.sty}
 \input{./res/beamercolorthemeSPbU.sty}
