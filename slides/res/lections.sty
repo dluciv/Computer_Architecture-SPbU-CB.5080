@@ -1,7 +1,7 @@
 \ProvidesPackage{res/lections}
 
 \usepackage{wrapfig}
-
+\usepackage{ifxetex}
 \usepackage{newtxsf}
 \usepackage{fontspec}%[no-math]
 \usepackage{minted}
@@ -44,6 +44,14 @@
 	]{JetBrainsMonoNL-Regular}
 }
 
+\def\SetConyFont#1{\expandafter#1
+    [
+    Ligatures=TeX,Scale=MatchLowercase,Kerning=On,
+    Path=res/fonts/Cony/,
+    BoldFont=ConyBold
+    ]{ConyRegular}
+}
+
 \SetCuprumFont{\newfontfamily{\cyrillicfont}}
 \SetCuprumFont{\newfontfamily{\cyrillicfontsf}}
 \SetCuprumFont{\setsansfont}
@@ -51,6 +59,9 @@
 
 \SetJBMonoNLFont{\newfontfamily{\cyrillicfonttt}}
 \SetJBMonoNLFont{\setmonofont}
+
+\SetConyFont{\newfontfamily{\conyfont}}
+\DeclareTextFontCommand{\textcony}{\conyfont}
 
 \usemintedstyle{borland}
 
@@ -60,12 +71,25 @@
 \providecommand{\tightlist}{%
 	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-\newcommand{\preamble}{
-
-\titlegraphic{%
-	\includegraphics[height=15mm]{res/spbu_grey.pdf}\hfill%
-	\includegraphics[height=10mm]{res/yadro_logo.png}
-}
+\ifxetex
+    \titlegraphic{% https://latex-beamer.com/faq/precise-position-image/
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=south west] at (current page.south west)
+            {
+                \includegraphics[height=15mm]{res/spbu_grey.pdf}
+            };
+            \node[anchor=south east] at (current page.south east)
+            {
+                \includegraphics[height=10mm]{res/yadro_logo.png}
+            };
+        \end{tikzpicture}
+    }
+\else
+    \titlegraphic{%
+        \includegraphics[height=15mm]{res/spbu_grey.pdf}\hfill%
+        \includegraphics[height=10mm]{res/yadro_logo.png}
+    }
+\fi
 
 \author[Д.~В.~Луцив]{
 	Луцив Дмитрий Вадимович
@@ -76,7 +100,7 @@
 % , при поддержке Группы компаний <<Ядро>>
 
 \date{}
-}
+
 
 \AtBeginSection[]{%
 	\begin{frame}<beamer>
@@ -103,9 +127,11 @@
 }
 
 \newcommand{\titleslide}{
-	\thispagestyle{empty}
-	\maketitle
+    \thispagestyle{empty}
+    \maketitle
 }
+
+\newcommand{\preamble}{}
 
 \newcommand{\postamble}{
 \section*{}

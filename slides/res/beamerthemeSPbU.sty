@@ -29,12 +29,11 @@
 		\end{beamercolorbox}%
 		\begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
 			\usebeamerfont{date in head/foot}
-			\insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+			\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
 	\end{beamercolorbox}}%
 	\vskip0pt%
 }
 \makeatother
-
 
 \setbeamertemplate{headline}{}
 
@@ -43,6 +42,29 @@
 \titlegraphic{
 \includegraphics[height=15mm]{spbu_grey.pdf}
 }
+
+\ifxetex
+\makeatletter
+\setbeamertemplate{title page}{
+    \begin{minipage}[\paperheight]{\textwidth}
+        \begin{center}
+            \inserttitlegraphic{}
+            {
+                \setbeamercolor{block body}{fg=spbuterracota, bg=spbupantone!40!white}
+                \begin{block}{}
+                    \begin{center}
+                        \textcony{\huge \textbf{\inserttitle{}}}
+                    \end{center}
+                \end{block}
+            }
+
+            \insertauthor{}\\\insertinstitute{}
+        \end{center}
+
+    \end{minipage}
+}
+\makeatother
+\fi
 
 \mode
 <all>
