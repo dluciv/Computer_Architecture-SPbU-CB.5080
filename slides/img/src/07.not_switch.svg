@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+
+<svg
+   width="6.9663653cm"
+   height="4.9343843cm"
+   viewBox="1.45 1.395 8.1267594 6.0509996"
+   version="1.1"
+   id="svg78"
+   sodipodi:docname="07.not_switch.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs82" />
+  <sodipodi:namedview
+     id="namedview80"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="cm"
+     showgrid="false"
+     inkscape:zoom="3.7356472"
+     inkscape:cx="91.015018"
+     inkscape:cy="48.452113"
+     inkscape:window-width="1916"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg78" />
+  <path
+     stroke="#000000"
+     fill="none"
+     stroke-width="0.1"
+     d="m 2.1900609,3.381 v 0.6 c 0.5,-0.075 1,-0.15 1,0.225 0,0.375 -1,0.45 -1,0.225 0,-0.225 1,-0.15 1,0.225 0,0.375 -1,0.45 -1,0.225 0,-0.225 1,-0.15 1,0.225 0,0.375 -1,0.45 -1,0.225 0,-0.225 1,-0.15 1,0.225 0,0.375 -0.75,0.3 -1,0.225 v 0.6"
+     id="path2" />
+  <line
+     x1="2.6900609"
+     y1="2.5810001"
+     x2="2.6900609"
+     y2="5.881"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line4" />
+  <line
+     x1="1.5650609"
+     y1="3.381"
+     x2="2.1900609"
+     y2="3.381"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line6" />
+  <line
+     x1="1.1900609"
+     y1="6.381"
+     x2="1.9660609"
+     y2="6.381"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line8" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="1.888,6.750 2.388,6.500 1.888,6.250 "
+     id="polyline10"
+     transform="translate(-0.30993915,-0.119)" />
+  <line
+     x1="1.6900609"
+     y1="2.381"
+     x2="2.2900608"
+     y2="2.381"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line12" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="4.000,2.500 3.400,2.500 2.600,2.900 "
+     id="polyline14"
+     transform="translate(-0.30993915,-0.119)" />
+  <line
+     x1="2.1900609"
+     y1="3.381"
+     x2="2.1900609"
+     y2="2.881"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line16" />
+  <line
+     x1="1.9400609"
+     y1="2.881"
+     x2="2.4400609"
+     y2="2.881"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line18" />
+  <line
+     x1="1.5650609"
+     y1="3.381"
+     x2="1.5650609"
+     y2="3.756"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line20" />
+  <line
+     x1="1.1900609"
+     y1="3.756"
+     x2="1.9400609"
+     y2="3.756"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line22" />
+  <line
+     x1="1.3160609"
+     y1="3.9429998"
+     x2="1.8140609"
+     y2="3.9429998"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line24" />
+  <line
+     x1="1.4410609"
+     y1="4.131"
+     x2="1.6890608"
+     y2="4.131"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line26" />
+  <text
+     x="1.1900609"
+     y="2.881"
+     fill="#000000"
+     text-anchor="start"
+     font-size="0.8px"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text28">+</text>
+  <line
+     x1="1.1900609"
+     y1="2.381"
+     x2="1.6900609"
+     y2="2.381"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line30" />
+  <line
+     x1="3.6900609"
+     y1="2.381"
+     x2="3.9660609"
+     y2="2.381"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line32" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="3.888,2.750 4.388,2.500 3.888,2.250 "
+     id="polyline34"
+     transform="translate(-0.30993915,-0.119)" />
+  <line
+     x1="7.0330606"
+     y1="5.6459999"
+     x2="7.783061"
+     y2="5.6459999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line36" />
+  <line
+     x1="7.783061"
+     y1="4.8959999"
+     x2="7.783061"
+     y2="6.3959999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line38" />
+  <line
+     x1="7.783061"
+     y1="5.1459999"
+     x2="8.533061"
+     y2="4.6459999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line40" />
+  <line
+     x1="7.783061"
+     y1="6.1459999"
+     x2="8.533061"
+     y2="6.6459999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line42" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="8.593,6.765 8.843,6.765 8.747,6.534 "
+     id="polyline44"
+     transform="translate(-0.30993915,-0.119)" />
+  <line
+     x1="8.4830608"
+     y1="6.6459999"
+     x2="8.4830608"
+     y2="7.0209999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line46" />
+  <line
+     x1="7.9830608"
+     y1="7.0209999"
+     x2="8.9830608"
+     y2="7.0209999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line48" />
+  <line
+     x1="8.1500607"
+     y1="7.2080002"
+     x2="8.8150606"
+     y2="7.2080002"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line50" />
+  <line
+     x1="8.3180609"
+     y1="7.3959999"
+     x2="8.6480608"
+     y2="7.3959999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line52" />
+  <line
+     x1="5.6830606"
+     y1="4.6459999"
+     x2="6.8340607"
+     y2="4.625"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line54" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="6.761,5.001 7.256,4.742 6.752,4.501 "
+     id="polyline56"
+     transform="translate(-0.30993915,-0.119)" />
+  <text
+     x="7.7080603"
+     y="1.8710001"
+     fill="#000000"
+     text-anchor="start"
+     font-size="0.8px"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text58">+</text>
+  <line
+     x1="8.533061"
+     y1="4.6459999"
+     x2="9.5090609"
+     y2="4.6459999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line60" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="9.431,5.015 9.931,4.765 9.431,4.515 "
+     id="polyline62"
+     transform="translate(-0.30993915,-0.119)" />
+  <line
+     x1="7.0080605"
+     y1="3.5710001"
+     x2="7.7580605"
+     y2="3.5710001"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line64" />
+  <line
+     x1="7.7580605"
+     y1="4.3210001"
+     x2="7.7580605"
+     y2="2.8210001"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line66" />
+  <line
+     x1="7.7580605"
+     y1="4.0710001"
+     x2="8.5080605"
+     y2="4.5710001"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line68" />
+  <line
+     x1="7.7580605"
+     y1="3.0710001"
+     x2="8.5080605"
+     y2="2.5710001"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line70" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="8.318,3.190 8.068,3.190 8.164,2.959 "
+     id="polyline72"
+     transform="translate(-0.30993915,-0.119)" />
+  <line
+     x1="8.533061"
+     y1="1.8960001"
+     x2="8.5080605"
+     y2="2.5710001"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line74" />
+  <line
+     x1="7.0080605"
+     y1="3.5710001"
+     x2="7.0330606"
+     y2="5.6459999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line76" />
+</svg>

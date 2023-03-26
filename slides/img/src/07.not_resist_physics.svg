@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="407.59998"
+   height="279.52002"
+   viewBox="-0.5 -0.5 407.59999 279.52001"
+   id="svg152"
+   sodipodi:docname="07.not_resist_physics.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <sodipodi:namedview
+     id="namedview154"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="3.0996441"
+     inkscape:cx="250.0287"
+     inkscape:cy="140.33869"
+     inkscape:window-width="1916"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg152" />
+  <defs
+     id="defs2" />
+  <path
+     d="m 88.877999,252.62 0.04,-123.12 q 0,-10 10,-10 H 133.888"
+     fill="none"
+     stroke="#cccccc"
+     stroke-width="7"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path4" />
+  <path
+     d="m 146.888,119.5 -13,6.5 v -13 z"
+     fill="#cccccc"
+     stroke="#cccccc"
+     stroke-width="7"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path6" />
+  <path
+     d="m 89.717999,119.5 v 20"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path8" />
+  <path
+     d="M 89.717999,119.5 H 114.718 l 33.84,0.23"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path10" />
+  <path
+     d="m 153.808,119.77 -7.02,2.28 1.77,-2.32 -1.73,-2.34 z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path12" />
+  <rect
+     x="29.5"
+     y="-99.718002"
+     width="90"
+     height="20"
+     fill="none"
+     stroke="none"
+     transform="rotate(90)"
+     pointer-events="all"
+     id="rect14" />
+  <rect
+     x="45.699997"
+     y="-99.718002"
+     width="57.599998"
+     height="20"
+     fill="#ffffff"
+     stroke="#000000"
+     transform="rotate(90)"
+     pointer-events="all"
+     id="rect16" />
+  <path
+     d="m 89.717999,29.499999 v 16.2 m 0,57.600001 v 16.2"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path18" />
+  <path
+     d="M -0.28200137,179.5 H 43.347999"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path20" />
+  <path
+     d="m 48.597999,179.5 -7,2.33 1.75,-2.33 -1.75,-2.33 z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path22" />
+  <path
+     d="m 89.717999,249.5 v -30"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path24" />
+  <rect
+     x="74.718002"
+     y="249.5"
+     width="30"
+     height="20"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect26" />
+  <path
+     d="M 74.717999,254.5 H 104.718 M 77.117999,257 H 102.318 m -22.800001,2.5 h 20.4 m -15.3,5 h 10.2 m -7.8,2.5 h 5.4 m -2.7,-17.5 v 5 m -7.5,7.5 h 15 m -7.8,7.5 h 0.6"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path28" />
+  <rect
+     x="9.7179899"
+     y="-0.5"
+     width="70"
+     height="50"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect30" />
+  <g
+     transform="translate(-7.7820014,-1.0000011)"
+     id="g36">
+    <switch
+       id="switch34">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 25px; margin-left: 18px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">1, истина,<xhtml:br />
+высокий потенциал</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="52"
+         y="29"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text32">1, истина,...</text>
+    </switch>
+  </g>
+  <rect
+     x="4.7179899"
+     y="229.02"
+     width="70"
+     height="50"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect38" />
+  <g
+     transform="translate(-7.7820014,-1.0000011)"
+     id="g44">
+    <switch
+       id="switch42">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 255px; margin-left: 13px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">0, ложь,<xhtml:br />
+низкий потенциал</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="47"
+         y="258"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text40">0, ложь,...</text>
+    </switch>
+  </g>
+  <rect
+     x="-0.28201017"
+     y="168.5"
+     width="35"
+     height="20"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect46" />
+  <g
+     transform="translate(-7.7820014,-9.0000011)"
+     id="g52">
+    <switch
+       id="switch50">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 33px; height: 1px; padding-top: 179px; margin-left: 8px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Вход<xhtml:br />
+1</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="25"
+         y="183"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text48">Вход 1</text>
+    </switch>
+  </g>
+  <rect
+     x="108.668"
+     y="108.5"
+     width="35"
+     height="20"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect54" />
+  <g
+     transform="translate(-7.7820014,-9.0000011)"
+     id="g60">
+    <switch
+       id="switch58">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 33px; height: 1px; padding-top: 119px; margin-left: 117px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Выход<xhtml:br />
+0</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="133"
+         y="123"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text56">Выход 0</text>
+    </switch>
+  </g>
+  <circle
+     cx="89.718002"
+     cy="179.5"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-dasharray="6, 6"
+     pointer-events="all"
+     id="ellipse62"
+     r="40" />
+  <path
+     d="m 89.717999,219.5 v -30 -50"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path64" />
+  <rect
+     x="-197"
+     y="77.218002"
+     width="35"
+     height="20"
+     fill="none"
+     stroke="none"
+     transform="rotate(-90)"
+     pointer-events="all"
+     id="rect66" />
+  <g
+     transform="rotate(-90,87.109004,186.391)"
+     id="g72">
+    <switch
+       id="switch70">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 33px; height: 1px; padding-top: 180px; margin-left: 78px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Транзистор<xhtml:br />
+открыт</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="95"
+         y="184"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text68">Транзистор открыт</text>
+    </switch>
+  </g>
+  <path
+     d="M 339.718,29.499999 V 109.5 q 0,10 10,10 h 34.17"
+     fill="none"
+     stroke="#cccccc"
+     stroke-width="7"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path74" />
+  <path
+     d="m 396.888,119.5 -13,6.5 v -13 z"
+     fill="#cccccc"
+     stroke="#cccccc"
+     stroke-width="7"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path76" />
+  <path
+     d="m 339.718,119.5 v 20"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path78" />
+  <path
+     d="m 339.718,119.5 h 25 l 33.84,0.23"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path80" />
+  <path
+     d="m 403.808,119.77 -7.02,2.28 1.77,-2.32 -1.73,-2.34 z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path82" />
+  <rect
+     x="29.5"
+     y="-349.71799"
+     width="90"
+     height="20"
+     fill="none"
+     stroke="none"
+     transform="rotate(90)"
+     pointer-events="all"
+     id="rect84" />
+  <rect
+     x="45.700012"
+     y="-349.71799"
+     width="57.599998"
+     height="20"
+     fill="none"
+     stroke="#000000"
+     transform="rotate(90)"
+     pointer-events="all"
+     id="rect86" />
+  <path
+     d="m 339.718,29.499999 v 16.2 m 0,57.600001 v 16.2"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path88" />
+  <path
+     d="m 244.718,179.5 h 48.63"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path90" />
+  <path
+     d="m 298.598,179.5 -7,2.33 1.75,-2.33 -1.75,-2.33 z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path92" />
+  <path
+     d="m 339.718,249.5 v -30"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path94" />
+  <rect
+     x="324.71802"
+     y="249.5"
+     width="30"
+     height="20"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect96" />
+  <path
+     d="m 324.718,254.5 h 30 m -27.6,2.5 h 25.2 m -22.8,2.5 h 20.4 m -15.3,5 h 10.2 m -7.8,2.5 h 5.4 m -2.7,-17.5 v 5 m -7.5,7.5 h 15 m -7.8,7.5 h 0.6"
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path98" />
+  <rect
+     x="259.71799"
+     y="-0.5"
+     width="70"
+     height="50"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect100" />
+  <g
+     transform="translate(-7.7820014,-1.0000011)"
+     id="g106">
+    <switch
+       id="switch104">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 25px; margin-left: 268px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">1, истина,<xhtml:br />
+высокий потенциал</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="302"
+         y="29"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text102">1, истина,...</text>
+    </switch>
+  </g>
+  <rect
+     x="254.718"
+     y="229.02"
+     width="70"
+     height="50"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect108" />
+  <g
+     transform="translate(-7.7820014,-1.0000011)"
+     id="g114">
+    <switch
+       id="switch112">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 255px; margin-left: 263px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">0, ложь,<xhtml:br />
+низкий потенциал</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="297"
+         y="258"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text110">0, ложь,...</text>
+    </switch>
+  </g>
+  <rect
+     x="244.718"
+     y="168.5"
+     width="35"
+     height="20"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect116" />
+  <g
+     transform="translate(-7.7820014,-9.0000011)"
+     id="g122">
+    <switch
+       id="switch120">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 33px; height: 1px; padding-top: 179px; margin-left: 253px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Вход<xhtml:br />
+0</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="270"
+         y="183"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text118">Вход 0</text>
+    </switch>
+  </g>
+  <rect
+     x="358.668"
+     y="108.5"
+     width="35"
+     height="20"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect124" />
+  <g
+     transform="translate(-7.7820014,-9.0000011)"
+     id="g130">
+    <switch
+       id="switch128">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 33px; height: 1px; padding-top: 119px; margin-left: 367px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Выход<xhtml:br />
+1</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="383"
+         y="123"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text126">Выход 1</text>
+    </switch>
+  </g>
+  <circle
+     cx="339.71799"
+     cy="179.5"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-dasharray="6, 6"
+     pointer-events="all"
+     id="ellipse132"
+     r="40" />
+  <rect
+     x="322.21802"
+     y="169.5"
+     width="35"
+     height="20"
+     fill="none"
+     stroke="none"
+     pointer-events="all"
+     id="rect134" />
+  <g
+     transform="translate(8.2179986,-1.0000011)"
+     id="g140">
+    <switch
+       id="switch138">
+      <foreignObject
+         style="overflow: visible; text-align: left;"
+         pointer-events="none"
+         width="100%"
+         height="100%"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 33px; height: 1px; padding-top: 180px; margin-left: 331px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Транзистор<xhtml:br />
+закрыт</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="347"
+         y="184"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text136">Транзистор закрыт</text>
+    </switch>
+  </g>
+  <switch
+     id="switch150"
+     transform="translate(-7.2820014,-0.5000011)">
+    <g
+       requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+       id="g144" />
+    <a
+       transform="translate(0,-5)"
+       xlink:href="https://desk.draw.io/support/solutions/articles/16000042487"
+       target="_blank"
+       id="a148">
+      <text
+         text-anchor="middle"
+         font-size="10px"
+         x="50%"
+         y="100%"
+         id="text146">Viewer does not support full SVG 1.1</text>
+    </a>
+  </switch>
+</svg>
