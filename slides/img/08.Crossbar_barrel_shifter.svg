@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-190 -55 600 450">
+ <title>Crossbar barrel shifter</title>
+ <desc>Schematic diagram of a 4-bit crossbar barrel shifter by CMG Lee. Input bits are denoted by x and output bits by y.</desc>
+ <defs>
+  <circle id="dot_1" cx="0" cy="0" r="2"/>
+  <g id="dot_4">
+   <use xlink:href="#dot_1" transform="translate(0,  0)"/>
+   <use xlink:href="#dot_1" transform="translate(100,0)"/>
+   <use xlink:href="#dot_1" transform="translate(200,0)"/>
+   <use xlink:href="#dot_1" transform="translate(300,0)"/>
+  </g>
+  <g id="dot_12">
+   <use xlink:href="#dot_4" transform="translate(0,  0)"/>
+   <use xlink:href="#dot_4" transform="translate(0,100)"/>
+   <use xlink:href="#dot_4" transform="translate(0,200)"/>
+  </g>
+  <path id="cell_1" d="M 0,0 L 20,20 M 40,40 L 30,10 L 10,30 L 40,40 L 50,50" fill="#ffffff"/>
+  <g id="cell_4">
+   <use xlink:href="#cell_1" transform="translate(0,  0)"/>
+   <use xlink:href="#cell_1" transform="translate(100,0)"/>
+   <use xlink:href="#cell_1" transform="translate(200,0)"/>
+   <use xlink:href="#cell_1" transform="translate(300,0)"/>
+   <path d="M 50,50 H 370"/>
+  </g>
+  <g id="cell_16">
+   <use xlink:href="#cell_4" transform="translate(0,  0)"/>
+   <use xlink:href="#cell_4" transform="translate(0,100)"/>
+   <use xlink:href="#cell_4" transform="translate(0,200)"/>
+   <use xlink:href="#cell_4" transform="translate(0,300)"/>
+   <path d="M   0,-20 V 300"/>
+   <path d="M 100,-20 V 300"/>
+   <path d="M 200,-20 V 300"/>
+   <path d="M 300,-20 V 300"/>
+   <use xlink:href="#dot_12"/>
+   <use transform="translate(350,50) rotate(90)" xlink:href="#dot_12"/>
+  </g>
+ </defs>
+ <g font-family="sans-serif" font-size="32" letter-spacing="-1" text-anchor="middle" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke="none" fill="none">
+  <g stroke="#000000">
+   <path d="M 330,130 L  70,390 V -10 L -60,120 H -130" stroke="#cc0000"/>
+   <path d="M 330,230 L 170,390 V -10 L -40,200 H -130" stroke="#cc9900"/>
+   <path d="M 330,330 L 270,390 V -10 L -20,280 H -130" stroke="#009900"/>
+   <path d="M 330,30                  L   0,360 H -130" stroke="#0000ff"/>
+   <path d="M -150,100 V 15" stroke="#9900cc"/>
+   <rect x="-170" y="100" width="40" height="280" fill="#ffffff"/>
+   <use xlink:href="#cell_16"/>
+  </g>
+  <g fill="#000000">
+   <text x="0" y="-30"><tspan font-style="italic">x</tspan><tspan font-size="24" dy="9">0</tspan></text>
+   <text x="100" y="-30"><tspan font-style="italic">x</tspan><tspan font-size="24" dy="9">1</tspan></text>
+   <text x="200" y="-30"><tspan font-style="italic">x</tspan><tspan font-size="24" dy="9">2</tspan></text>
+   <text x="300" y="-30"><tspan font-style="italic">x</tspan><tspan font-size="24" dy="9">3</tspan></text>
+   <text x="390" y="50"><tspan font-style="italic">y</tspan><tspan font-size="24" dy="9">3</tspan></text>
+   <text x="390" y="150"><tspan font-style="italic">y</tspan><tspan font-size="24" dy="9">2</tspan></text>
+   <text x="390" y="250"><tspan font-style="italic">y</tspan><tspan font-size="24" dy="9">1</tspan></text>
+   <text x="390" y="350"><tspan font-style="italic">y</tspan><tspan font-size="24" dy="9">0</tspan></text>
+   <text x="-70" y="80" fill="#cc0000">shift 3</text>
+   <text x="-70" y="170" fill="#cc9900">shift 2</text>
+   <text x="-70" y="250" fill="#009900">shift 1</text>
+   <text x="-70" y="330" fill="#0000ff">shift 0</text>
+   <text x="-180" y="-25" text-anchor="start"><tspan>Shift</tspan><tspan x="-180" dy="30">count</tspan></text>
+   <text transform="translate(-150,160)" x="0" y="0"><tspan>D</tspan><tspan x="0" dy="30">e</tspan><tspan x="0" dy="30">c</tspan><tspan x="0" dy="30">o</tspan><tspan x="0" dy="30">d</tspan><tspan x="0" dy="30">e</tspan><tspan x="0" dy="30">r</tspan></text>
+  </g>
+ </g>
+</svg>
