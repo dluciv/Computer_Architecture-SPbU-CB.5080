@@ -77,16 +77,21 @@
 \item
   \href{https://en.wikipedia.org/wiki/Bipolar_junction_transistor}{Биполярный
   транзистор}
+\item \href{https://en.wikipedia.org/wiki/Field-effect_transistor}{Полевой транзистор} (бывает P-N, но чаще МОП/MOSFET)
 \end{itemize}
 \end{block}
 
 \pause
 
-\begin{block}{Полупроводниковые диод и транзистор}
-    \begin{itemize}
-  \item \href{https://youtu.be/OMGdSCaMVD0?t=107}{Как оно вообще умудряется работать?..}
-  \item \href{https://www.falstad.com/circuit/e-npn.html}{Симулятор}
-    \end{itemize}
+\begin{block}{Полупроводниковые диод и транзисторы}
+    \begin{outline}[itemize]
+        \1 \href{https://youtu.be/OMGdSCaMVD0?t=107}{Как полупроводниковый диод и биполярный транзистор умудряются работать?..}
+            \2 \href{https://www.falstad.com/circuit/e-npn.html}{Симулятор биполярного NPN-транзистора}
+        \1 \href{https://youtu.be/ZUly6Wz0RHc}{Как умудряется работать полевой транзистор?..}
+            \2 \href{https://www.falstad.com/circuit/e-nmosfet.html}{Симулятор полевого N-транзистора}
+    \end{outline}
+    \pause
+    \href{https://www.falstad.com/circuit/e-index.html}{Список симуляторов}
 \end{block}
 
 \pause
@@ -96,6 +101,17 @@
         \item \href{https://youtu.be/DEewNHWgqFU}{Немного духа 1960-х}
     \end{itemize}
 \end{block}
+\end{frame}
+
+\begin{frame}{Полевой или биполярный?..}
+    Обычно полевой, поскольку:
+    \begin{outline}[itemize]
+        \1 Полевой управляется потенциалом
+            \2 Для высокого потенциала в микросхемах «мало места» (напряжённость поля высока)
+        \pause
+        \1 Биполярный управляется током
+            \2 Для большого тока в микросхемах места ещё меньше\ldots
+    \end{outline}
 \end{frame}
 
 \section{Вентили}
@@ -150,6 +166,10 @@
         \includegraphics[height=0.5\textheight]{img/07.not_switch.pdf}
         \caption{Реле и транзисторно-транзисторная логика}
     \end{figure}
+    Симуляторы:
+    \begin{itemize}
+        \item \href{https://www.falstad.com/circuit/e-cmosinverter.html}{МОП ТТЛ}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Отрицание с согласующим резистором}
@@ -157,6 +177,10 @@
         \includegraphics[height=0.5\textheight]{img/07.not_resist.pdf}
         \caption{Триод и резисторно-транзисторная логика}
     \end{figure}
+    Симуляторы:
+    \begin{itemize}
+        \item \href{https://www.falstad.com/circuit/e-rtlinverter.html}{Бип. РТЛ}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Как оно работает? (1)}

@@ -2,9 +2,9 @@
 <!-- Created by diasvg.py -->
 
 <svg
-   width="9.2594995cm"
-   height="4.7012877cm"
-   viewBox="1.45 1.395 10.801863 5.7651549"
+   width="11.435136cm"
+   height="4.9343843cm"
+   viewBox="1.45 1.395 13.339897 6.0509996"
    version="1.1"
    id="svg78"
    sodipodi:docname="07.R-R.svg"
@@ -26,11 +26,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="cm"
      showgrid="false"
-     inkscape:zoom="3.7356472"
-     inkscape:cx="90.211945"
-     inkscape:cy="144.82096"
+     inkscape:zoom="1.8678236"
+     inkscape:cx="179.35313"
+     inkscape:cy="156.86706"
      inkscape:window-width="1916"
-     inkscape:window-height="1019"
+     inkscape:window-height="1017"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -38,46 +38,46 @@
   <rect
      style="fill:#bfbfbf;fill-opacity:1;stroke:none;stroke-width:0.0122629;stroke-linejoin:bevel;paint-order:stroke fill markers"
      id="rect929-2"
-     width="11.269206"
-     height="1.8731847"
-     x="1.2419783"
-     y="4.7149024" />
+     width="14.022823"
+     height="1.8322577"
+     x="1.173503"
+     y="4.9213824" />
   <rect
      style="fill:#bfbfbf;fill-opacity:1;stroke:none;stroke-width:0.0122629;stroke-linejoin:bevel;paint-order:stroke fill markers"
      id="rect929"
-     width="11.269206"
-     height="1.8731847"
-     x="1.3276298"
-     y="2.1220765" />
+     width="13.937172"
+     height="1.9414688"
+     x="1.2591546"
+     y="2.3285568" />
   <line
-     x1="2.6785419"
-     y1="5.3399024"
-     x2="3.4285424"
-     y2="5.3399024"
+     x1="2.6100667"
+     y1="5.5463824"
+     x2="3.3600671"
+     y2="5.5463824"
      stroke="#000000"
      stroke-width="0.1"
      id="line36" />
   <line
-     x1="3.4285424"
-     y1="4.5899024"
-     x2="3.4285424"
-     y2="6.0899024"
+     x1="3.3600671"
+     y1="4.7963824"
+     x2="3.3600671"
+     y2="6.2963824"
      stroke="#000000"
      stroke-width="0.1"
      id="line38" />
   <line
-     x1="3.4285424"
-     y1="4.8399024"
-     x2="4.1785421"
-     y2="4.3399024"
+     x1="3.3600671"
+     y1="5.0463824"
+     x2="4.1100669"
+     y2="4.5463824"
      stroke="#000000"
      stroke-width="0.1"
      id="line40" />
   <line
-     x1="3.4285424"
-     y1="5.8399024"
-     x2="4.1785421"
-     y2="6.3399024"
+     x1="3.3600671"
+     y1="6.0463824"
+     x2="4.1100669"
+     y2="6.5463824"
      stroke="#000000"
      stroke-width="0.1"
      id="line42" />
@@ -87,44 +87,44 @@
      stroke-width="0.1"
      points="8.593,6.765 8.843,6.765 8.747,6.534 "
      id="polyline44"
-     transform="translate(-4.6644579,-0.42509755)" />
+     transform="translate(-4.7329331,-0.21861733)" />
   <line
-     x1="4.1285419"
-     y1="6.3399024"
-     x2="4.1285419"
-     y2="6.7149024"
+     x1="4.0600667"
+     y1="6.5463824"
+     x2="4.0600667"
+     y2="6.9213824"
      stroke="#000000"
      stroke-width="0.1"
      id="line46" />
   <line
-     x1="3.6285422"
-     y1="6.7149024"
-     x2="4.6285419"
-     y2="6.7149024"
+     x1="3.5600669"
+     y1="6.9213824"
+     x2="4.5600667"
+     y2="6.9213824"
      stroke="#000000"
      stroke-width="0.1"
      id="line48" />
   <line
-     x1="3.795542"
-     y1="6.9019027"
-     x2="4.4605417"
-     y2="6.9019027"
+     x1="3.7270668"
+     y1="7.1083827"
+     x2="4.3920665"
+     y2="7.1083827"
      stroke="#000000"
      stroke-width="0.1"
      id="line50" />
   <line
-     x1="3.9635422"
-     y1="7.0899024"
-     x2="4.2935419"
-     y2="7.0899024"
+     x1="3.895067"
+     y1="7.2963824"
+     x2="4.2250667"
+     y2="7.2963824"
      stroke="#000000"
      stroke-width="0.1"
      id="line52" />
   <line
-     x1="1.3285419"
-     y1="4.3399024"
-     x2="2.479542"
-     y2="4.3189025"
+     x1="1.2600666"
+     y1="4.5463824"
+     x2="2.4110668"
+     y2="4.5253825"
      stroke="#000000"
      stroke-width="0.1"
      id="line54" />
@@ -134,10 +134,10 @@
      stroke-width="0.1"
      points="6.761,5.001 7.256,4.742 6.752,4.501 "
      id="polyline56"
-     transform="translate(-4.6644579,-0.42509755)" />
+     transform="translate(-4.7329331,-0.21861733)" />
   <text
-     x="3.5505419"
-     y="1.9470608"
+     x="3.4820666"
+     y="2.1535411"
      fill="#000000"
      text-anchor="start"
      font-size="0.8px"
@@ -146,10 +146,10 @@
      font-weight="400"
      id="text58">+</text>
   <line
-     x1="4.1785421"
-     y1="4.3399024"
-     x2="5.154542"
-     y2="4.3399024"
+     x1="4.1100669"
+     y1="4.5463824"
+     x2="5.0860667"
+     y2="4.5463824"
      stroke="#000000"
      stroke-width="0.1"
      id="line60" />
@@ -159,36 +159,36 @@
      stroke-width="0.1"
      points="9.431,5.015 9.931,4.765 9.431,4.515 "
      id="polyline62"
-     transform="translate(-4.6644579,-0.42509755)" />
+     transform="translate(-4.7329331,-0.21861733)" />
   <line
-     x1="2.6535418"
-     y1="3.2649026"
-     x2="3.4035418"
-     y2="3.2649026"
+     x1="2.5850666"
+     y1="3.4713829"
+     x2="3.3350666"
+     y2="3.4713829"
      stroke="#000000"
      stroke-width="0.1"
      id="line64" />
   <line
-     x1="3.4035418"
-     y1="4.0149026"
-     x2="3.4035418"
-     y2="2.5149026"
+     x1="3.3350666"
+     y1="4.2213826"
+     x2="3.3350666"
+     y2="2.7213829"
      stroke="#000000"
      stroke-width="0.1"
      id="line66" />
   <line
-     x1="3.4035418"
-     y1="3.7649024"
-     x2="4.1535416"
-     y2="4.2649026"
+     x1="3.3350666"
+     y1="3.9713826"
+     x2="4.0850663"
+     y2="4.4713826"
      stroke="#000000"
      stroke-width="0.1"
      id="line68" />
   <line
-     x1="3.4035418"
-     y1="2.7649026"
-     x2="4.1535416"
-     y2="2.2649026"
+     x1="3.3350666"
+     y1="2.9713829"
+     x2="4.0850663"
+     y2="2.4713829"
      stroke="#000000"
      stroke-width="0.1"
      id="line70" />
@@ -198,52 +198,52 @@
      stroke-width="0.1"
      points="8.318,3.190 8.068,3.190 8.164,2.959 "
      id="polyline72"
-     transform="translate(-4.6644579,-0.42509755)" />
+     transform="translate(-4.7329331,-0.21861733)" />
   <line
-     x1="4.1785421"
-     y1="1.5899025"
-     x2="4.1535416"
-     y2="2.2649026"
+     x1="4.1100669"
+     y1="1.7963828"
+     x2="4.0850663"
+     y2="2.4713829"
      stroke="#000000"
      stroke-width="0.1"
      id="line74" />
   <line
-     x1="2.6535418"
-     y1="3.2649026"
-     x2="2.6785419"
-     y2="5.3399024"
+     x1="2.5850666"
+     y1="3.4713829"
+     x2="2.6100667"
+     y2="5.5463824"
      stroke="#000000"
      stroke-width="0.1"
      id="line76" />
   <line
-     x1="6.5120702"
-     y1="5.2133307"
-     x2="7.2410927"
-     y2="5.2133307"
+     x1="9.1885662"
+     y1="5.5874329"
+     x2="9.9175892"
+     y2="5.5874329"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line46-3" />
   <line
-     x1="7.2410927"
-     y1="4.4843082"
-     x2="7.2410927"
-     y2="5.9423532"
+     x1="9.9175892"
+     y1="4.8584104"
+     x2="9.9175892"
+     y2="6.3164554"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line48-6" />
   <line
-     x1="7.2410927"
-     y1="4.7273159"
-     x2="7.9701152"
-     y2="4.2413011"
+     x1="9.9175892"
+     y1="5.101418"
+     x2="10.646611"
+     y2="4.6154032"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line50-7" />
   <line
-     x1="7.2410927"
-     y1="5.6993456"
-     x2="7.9701152"
-     y2="6.1853609"
+     x1="9.9175892"
+     y1="6.0734477"
+     x2="10.646611"
+     y2="6.559463"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line52-5" />
@@ -253,44 +253,44 @@
      stroke-width="0.1"
      points="11.750,5.500 12.000,5.500 11.904,5.269 "
      id="polyline54"
-     transform="matrix(0.9720302,0,0,0.9720302,-3.6942471,0.83919462)" />
+     transform="matrix(0.9720302,0,0,0.9720302,-1.0177513,1.213297)" />
   <line
-     x1="7.9701152"
-     y1="6.1853609"
-     x2="7.9701152"
-     y2="6.5498724"
+     x1="10.646611"
+     y1="6.559463"
+     x2="10.646611"
+     y2="6.9239745"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line56" />
   <line
-     x1="7.4840999"
-     y1="6.5498724"
-     x2="8.45613"
-     y2="6.5498724"
+     x1="10.160596"
+     y1="6.9239745"
+     x2="11.132627"
+     y2="6.9239745"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line58" />
   <line
-     x1="7.6474013"
-     y1="6.7316413"
-     x2="8.2928286"
-     y2="6.7316413"
+     x1="10.323897"
+     y1="7.1057434"
+     x2="10.969325"
+     y2="7.1057434"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line60-3" />
   <line
-     x1="7.8097301"
-     y1="6.9143834"
-     x2="8.1304998"
-     y2="6.9143834"
+     x1="10.486226"
+     y1="7.2884855"
+     x2="10.806996"
+     y2="7.2884855"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line62" />
   <line
-     x1="5.7830472"
-     y1="5.2133307"
-     x2="6.2943354"
-     y2="5.2133307"
+     x1="8.4595432"
+     y1="5.5874329"
+     x2="8.9708319"
+     y2="5.5874329"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line64-5" />
@@ -300,18 +300,18 @@
      stroke-width="0.1"
      points="9.888,4.750 10.388,4.500 9.888,4.250 "
      id="polyline66"
-     transform="matrix(0.9720302,0,0,0.9720302,-3.6942471,0.83919462)" />
+     transform="matrix(0.9720302,0,0,0.9720302,-1.0177513,1.213297)" />
   <line
-     x1="7.9701152"
-     y1="2.0542324"
-     x2="7.9701152"
-     y2="2.6005135"
+     x1="10.646611"
+     y1="2.4283347"
+     x2="10.646611"
+     y2="2.9746158"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line68-6" />
   <rect
-     x="7.727108"
-     y="2.6005135"
+     x="10.403605"
+     y="2.9746158"
      width="0.48601508"
      height="1.093534"
      fill="#ffffff"
@@ -319,8 +319,8 @@
      stroke-width="0"
      id="rect70" />
   <rect
-     x="7.727108"
-     y="2.6005135"
+     x="10.403605"
+     y="2.9746158"
      width="0.48601508"
      height="1.093534"
      fill="none"
@@ -328,16 +328,16 @@
      stroke-width="0.0972031"
      id="rect72" />
   <line
-     x1="7.9701152"
-     y1="3.6950192"
-     x2="7.9701152"
-     y2="4.2413011"
+     x1="10.646611"
+     y1="4.0691214"
+     x2="10.646611"
+     y2="4.6154032"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line74-2" />
   <text
-     x="7.2410927"
-     y="2.29724"
+     x="9.9175892"
+     y="2.6713424"
      fill="#000000"
      text-anchor="start"
      font-size="0.777625px"
@@ -347,10 +347,10 @@
      id="text76"
      style="stroke-width:0.972031">+</text>
   <line
-     x1="7.9701152"
-     y1="4.2413011"
-     x2="8.9674177"
-     y2="4.2413011"
+     x1="10.646611"
+     y1="4.6154032"
+     x2="11.643914"
+     y2="4.6154032"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line78" />
@@ -360,18 +360,18 @@
      stroke-width="0.1"
      points="12.638,3.750 13.138,3.500 12.638,3.250 "
      id="polyline80"
-     transform="matrix(0.9720302,0,0,0.9720302,-3.6942471,0.83919462)" />
+     transform="matrix(0.9720302,0,0,0.9720302,-1.0177513,1.213297)" />
   <line
-     x1="10.859553"
-     y1="1.8159137"
-     x2="10.859553"
-     y2="2.3621948"
+     x1="13.53605"
+     y1="2.190016"
+     x2="13.53605"
+     y2="2.7362971"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line68-6-9" />
   <rect
-     x="10.616546"
-     y="2.6005135"
+     x="13.293042"
+     y="2.9746158"
      width="0.48601508"
      height="1.093534"
      fill="#ffffff"
@@ -379,8 +379,8 @@
      stroke-width="0"
      id="rect70-1" />
   <rect
-     x="10.616546"
-     y="2.6005135"
+     x="13.293042"
+     y="2.9746158"
      width="0.48601508"
      height="1.093534"
      fill="none"
@@ -388,8 +388,8 @@
      stroke-width="0.0972031"
      id="rect72-2" />
   <text
-     x="10.13053"
-     y="2.29724"
+     x="12.807027"
+     y="2.6713424"
      fill="#000000"
      text-anchor="start"
      font-size="0.777625px"
@@ -399,8 +399,8 @@
      id="text76-7"
      style="stroke-width:0.972031">+</text>
   <rect
-     x="10.602005"
-     y="4.8469319"
+     x="13.278502"
+     y="5.221034"
      width="0.48601508"
      height="1.093534"
      fill="none"
@@ -408,50 +408,50 @@
      stroke-width="0.0972031"
      id="rect72-2-0" />
   <line
-     x1="10.844013"
-     y1="6.1972823"
-     x2="10.844013"
-     y2="6.5617938"
+     x1="13.520509"
+     y1="6.5713844"
+     x2="13.520509"
+     y2="6.9358959"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line56-6" />
   <line
-     x1="10.357998"
-     y1="6.5617938"
-     x2="11.330029"
-     y2="6.5617938"
+     x1="13.034494"
+     y1="6.9358959"
+     x2="14.006525"
+     y2="6.9358959"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line58-2" />
   <line
-     x1="10.521299"
-     y1="6.7435627"
-     x2="11.166727"
-     y2="6.7435627"
+     x1="13.197796"
+     y1="7.1176648"
+     x2="13.843224"
+     y2="7.1176648"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line60-3-6" />
   <line
-     x1="10.683628"
-     y1="6.9263048"
-     x2="11.004398"
-     y2="6.9263048"
+     x1="13.360125"
+     y1="7.3004069"
+     x2="13.680895"
+     y2="7.3004069"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line62-1" />
   <line
-     x1="10.8751"
-     y1="3.7156131"
-     x2="10.8751"
-     y2="4.8578653"
+     x1="13.551597"
+     y1="4.0897155"
+     x2="13.551597"
+     y2="5.2319674"
      stroke="#000000"
      stroke-width="0.140557"
      id="line68-6-8" />
   <line
-     x1="10.89828"
-     y1="4.1824017"
-     x2="11.895583"
-     y2="4.1824017"
+     x1="13.574777"
+     y1="4.5565038"
+     x2="14.57208"
+     y2="4.5565038"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line78-7" />
@@ -461,116 +461,314 @@
      stroke-width="0.1"
      points="12.638,3.750 13.138,3.500 12.638,3.250 "
      id="polyline80-9"
-     transform="matrix(0.9720302,0,0,0.9720302,-0.76608179,0.78029562)" />
+     transform="matrix(0.9720302,0,0,0.9720302,1.910414,1.154398)" />
   <line
-     x1="10.202445"
-     y1="2.3121948"
-     x2="10.840154"
-     y2="2.3121948"
+     x1="12.878942"
+     y1="2.6862972"
+     x2="13.51665"
+     y2="2.6862972"
      stroke="#000000"
      stroke-width="0.0808326"
      id="line60-2" />
   <line
-     x1="10.251046"
-     y1="2.3526111"
-     x2="10.251046"
-     y2="2.8988926"
+     x1="12.927543"
+     y1="2.7267134"
+     x2="12.927543"
+     y2="3.272995"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line74-2-0" />
   <line
-     x1="10.191001"
-     y1="2.8988926"
-     x2="10.67139"
-     y2="2.8988926"
+     x1="12.867497"
+     y1="3.272995"
+     x2="13.347886"
+     y2="3.272995"
      stroke="#000000"
      stroke-width="0.0701571"
      id="line60-23" />
   <line
-     x1="10.121301"
-     y1="5.6062231"
-     x2="10.61306"
-     y2="5.6062231"
+     x1="12.797797"
+     y1="5.9803252"
+     x2="13.289557"
+     y2="5.9803252"
      stroke="#000000"
      stroke-width="0.0709825"
      id="line60-2-7" />
   <line
-     x1="10.169902"
-     y1="5.6062231"
-     x2="10.169902"
-     y2="6.1525049"
+     x1="12.846398"
+     y1="5.9803252"
+     x2="12.846398"
+     y2="6.526607"
      stroke="#000000"
      stroke-width="0.0972031"
      id="line74-2-0-5" />
   <line
-     x1="10.121301"
-     y1="6.1525049"
-     x2="10.892614"
-     y2="6.1525049"
+     x1="12.797797"
+     y1="6.526607"
+     x2="13.569111"
+     y2="6.526607"
      stroke="#000000"
      stroke-width="0.0888978"
      id="line60-23-9" />
   <text
      xml:space="preserve"
      style="font-weight:bold;font-size:2.07652px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:justify;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0122629;stroke-linejoin:bevel;paint-order:stroke fill markers"
-     x="1.701057"
-     y="2.514714"
+     x="1.6325817"
+     y="2.7211943"
      id="text4110"><tspan
        sodipodi:role="line"
        id="tspan4108"
        style="fill:#000000;fill-opacity:1;stroke-width:0.0122629"
-       x="1.701057"
-       y="2.514714" /></text>
+       x="1.6325817"
+       y="2.7211943" /></text>
   <text
      xml:space="preserve"
      style="font-weight:bold;font-size:0.605652px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:justify;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0122629;stroke-linejoin:bevel;paint-order:stroke fill markers"
-     x="1.5521251"
-     y="2.8149025"
+     x="1.4836498"
+     y="3.0213828"
      id="text4374"><tspan
        sodipodi:role="line"
        id="tspan4372"
        style="font-size:0.605652px;stroke-width:0.0122629"
-       x="1.5521251"
-       y="2.8149025">R<tspan
+       x="1.4836498"
+       y="3.0213828">R<tspan
    style="font-size:0.605652px;baseline-shift:sub"
    id="tspan8285">1</tspan></tspan></text>
   <text
      xml:space="preserve"
      style="font-weight:bold;font-size:0.605652px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:justify;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0122629;stroke-linejoin:bevel;paint-order:stroke fill markers"
-     x="1.3965137"
-     y="5.350059"
+     x="1.3280385"
+     y="5.5565391"
      id="text4374-2"><tspan
        sodipodi:role="line"
        id="tspan4372-8"
        style="font-size:0.605652px;stroke-width:0.0122629"
-       x="1.3965137"
-       y="5.350059">R<tspan
+       x="1.3280385"
+       y="5.5565391">R<tspan
    style="font-size:0.605652px;baseline-shift:sub"
    id="tspan8287">2</tspan></tspan></text>
   <text
      xml:space="preserve"
      style="font-weight:bold;font-size:0.605652px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:justify;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0122629;stroke-linejoin:bevel;paint-order:stroke fill markers"
-     x="4.4423065"
-     y="1.8274355"
+     x="4.3738313"
+     y="2.0339158"
      id="text4374-9"><tspan
        sodipodi:role="line"
        id="tspan4372-7"
        style="font-size:0.605652px;stroke-width:0.0122629"
-       x="4.4423065"
-       y="1.8274355">U<tspan
+       x="4.3738313"
+       y="2.0339158">U<tspan
    style="font-size:0.605652px;baseline-shift:sub"
    id="tspan8251">H</tspan></tspan></text>
   <text
      xml:space="preserve"
      style="font-weight:bold;font-size:0.605652px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:justify;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0122629;stroke-linejoin:bevel;paint-order:stroke fill markers"
-     x="4.7986984"
-     y="7.0390248"
+     x="4.7302232"
+     y="7.2455049"
      id="text4374-9-3"><tspan
        sodipodi:role="line"
        id="tspan4372-7-6"
        style="font-size:0.605652px;stroke-width:0.0122629"
-       x="4.7986984"
-       y="7.0390248">U<tspan
+       x="4.7302232"
+       y="7.2455049">U<tspan
    style="font-size:0.605652px;baseline-shift:sub"
    id="tspan8251-1">L</tspan></tspan></text>
+  <line
+     x1="7.5667844"
+     y1="6.6459994"
+     x2="7.5667844"
+     y2="7.0209994"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line46-36" />
+  <line
+     x1="7.0667806"
+     y1="7.0209994"
+     x2="8.0667877"
+     y2="7.0209994"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line48-1" />
+  <line
+     x1="7.2337813"
+     y1="7.2079997"
+     x2="7.8987861"
+     y2="7.2079997"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line50-0" />
+  <line
+     x1="7.4017825"
+     y1="7.3959994"
+     x2="7.7317853"
+     y2="7.3959994"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line52-6" />
+  <line
+     x1="5.5984731"
+     y1="4.5664945"
+     x2="6.2604623"
+     y2="4.5448861"
+     stroke="#000000"
+     stroke-width="0.0769295"
+     id="line54-3" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="6.761,5.001 7.256,4.742 6.752,4.501 "
+     id="polyline56-2"
+     transform="translate(-0.8826137,-0.19880962)" />
+  <text
+     x="6.7917805"
+     y="1.8710001"
+     fill="#000000"
+     text-anchor="start"
+     font-size="0.8px"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text58-0">+</text>
+  <line
+     x1="7.6167846"
+     y1="4.6459999"
+     x2="8.5927896"
+     y2="4.6459999"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line60-6" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="9.431,5.015 9.931,4.765 9.431,4.515 "
+     id="polyline62-1"
+     transform="translate(-1.2262187,-0.11900001)" />
+  <line
+     x1="7.6167846"
+     y1="1.8960001"
+     x2="7.591784"
+     y2="2.5710001"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line74-5" />
+  <line
+     x1="6.4353857"
+     y1="4.0752125"
+     x2="6.4603858"
+     y2="6.1502118"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line76-5" />
+  <g
+     id="g961"
+     transform="matrix(0.74906461,0,0,0.74906461,-1.3444106,3.1010833)">
+    <path
+       id="path10143"
+       class="st15"
+       d="M 11.303104,3.155039 V 3.7041008"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10147"
+       class="st15"
+       d="m 11.948704,2.744751 h -0.6456"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10149"
+       class="st15"
+       d="M 11.951721,2.7477678 V 2.0659657"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10151"
+       class="st15"
+       d="m 11.948704,4.1113719 c -0.214195,0 -0.431406,0 -0.6456,0"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10153"
+       class="st9"
+       d="m 11.951721,4.1174056 v 0.681802"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-miterlimit:10" />
+    <path
+       id="path10157"
+       class="st9"
+       d="M 11.091926,4.1143887 H 10.45236"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-miterlimit:10" />
+    <path
+       id="path10159"
+       class="st15"
+       d="m 11.091926,4.1143887 0.003,-1.3756714"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+  </g>
+  <g
+     id="g961-2"
+     transform="matrix(0.74906461,0,0,0.74906461,-1.3444106,1.0161171)">
+    <path
+       id="path10143-9"
+       class="st15"
+       d="M 11.303104,3.155039 V 3.7041008"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10147-3"
+       class="st15"
+       d="m 11.948704,2.744751 h -0.6456"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10149-1"
+       class="st15"
+       d="M 11.951721,2.7477678 V 2.0659657"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10151-9"
+       class="st15"
+       d="m 11.948704,4.1113719 c -0.214195,0 -0.431406,0 -0.6456,0"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10153-4"
+       class="st9"
+       d="m 11.951721,4.1174056 v 0.681802"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-miterlimit:10" />
+    <path
+       id="path10157-7"
+       class="st9"
+       d="M 11.091926,4.1143887 H 10.45236"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-miterlimit:10" />
+    <path
+       id="path10159-8"
+       class="st15"
+       d="m 11.091926,4.1143887 0.003,-1.3756714"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+  </g>
+  <g
+     id="g952"
+     transform="matrix(0.74906461,0,0,0.74906461,-1.4022007,3.1067328)">
+    <path
+       id="path10145"
+       class="st10"
+       d="M 11.75378,3.4205194 11.594839,3.2376232 v 0.3657923 z"
+       style="stroke:#000000;stroke-width:0.0546813;stroke-miterlimit:10" />
+    <path
+       id="path10155"
+       class="st9"
+       d="m 11.732308,3.4205193 -0.368914,10e-8"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     id="g952-4"
+     transform="matrix(-0.74906461,0,0,-0.74906461,15.9681,6.1461466)"
+     inkscape:transform-center-x="-0.062048582"
+     inkscape:transform-center-y="1.4291586">
+    <path
+       id="path10145-5"
+       class="st10"
+       d="M 11.75378,3.4205194 11.594839,3.2376232 v 0.3657923 z"
+       style="stroke:#000000;stroke-width:0.0546813;stroke-miterlimit:10" />
+    <path
+       id="path10155-0"
+       class="st9"
+       d="m 11.732308,3.4205193 -0.368914,10e-8"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+  </g>
 </svg>

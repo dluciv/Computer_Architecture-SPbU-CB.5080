@@ -2,9 +2,9 @@
 <!-- Created by diasvg.py -->
 
 <svg
-   width="4.8865738cm"
-   height="3.8336112cm"
-   viewBox="5.2 0.906 7.9998042 4.376816"
+   width="7.6044569cm"
+   height="3.8336108cm"
+   viewBox="5.2 0.906 12.449247 4.3768155"
    version="1.1"
    id="svg82"
    sodipodi:docname="07.not_resist.svg"
@@ -26,25 +26,25 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="cm"
      showgrid="false"
-     inkscape:zoom="3.6041927"
-     inkscape:cx="77.964755"
-     inkscape:cy="96.276761"
+     inkscape:zoom="7.2083854"
+     inkscape:cx="159.9526"
+     inkscape:cy="99.883672"
      inkscape:window-width="1916"
-     inkscape:window-height="1019"
+     inkscape:window-height="1017"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg82" />
   <circle
      cx="7.1999998"
-     cy="3.9324081"
+     cy="4.0837135"
      fill="#ffffff"
      stroke="none"
      id="ellipse2"
      r="1" />
   <circle
      cx="7.1999998"
-     cy="3.9324081"
+     cy="4.0837135"
      fill="none"
      stroke="#000000"
      stroke-width="0.1"
@@ -52,17 +52,17 @@
      r="1" />
   <line
      x1="6.6999998"
-     y1="3.4324081"
+     y1="3.5837135"
      x2="7.6999998"
-     y2="3.4324081"
+     y2="3.5837135"
      stroke="#000000"
      stroke-width="0.1"
      id="line6" />
   <line
      x1="7.1999998"
-     y1="2.4324081"
+     y1="2.5837135"
      x2="7.1999998"
-     y2="3.4324081"
+     y2="3.5837135"
      stroke="#000000"
      stroke-width="0.1"
      id="line8" />
@@ -70,30 +70,30 @@
      stroke="#000000"
      fill="none"
      stroke-width="0.1"
-     d="m 7.7000002,4.432408 a 0.625,0.625 0 0 0 -1,0"
+     d="m 7.7000004,4.5837133 a 0.625,0.625 0 0 0 -1,0"
      id="path10" />
   <line
      x1="7.6999998"
-     y1="4.4324079"
+     y1="4.5837131"
      x2="7.6999998"
-     y2="5.4324079"
+     y2="5.5837131"
      stroke="#000000"
      stroke-width="0.1"
      id="line12" />
   <line
      x1="6.4499998"
-     y1="3.9324081"
+     y1="4.0837135"
      x2="7.9499998"
-     y2="3.9324081"
+     y2="4.0837135"
      stroke="#000000"
      stroke-width="0.1"
      stroke-dasharray="0.2, 0.2"
      id="line14" />
   <line
      x1="5.6999998"
-     y1="3.9324081"
+     y1="4.0837135"
      x2="6.4499998"
-     y2="3.9324081"
+     y2="4.0837135"
      stroke="#000000"
      stroke-width="0.1"
      id="line16" />
@@ -101,13 +101,13 @@
      stroke="#000000"
      fill="none"
      stroke-width="0.1"
-     d="m 7.4500002,4.682408 a 0.25,0.25 0 1 0 -0.5,0"
+     d="m 7.4500004,4.8337133 a 0.25,0.25 0 1 0 -0.5,0"
      id="path18" />
   <line
      x1="5.1999998"
-     y1="3.9324081"
+     y1="4.0837135"
      x2="5.8509998"
-     y2="3.9324081"
+     y2="4.0837135"
      stroke="#000000"
      stroke-width="0.1"
      id="line20" />
@@ -117,18 +117,18 @@
      stroke-width="0.1"
      points="5.513,5.250 6.013,5.000 5.513,4.750 "
      id="polyline22"
-     transform="translate(-0.04999981,-1.067592)" />
+     transform="translate(-0.04999963,-0.91628674)" />
   <line
      x1="7.1999998"
-     y1="0.43240795"
+     y1="0.58371323"
      x2="7.1999998"
-     y2="0.99440801"
+     y2="1.1457133"
      stroke="#000000"
      stroke-width="0.1"
      id="line24" />
   <rect
      x="6.9499998"
-     y="0.99440801"
+     y="1.1457133"
      width="0.5"
      height="1.125"
      fill="#ffffff"
@@ -137,7 +137,7 @@
      id="rect26" />
   <rect
      x="6.9499998"
-     y="0.99440801"
+     y="1.1457133"
      width="0.5"
      height="1.125"
      fill="none"
@@ -146,15 +146,15 @@
      id="rect28" />
   <line
      x1="7.1999998"
-     y1="2.1204081"
+     y1="2.2717135"
      x2="7.1999998"
-     y2="2.6824081"
+     y2="2.8337135"
      stroke="#000000"
      stroke-width="0.1"
      id="line30" />
   <text
      x="6.4499998"
-     y="0.68240798"
+     y="0.83371323"
      fill="#000000"
      text-anchor="start"
      font-size="0.8px"
@@ -164,41 +164,41 @@
      id="text32">+</text>
   <line
      x1="7.6999998"
-     y1="5.4324079"
+     y1="5.5837131"
      x2="7.6999998"
-     y2="5.8074079"
+     y2="5.9587131"
      stroke="#000000"
      stroke-width="0.1"
      id="line34" />
   <line
      x1="7.1999998"
-     y1="5.8074079"
+     y1="5.9587131"
      x2="8.1999998"
-     y2="5.8074079"
+     y2="5.9587131"
      stroke="#000000"
      stroke-width="0.1"
      id="line36" />
   <line
      x1="7.368"
-     y1="5.9944077"
+     y1="6.1457129"
      x2="8.0319996"
-     y2="5.9944077"
+     y2="6.1457129"
      stroke="#000000"
      stroke-width="0.1"
      id="line38" />
   <line
      x1="7.5349998"
-     y1="6.1824079"
+     y1="6.3337131"
      x2="7.8649998"
-     y2="6.1824079"
+     y2="6.3337131"
      stroke="#000000"
      stroke-width="0.1"
      id="line40" />
   <line
      x1="7.1999998"
-     y1="2.6824081"
+     y1="2.8337135"
      x2="8.2259998"
-     y2="2.6824081"
+     y2="2.8337135"
      stroke="#000000"
      stroke-width="0.1"
      id="line42" />
@@ -208,83 +208,44 @@
      stroke-width="0.1"
      points="7.888,4.000 8.388,3.750 7.888,3.500 "
      id="polyline44"
-     transform="translate(-0.04999981,-1.067592)" />
-  <line
-     x1="10.45"
-     y1="3.4324081"
-     x2="11.2"
-     y2="3.4324081"
-     stroke="#000000"
-     stroke-width="0.1"
-     id="line46" />
-  <line
-     x1="11.2"
-     y1="2.6824081"
-     x2="11.2"
-     y2="4.1824079"
-     stroke="#000000"
-     stroke-width="0.1"
-     id="line48" />
-  <line
-     x1="11.2"
-     y1="2.9324081"
-     x2="11.95"
-     y2="2.4324081"
-     stroke="#000000"
-     stroke-width="0.1"
-     id="line50" />
-  <line
-     x1="11.2"
-     y1="3.9324081"
-     x2="11.95"
-     y2="4.4324079"
-     stroke="#000000"
-     stroke-width="0.1"
-     id="line52" />
-  <polyline
-     fill="none"
-     stroke="#000000"
-     stroke-width="0.1"
-     points="11.750,5.500 12.000,5.500 11.904,5.269 "
-     id="polyline54"
-     transform="translate(-0.04999981,-1.067592)" />
+     transform="translate(-0.04999963,-0.91628674)" />
   <line
      x1="11.95"
-     y1="4.4324079"
+     y1="4.5837131"
      x2="11.95"
-     y2="4.8074079"
+     y2="4.9587131"
      stroke="#000000"
      stroke-width="0.1"
      id="line56" />
   <line
      x1="11.45"
-     y1="4.8074079"
+     y1="4.9587131"
      x2="12.45"
-     y2="4.8074079"
+     y2="4.9587131"
      stroke="#000000"
      stroke-width="0.1"
      id="line58" />
   <line
      x1="11.618"
-     y1="4.9944077"
+     y1="5.1457129"
      x2="12.282"
-     y2="4.9944077"
+     y2="5.1457129"
      stroke="#000000"
      stroke-width="0.1"
      id="line60" />
   <line
      x1="11.785"
-     y1="5.1824079"
+     y1="5.3337131"
      x2="12.115"
-     y2="5.1824079"
+     y2="5.3337131"
      stroke="#000000"
      stroke-width="0.1"
      id="line62" />
   <line
-     x1="9.6999998"
-     y1="3.4324081"
-     x2="10.226"
-     y2="3.4324081"
+     x1="9.7952042"
+     y1="4.1197128"
+     x2="10.321204"
+     y2="4.1197128"
      stroke="#000000"
      stroke-width="0.1"
      id="line64" />
@@ -294,18 +255,18 @@
      stroke-width="0.1"
      points="9.888,4.750 10.388,4.500 9.888,4.250 "
      id="polyline66"
-     transform="translate(-0.04999981,-1.067592)" />
+     transform="translate(0.04520484,-0.38028794)" />
   <line
      x1="11.95"
-     y1="0.18240796"
+     y1="0.33371323"
      x2="11.95"
-     y2="0.74440801"
+     y2="0.89571327"
      stroke="#000000"
      stroke-width="0.1"
      id="line68" />
   <rect
      x="11.7"
-     y="0.74440801"
+     y="0.89571327"
      width="0.5"
      height="1.125"
      fill="#ffffff"
@@ -314,7 +275,7 @@
      id="rect70" />
   <rect
      x="11.7"
-     y="0.74440801"
+     y="0.89571327"
      width="0.5"
      height="1.125"
      fill="none"
@@ -323,15 +284,15 @@
      id="rect72" />
   <line
      x1="11.95"
-     y1="1.8704079"
+     y1="2.0217133"
      x2="11.95"
-     y2="2.4324081"
+     y2="2.5837135"
      stroke="#000000"
      stroke-width="0.1"
      id="line74" />
   <text
      x="11.2"
-     y="0.43240795"
+     y="0.58371323"
      fill="#000000"
      text-anchor="start"
      font-size="0.8px"
@@ -341,9 +302,9 @@
      id="text76">+</text>
   <line
      x1="11.95"
-     y1="2.4324081"
+     y1="2.5837135"
      x2="12.976"
-     y2="2.4324081"
+     y2="2.5837135"
      stroke="#000000"
      stroke-width="0.1"
      id="line78" />
@@ -353,5 +314,217 @@
      stroke-width="0.1"
      points="12.638,3.750 13.138,3.500 12.638,3.250 "
      id="polyline80"
-     transform="translate(-0.04999981,-1.067592)" />
+     transform="translate(-0.04999963,-0.91628674)" />
+  <line
+     x1="14.899444"
+     y1="3.5837135"
+     x2="15.649444"
+     y2="3.5837135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line46-3" />
+  <line
+     x1="15.649444"
+     y1="2.8337135"
+     x2="15.649444"
+     y2="4.3337135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line48-6" />
+  <line
+     x1="15.649444"
+     y1="3.0837135"
+     x2="16.399443"
+     y2="2.5837135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line50-7" />
+  <line
+     x1="15.649444"
+     y1="4.0837135"
+     x2="16.399443"
+     y2="4.5837135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line52-5" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="11.750,5.500 12.000,5.500 11.904,5.269 "
+     id="polyline54-3"
+     transform="translate(4.3994439,-0.91628654)" />
+  <line
+     x1="16.399443"
+     y1="4.5837135"
+     x2="16.399443"
+     y2="4.9587135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line56-5" />
+  <line
+     x1="15.899444"
+     y1="4.9587135"
+     x2="16.899445"
+     y2="4.9587135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line58-6" />
+  <line
+     x1="16.067444"
+     y1="5.1457129"
+     x2="16.731443"
+     y2="5.1457129"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line60-2" />
+  <line
+     x1="16.234444"
+     y1="5.3337135"
+     x2="16.564444"
+     y2="5.3337135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line62-9" />
+  <line
+     x1="14.149444"
+     y1="3.5837135"
+     x2="14.675444"
+     y2="3.5837135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line64-1" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="9.888,4.750 10.388,4.500 9.888,4.250 "
+     id="polyline66-2"
+     transform="translate(4.3994439,-0.91628654)" />
+  <line
+     x1="16.399443"
+     y1="0.33371338"
+     x2="16.399443"
+     y2="0.89571339"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line68-7" />
+  <rect
+     x="16.149443"
+     y="0.89571339"
+     width="0.5"
+     height="1.125"
+     fill="#ffffff"
+     stroke="none"
+     stroke-width="0"
+     id="rect70-0" />
+  <rect
+     x="16.149443"
+     y="0.89571339"
+     width="0.5"
+     height="1.125"
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="rect72-9" />
+  <line
+     x1="16.399443"
+     y1="2.0217135"
+     x2="16.399443"
+     y2="2.5837135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line74-3" />
+  <text
+     x="15.649444"
+     y="0.58371341"
+     fill="#000000"
+     text-anchor="start"
+     font-size="0.8px"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text76-6">+</text>
+  <line
+     x1="16.399443"
+     y1="2.5837135"
+     x2="17.425444"
+     y2="2.5837135"
+     stroke="#000000"
+     stroke-width="0.1"
+     id="line78-0" />
+  <polyline
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.1"
+     points="12.638,3.750 13.138,3.500 12.638,3.250 "
+     id="polyline80-6"
+     transform="translate(4.3994439,-0.91628654)" />
+  <g
+     id="g952">
+    <path
+       id="path10145"
+       class="st10"
+       d="M 11.75378,3.4205194 11.594839,3.2376232 v 0.3657923 z"
+       style="stroke:#000000;stroke-width:0.0546813;stroke-miterlimit:10" />
+    <path
+       id="path10155"
+       class="st9"
+       d="m 11.732308,3.4205193 -0.368914,10e-8"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     id="g961">
+    <path
+       id="path10143"
+       class="st15"
+       d="M 11.303104,3.155039 V 3.7041008"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10147"
+       class="st15"
+       d="m 11.948704,2.744751 h -0.6456"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10149"
+       class="st15"
+       d="M 11.951721,2.7477678 V 2.0659657"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10151"
+       class="st15"
+       d="m 11.948704,4.1113719 c -0.214195,0 -0.431406,0 -0.6456,0"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+    <path
+       id="path10153"
+       class="st9"
+       d="m 11.951721,4.1174056 v 0.681802"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-miterlimit:10" />
+    <path
+       id="path10157"
+       class="st9"
+       d="M 11.091926,4.1143887 H 10.45236"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-miterlimit:10" />
+    <path
+       id="path10159"
+       class="st15"
+       d="m 11.091926,4.1143887 0.003,-1.3756714"
+       style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
+  </g>
+  <a
+     id="a7431"
+     transform="matrix(0.03016823,0,0,0.03016823,8.9077463,-6.1428103)">
+		<path
+   id="path10161"
+   class="st15"
+   d="m 79.4,331.5 c 0,2.8 0,5.6 0,8.5"
+   style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10" />
+
+	</a>
+  <path
+     id="path10163"
+     class="st15"
+     d="M 11.303104,2.744751 V 3.0132483"
+     style="fill:none;stroke:#000000;stroke-width:0.0905049;stroke-linecap:round;stroke-miterlimit:10" />
 </svg>
