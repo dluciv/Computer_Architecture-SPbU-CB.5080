@@ -1,0 +1,226 @@
+\documentclass[xetex,aspectratio=43]{beamer}
+
+\usepackage{res/lections}
+
+\preamble
+
+\title[Память и ПЛИС]{Память и ПЛИС}
+
+\begin{document}
+
+    \titleslide
+
+    \tocslide
+
+\section{Динамическая память}
+
+\begin{frame}{DRAM}
+    \alert{TODO: Тут лукавство!}
+
+    \begin{figure}
+        \includesvg[height=0.75\textheight]{img/09.dram.svg}
+    \end{figure}
+
+    Технологически конденсатор выполняется вместе с транзистором и почти не
+    требует дополнительного места (может быть использована ёмкость P-N
+    перехода).
+\end{frame}
+
+
+\begin{frame}{Flash-память: элементная база}
+    \begin{itemize}
+        \item
+        \href{http://en.wikipedia.org/wiki/Floating-gate_transistor}{Транзистор
+            с плавающим затвором} Эти транзисторы могут при подаче
+        \emph{достаточно} высокого или \emph{достаточно} низкого потенциалов
+        (т.е. заметно больше 1 или заметно меньше 0) на управляющий вход
+        запоминать своё состояние. После нескольких миллионов срабатываний
+        транзистор необратимо портится (поэтому у Flash ограничено количество
+        перезаписей). Этим эффектом, так же как и широкой петлёй гистерезиса
+        (хотя природа этого совершенно иная), можно пользоваться для хранения
+        данных.
+        \item
+        На основе таких транзисторов делается
+        \href{http://en.wikipedia.org/wiki/Flash_memory}{флэш-память}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Flash-память: реализация NAND}
+    \begin{figure}
+        \includesvg[height=0.25\textheight]{img/09.nand.svg}
+    \end{figure}
+
+    \begin{itemize}
+        \tightlist
+        \item
+        Для чтения на все слова, кроме читаемого, подаётся небольшой
+        «приоткрывающий» потенциал. Ток течёт с соответствующих открытым
+        транзисторам битовых линий в землю.
+        \item
+        Для программирования (открытия затвора, установки в бита 0) надо
+        небольшим потенциалом «приоткрыть» все линии слов и подать сильный
+        сигнал на пересечения нужных слова и бита.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Flash-память: особенности NAND, альтернативы}
+    \begin{itemize}
+        \tightlist
+        \item
+        Из-за особенностей изготовления транзисторов, сброс (в 1) по словам
+        или ещё большим блокам
+        \item
+        Для SSD введена операция
+        \href{https://ru.wikipedia.org/wiki/TRIM}{\texttt{TRIM}}, которая
+        говорит накопителю, что блок памяти свободен и может использоваться
+        для оптимизации с целью увеличения ресурса перезаписи
+
+        \pause
+
+        \item
+        Альтернативная технология ---
+        \href{https://en.wikipedia.org/wiki/Phase-change_memory\#Challenges}{память
+            на основе изменений фазового состояния халькогенидов} --- обладает
+        потенциально лучшими характеристиками, уже используется коммерчески
+        (Например, кэш для ФС Intel Optane™), но тоже со временем деградирует
+    \end{itemize}
+
+\end{frame}
+
+\section{ПЛИС}
+
+\begin{frame}{Что это и зачем?}
+        Что это?
+
+        \begin{itemize}
+            \tightlist
+            \item
+            \textbf{Программируемые логические интегральные схемы}
+            (\textbf{Programmable Logic Device}) --- интегральные схемы,
+            физический уровень которых (реализующий логику) можно задавать
+            программно
+
+            \begin{itemize}
+                \tightlist
+                \item
+                программируются связи между компонентами схемы
+            \end{itemize}
+        \end{itemize}
+
+        Зачем?
+
+        \begin{itemize}
+            \tightlist
+            \item
+            Применяются для эффективной реализации (быстродействие --- заметно
+            медленнее серийных микросхем, существенно быстрее микропрограмм,
+            принципиально быстрее обычной программной реализации) специфических
+            задач
+
+            \begin{itemize}
+                \tightlist
+                \item
+                прототипирование, единичное или мелкосерийное производство
+                \item
+                микропроцессоры встроенных ЭВМ
+            \end{itemize}
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Какие бывают ПЛИС?}
+        \begin{itemize}
+            \tightlist
+            \item
+            Простые ПЛИС --- логические функции, в т.ч. довольно сложная логика,
+            но явно задаются через вентили «и», «или», «не»
+            \item
+            CPLD (Complex Programmable Logic Device) --- несколько более
+            высокоуровневые, содержат внутренние шины, более сложные элементы
+            \item
+            Программируемая пользователем вентильная матрица (Field-Programmable
+            Gate Array, FPGA) --- содержит готовые регистры, компоненты АЛУ и т.д.
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Пример: ПЛИС типа GAL (Gateway Array Logic)}
+    \alert{Схема}
+
+    \begin{itemize}
+        \tightlist
+        \item
+        Схема на примере вычисляет функции, представленные в ДНФ:
+
+        \begin{itemize}
+            \tightlist
+            \item
+            \(F_0 = B \wedge\neg C \vee A\wedge C\)
+            \item
+            \(F_1 = B \wedge\neg C \vee \neg A \wedge \neg B\)
+            \item
+            \(F_2 = A\wedge C \vee \neg A \wedge B\)
+        \end{itemize}
+        \item
+        Входов у вентилей обычно больше
+        \item
+        Как реализуются перемычки в полях OR и AND?
+
+        \begin{itemize}
+            \tightlist
+            \item
+            «пережиганием» (одноразовое программирование)
+            \item
+            мультиплексором с управлением статической памятью (на основе
+            D-триггера, будет позже)
+            \item
+            транзистором с плавающим затвором
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Как программировать ПЛИС и чего можно добиться?}
+        \begin{itemize}
+            \tightlist
+            \item
+            Специальные языки, например Verilog Hardware Definition Language
+            \item
+            САПР (даже Logism)
+
+            \begin{itemize}
+                \tightlist
+                \item
+                Т.е. почти всё, что есть (было и будет) в данном курсе, можно
+                сделать на ПЛИС
+            \end{itemize}
+            \item
+            \textbf{Hardware-Software CoDesign} --- подход, подразумевающий
+            совместную разработку специализированных ПО и оборудования
+
+            \begin{itemize}
+                \tightlist
+                \item
+                На кафедре системного программирования СПбГУ --- Булычев, Медведев,
+                Терехов: https://scholar.google.com/scholar?q=HasCOL+SPbU
+            \end{itemize}
+        \end{itemize}
+\end{frame}
+
+\section*{}
+
+ \begin{frame}{Вопросы}
+    \begin{itemize}
+        \item
+        Как организована динамическая память?
+        \item
+        Как организована NAND-память?
+        \item
+        Что такое ПЛИС? Зачем они нужны и какие бывают?
+        \item
+        Опишите структуру ПЛИС типа GAL с полями AND и OR
+        \item
+        Как программируются ПЛИС?
+    \end{itemize}
+\end{frame}
+
+\postamble
+
+\end{document}
