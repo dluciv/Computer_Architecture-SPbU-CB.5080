@@ -4,7 +4,7 @@
 
 \preamble
 
-\title[Память и ПЛИС]{Память и ПЛИС}
+\title{Память и ПЛИС}
 
 \begin{document}
 
@@ -14,24 +14,44 @@
 
 \section{Динамическая память}
 
-\begin{frame}{DRAM}
-    \alert{TODO: Тут лукавство!}
-
-    \begin{figure}
-        \includesvg[height=0.75\textheight]{img/09.dram.svg}
-    \end{figure}
-
-    Технологически конденсатор выполняется вместе с транзистором и почти не
-    требует дополнительного места (может быть использована ёмкость P-N
-    перехода).
+\begin{frame}{Память: статическая и динамическая}
+    \begin{outline}[itemize]
+        \1 Статическая --- на триггерах (обычно D). Применяется:
+            \2 Где её нужно немного (микроконтроллеры, память настроек и часов и т.д.)
+            \2 Где нужна память, не требующая дополнительных расходов времени (регистры, кэш)
+        \1 Динамическая --- на схемах с [обычно кратковременной] памятью состояния
+            \2 \href{https://en.wikipedia.org/wiki/Magnetic-core_memory}{Ферритовые кольца или сердечники} (могла быть энергонезависимой)
+            \2 \href{https://en.wikipedia.org/wiki/Racetrack_memory}{Беговая память} --- на принципе перемещения магнитных доменов в нанотрубках
+            \2 Специальные ЭЛТ --- \href{https://en.wikipedia.org/wiki/Williams_tube}{Трубки Ульямса}
+            \2 Конденсаторы
+    \end{outline}
 \end{frame}
 
+\begin{frame}{DRAM: -1 приближение}
+    \alert{В минус первом приближении (4-битный процессор, 1 слово в строке)}
+
+    \begin{figure}
+        \includegraphics[angle=-90,origin=c,height=0.75\textheight]{img/09.dram-crop.pdf}
+        \vspace{-20mm}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{DRAM: реальность}
+    \begin{outline}[itemize]
+        \1  \href{https://en.wikipedia.org/wiki/Dynamic_random-access_memory\#History}{Технологически конденсатор выполняется вместе с транзистором} и почти не
+        требует дополнительного места: может быть использована ёмкость P-N
+        перехода
+        \pause
+        \1 \href{https://en.wikipedia.org/wiki/Dynamic_random-access_memory\#To_write_to_memory}{По горизонтали --- не шина данных с одним словом, а «широкая» строка}, нужные участки которой управляющая схема мультиплексирует при чтении из памяти и демультиплексирует при записи (а «ненужные» просто перезаписывает)
+    \end{outline}
+\end{frame}
 
 \begin{frame}{Flash-память: элементная база}
     \begin{itemize}
         \item
         \href{http://en.wikipedia.org/wiki/Floating-gate_transistor}{Транзистор
-            с плавающим затвором} Эти транзисторы могут при подаче
+            с плавающим затвором} Эти полевые транзисторы могут при подаче
         \emph{достаточно} высокого или \emph{достаточно} низкого потенциалов
         (т.е. заметно больше 1 или заметно меньше 0) на управляющий вход
         запоминать своё состояние. После нескольких миллионов срабатываний
@@ -47,7 +67,7 @@
 
 \begin{frame}{Flash-память: реализация NAND}
     \begin{figure}
-        \includesvg[height=0.25\textheight]{img/09.nand.svg}
+        \includegraphics[height=0.25\textheight]{img/09.nand.pdf}
     \end{figure}
 
     \begin{itemize}
@@ -143,38 +163,25 @@
 \end{frame}
 
 \begin{frame}{Пример: ПЛИС типа GAL (Gateway Array Logic)}
-    \alert{Схема}
+    \begin{figure}
+        \includegraphics[height=0.5\textheight]{img/09.PLD.pdf}
+    \end{figure}
+    Схема на примере вычисляет функции, представленные в ДНФ:
 
-    \begin{itemize}
-        \tightlist
-        \item
-        Схема на примере вычисляет функции, представленные в ДНФ:
+    \begin{eqnarray*}
+    F_0 = B \wedge\neg C \vee A\wedge C\ \\
+    F_1 = B \wedge\neg C \vee \neg A \wedge \neg B \\
+    F_2 = A\wedge C \vee \neg A \wedge B
+    \end{eqnarray*}
+\end{frame}
 
-        \begin{itemize}
-            \tightlist
-            \item
-            \(F_0 = B \wedge\neg C \vee A\wedge C\)
-            \item
-            \(F_1 = B \wedge\neg C \vee \neg A \wedge \neg B\)
-            \item
-            \(F_2 = A\wedge C \vee \neg A \wedge B\)
-        \end{itemize}
-        \item
-        Входов у вентилей обычно больше
-        \item
-        Как реализуются перемычки в полях OR и AND?
+\begin{frame}{Пример: ПЛИС типа GAL (замечания)}
+    \begin{outline}[itemize]
+        \1 Входов у вентилей обычно больше, чем 2
+        \1 Как реализуются перемычки в полях OR и AND?
 
-        \begin{itemize}
-            \tightlist
-            \item
-            «пережиганием» (одноразовое программирование)
-            \item
-            мультиплексором с управлением статической памятью (на основе
-            D-триггера, будет позже)
-            \item
-            транзистором с плавающим затвором
-        \end{itemize}
-    \end{itemize}
+        \2 «пережиганием» (одноразовое программирование); мультиплексором с управлением статической памятью; транзистором с плавающим затвором
+    \end{outline}
 \end{frame}
 
 \begin{frame}{Как программировать ПЛИС и чего можно добиться?}
