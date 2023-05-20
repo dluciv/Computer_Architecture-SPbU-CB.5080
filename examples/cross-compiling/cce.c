@@ -1,4 +1,4 @@
-// #include <stdio.h>
+#include <stdio.h>
 
 int sizeofint()
 {
@@ -13,10 +13,8 @@ int factorial(int n)
   return r;
 }
 
-/*
 int main()
 {
   printf("%d\n", factorial(6));
   return 0;
 }
-*/
