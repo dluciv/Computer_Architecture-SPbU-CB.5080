@@ -1,6 +1,4 @@
-# Пример
-
-## Содержание примера
+# Содержание примера
 
 `factorial` и ещё несколько функций.
 
@@ -13,7 +11,9 @@
   Обратите внимание на `nop`, не зря архитектура называется «Microprocessor without Interlocked Pipelined Stages»
 * [RISC-V 64](https://godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:12,endLineNumber:33,positionColumn:12,positionLineNumber:33,selectionStartColumn:12,selectionStartLineNumber:33,startColumn:12,startLineNumber:33),source:'%23include+%3Cstdio.h%3E%0A%23define+DOUBLE_PI+3.14159265358979323846%0A%0Aint+sizeofint()%0A%7B%0A++return+sizeof(int)%3B%0A%7D%0A%0Aint+factorial(int+n)%0A%7B%0A++int+r+%3D+1%3B%0A++while(n+%3E+1)%0A++++r+*%3D+n--%3B%0A++return+r%3B%0A%7D%0A%0Adouble+ipow(int+pow,+double+base)%0A%7B%0A++double+res+%3D+1,+tmp+%3D+base%3B%0A++while(pow)%0A++%7B%0A++++if(pow+%26+1)%0A++++++res+*%3D+tmp%3B%0A++++tmp+*%3D+tmp%3B%0A++++pow+%3E%3E%3D+1%3B%0A++%7D%0A++return+res%3B%0A%7D%0A%0Aint+main()%0A%7B%0A++printf(%22sizeof(int):+%25d%5Cn%22,+sizeofint())%3B%0A++printf(%22factorial(6):+%25d.%5Cn%22,+factorial(6))%3B%0A++printf(%22Pi%5E5:+%25lf%5Cn%22,+ipow(5,+DOUBLE_PI))%3B%0A++return+0%3B%0A%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:rv64-gcc1020,deviceViewOpen:'1',filters:(b:'0',binary:'1',binaryObject:'0',commentOnly:'0',debugCalls:'1',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'-march%3Drv64g',overrides:!(),selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1),l:'5',n:'0',o:'+RISC-V+(64-bits)+gcc+10.2.0+(Editor+%231)',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4)
 
-## Возможность откомпилировать самостоятельно
+# \[Кросс-\]компиляция примера
+
+## Для просмотра результирующего кода
 
 Есть для разных ОС. Для Linux пожалуй проще всего, достаточно (если у Вас хост x86_64 или даже x86) инсталлировать пару кросс-компиляторов.
 
@@ -23,3 +23,25 @@
 * `aarch64-linux-gnu-gcc`
 * [`mips64-elf-gcc`](https://aur.archlinux.org/packages/mips64-elf-gcc)
 * `riscv64-elf-gcc`, `riscv64-elf-newlib` и/или `riscv64-linux-gnu-gcc`
+
+## Для запуска на встраиваеом оборудовании
+
+* Ставим BuildRoot
+    * `git clone git://git.buildroot.net/buildroot`
+* Собираем BuildRoot
+    * `make qemu_riscv64_virt_defconfig`
+    * `make config | make menuconfig | make xconfig`
+        * Рекомендуется добавить `lftp` — клиент FTP
+        * Если в системе уже установлен пакет `qemu-system-riscv` — отключить сборку своего QEMU и сэкономить время и электричество
+    * `make`
+* На хосте кросс-компилируем софт
+    * `PATH=$PATH:<<<buildroot>>>/output/host/bin riscv64-buildroot-linux-gnu-cc <<<мои любимые исходнички>>>`
+* На хосте поднимаем какой-нибудь FTP-сервер
+    * `uftpd -n -o ftp=2222 .` — в каталоге, в который будем собирать софт
+* Запускаем BuildRoot
+    * `cd <<<<<<buildroot>>>>>>output/images`
+    * `./start-qemu.sh`
+    * В виртуальной машине:
+        * `uname -a` — Ура!
+        * `lftp 10.0.2.2:2222`, `get a.out`, `^D`
+        * `chmod u+x a.out; ./a.out` — Ура!
