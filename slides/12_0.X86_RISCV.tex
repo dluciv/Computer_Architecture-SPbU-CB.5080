@@ -382,15 +382,92 @@
     \end{itemize}
 \end{frame}
 
-\subsection{Команды и формат машинного кода}
+\subsection{Типы команд и формат машинного кода}
 
-\begin{frame}{Переходы}
-    \begin{block}{Безусловные}
-        содержимое...
-    \end{block}
-    \begin{block}{Условные}
-        содержимое...
-    \end{block}
+\begin{frame}[fragile]{Формат машинного кода и примеры команд (1, 2, 3)}
+    \begin{figure}
+        \includegraphics[width=1\linewidth]{img/12.RISCV_instruction_format_wikipedia}
+    \end{figure}
+
+    \begin{itemize}
+        \tightlist
+        \item \textbf{Reg/reg} операции над несколькими регистрами \\
+        \mintinline{c}{s0 = s1 + s2;} $\rightarrow$ \mintinline{gas}{add s0, s1, s2}; или\\
+        \mintinline{c}{s0 = s1;} $\rightarrow$ \mintinline{gas}{add s0, s1, zero}
+        \item \textbf{Immediate} операция над регистром и константой \\
+        \mintinline{c}{s0 = s1 - 12;} $\rightarrow$ \mintinline{gas}{addi s0, s1, -12}
+        \item \textbf{Upper immediate} загрузка константы в старшие биты регистра\\
+        \mintinline{c}{s2 = 0xABCDE123;} $\rightarrow$ \\
+        $\rightarrow$ \mintinline{gas}{lui s2, 0xABCDE} \\
+        {\color{white} $\rightarrow$} \mintinline{gas}{addi s2, s2, 0x123}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Формат машинного кода и примеры команд (4, 5)}
+    \begin{figure}
+        \includegraphics[width=1\linewidth]{img/12.RISCV_instruction_format_wikipedia}
+    \end{figure}
+
+    \begin{itemize}
+        \tightlist
+        \item \textbf{[Load]/Store} операция с короткими индексами массивов\\
+        \mintinline{c}{char a[10]; s2 = a[5];} $\rightarrow$ \\
+        $\rightarrow$ \mintinline{text}{загр адр. a в t1} \\
+        {\color{white}$\rightarrow$} \mintinline{gas}{lb t5, 5(t1)}
+        \item \textbf{Branch} ветвление или безусловный переход\\
+        \mintinline{c}{if(s1 >= t2) goto недалеко; } $\rightarrow$
+        \mintinline{gas}{bge s1, t2, недалеко}\\
+        \mintinline{c}{goto недалеко;} $\rightarrow$
+        \mintinline{gas}{beq zero, zero, недалеко} (можно и проще, ниже)\\
+        (недалеко --- адрес относительный)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Формат машинного кода и примеры команд (6)}
+    \begin{figure}
+        \includegraphics[width=1\linewidth]{img/12.RISCV_instruction_format_wikipedia}
+    \end{figure}
+
+    \begin{itemize}
+        \tightlist
+        \item \textbf{Jump} --- вызов, т.е. переход с сохранением адреса возврата\\
+        \begin{minted}{c}
+            void leaf(){}
+            int main(){leaf(); return 0;}
+        \end{minted}
+        $\rightarrow$ \mintinline{gas}{jal ra, leaf}\\
+        Но так сделать и безусловный переход: \mintinline{gas}{j недалеко} $\leftrightarrow$ \mintinline{gas}{jal zero, недалеко}
+        \item Снова \textbf{Immediate} --- возврат из функции \\
+        возврат \mintinline{gas}{ret} на самом деле \mintinline{gas}{jalr zero, ra, 0} --- перейти по
+        адресу в \mintinline{gas}{ra + 0}, исходный адрес записать в \mintinline{gas}{zero} (выкинуть)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Общее впечатление от системы команд}
+    \begin{outline}[itemize]
+        \1 Язык всё ещё не для человека:
+            \2 загрузка длинных констант в два захода
+            \2 «не очевидная» (но удобная для электроники!) мешанина с командами вызова и перехода
+        \1 Благодаря регистру \mintinline{gas}{zero} из «странных» команд делаются более очевидные «псевдокоманды»:
+            \2 \mintinline{gas}{jalr zero, ra, 0} $\rightarrow$ \mintinline{gas}{ret}
+            \2 \mintinline{gas}{jal zero, недалеко} $\rightarrow$ \mintinline{gas}{j недалеко}
+            \2 \mintinline{gas}{sub s1, zero, s0} $\rightarrow$ \mintinline{gas}{neg s1, s0} $\leftrightarrow$ \mintinline{c}{s1 = -s0}
+            \2 \mintinline{gas}{addi x0, x0, 0} $\rightarrow$ \mintinline{gas}{nop}
+            \2 и т.д.
+    \end{outline}
+    \pause
+    \alert{За пределами лекции:}
+    \begin{itemize}
+        \item расширение C(ompact) --- формат машинного кода, в котором некоторые команды по 2 байта
+        \item RISC-V 32 vs 64 --- у RISC-V 64 регистры 64-битные, но машинный код 32-битный
+    \end{itemize}
+
+\end{frame}
+
+\subsection{Конвейер}
+
+\begin{frame}{Конвейер}
+    Наличие и характер конвейера зависит от реализации
     \pause
     \begin{block}{Конвейер распознаёт конфликты}
         Потому что реализации стремятся быть (и являются) достаточно умными, и поддерживать:
@@ -402,9 +479,9 @@
         \end{itemize}
         Т.е. у конвейера нет шансов остаться таким же простым, как и у MIPS
     \end{block}
+    \pause
+    \href{https://stackoverflow.com/a/54725021}{Обсуждение на Stack Overflow}
 \end{frame}
-
-\subsection{Формат машинного кода}
 
 \subsection{Кросс-компиляция}
 
