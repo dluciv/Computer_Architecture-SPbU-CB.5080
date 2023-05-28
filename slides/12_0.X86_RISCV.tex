@@ -1,0 +1,381 @@
+\documentclass[xetex,aspectratio=43]{beamer}
+
+\usepackage{res/lections}
+
+\preamble
+
+\title{Примеры архитектур: Intel x86 и RISC-V}
+
+\begin{document}
+
+    \titleslide
+
+    \tocslide
+
+
+%==============================================
+
+\section{Архитектура и система команд x86}
+
+\subsection{Регистры и адресация}
+
+\begin{frame}{Регистровый файл (1)}
+        Регистры (для 32-битной ЭВМ)
+
+        \begin{itemize}
+            \tightlist
+            \item
+            EAX (общий, аккумулятор), EDX (умножение и деление вместе с EAX), EBX
+            (указатели), ECX (счетчик)
+            \item
+            EDI (dest index), ESI (source index)
+            \item
+            EBP, ESP, EIP
+            \item
+            CS, SS, DS, ES, FS, GS --- сегментные
+            \item
+            EFLAGS
+        \end{itemize}
+
+        \pause
+
+        Фрагменты регистров
+
+        \begin{itemize}
+            \tightlist
+            \item
+            \_H, \_L --- 8-разрядные
+            \item
+            \_X, \_S --- 16-разрядные
+            \item
+            E\_ --- 32-разрядные
+            \item
+            R\_ --- 64-разрядные
+        \end{itemize}
+
+        Например, для аккумулятора
+
+        (AH (8), AL (8)) $\rightarrow$ AX (16) $\rightarrow$ EAX (32) $\rightarrow$ RAX (64)
+\end{frame}
+
+\begin{frame}{Регистровый файл (2): EFLAGS}
+Регистр флагов EFLAGS.
+    Весь регистр 32-битный (начиная с 80386).
+
+    Основные флаги (с 8086):
+
+    \begin{itemize}
+        \tightlist
+        \item
+        OF --- флаг переполнения
+        \item
+        DF --- флаг направления
+        \item
+        IF --- флаг прерывания
+        \item
+        TF --- флаг трассировки
+        \item
+        SF --- флаг знака
+        \item
+        ZF --- флаг нуля
+        \item
+        AF --- флаг дополнительного переноса (для упакованных
+        двоично-десятичных операций)
+        \item
+        PF --- флаг четности
+        \item
+        CF --- флаг переноса
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Адресация данных}
+    \begin{itemize}
+        \item
+        Непосредственная (аргументы в коде)
+        \item
+        Регистровая (номер регистра в коде)
+        \item
+        Память{[}E\_X + смещение{]}, Память{[}EBP + смещение{]}, + возможно
+        префиксы сегментов
+    \end{itemize}
+\end{frame}
+
+\subsection{Система команд}
+
+\begin{frame}{Команды пересылки данных}
+    \begin{itemize}
+        \tightlist
+        \item
+        MOV память обменивается только с арифметическими регистрами, ESI, EDI
+        \item
+        XCHG reg, mem/reg
+        \item
+        LAHF, SAHF --- флаги \(\leftrightarrow\) AH
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Команды АЛУ}
+    \begin{block}{Логические}
+        AND, OR, XOR, NOT
+    \end{block}
+
+    \begin{block}{Арифметические}
+        \begin{itemize}
+            \item
+            ADD, SUB, ADC, SBB, INC, DEC, NEG
+            \item
+            MUL (reg/mem), DIV (reg/mem), IMUL, IDIV,
+            \item
+            CWQ (EAX \(\rightarrow\) EDX:EAX)
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Сдвига}
+        \begin{itemize}
+            \item
+            ROR, ROL
+            \item
+            RCL, RCR --- с переносом
+            \item
+            SHL, SHR --- без переноса
+            \item
+            SAL, SAR --- со знаковыми битами
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{BCD}
+    ASCII и BCD --- для быстрого преобразования двоично-десятичных чисел
+\end{frame}
+
+\begin{frame}{Команды работы со стеком}
+    \begin{itemize}
+        \item
+        PUSH, POP
+        \item
+        PUSHA, POPA
+        \item
+        Косвенно --- CALL, RET, INT, IRET
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Команды сравнения и передачи управления}
+    \begin{block}{Переходы Безусловные}
+        \begin{itemize}
+            \tightlist
+            \item
+            JMP FAR, NEAR, JMP M{[}xx{]}, JMP REG
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Команды Сравнения}
+        \begin{itemize}
+            \item
+            CMP --- как SUB
+            \item
+            TEST --- как AND
+            \item
+            CMPS --- CMPSB, CMPSW, CMPSD
+        \end{itemize}
+
+        \pause
+
+        Compare-exchange
+        \begin{itemize}
+            \tightlist
+            \item
+            CMPXCHG dest, src --- Сравнивает аккумулятор (8-64 bits) с dest. Если
+            равны, то в dest грузят src, иначе в аккумулятор загружают dest
+        \end{itemize}
+
+        \pause
+
+        Ужас. Кошмар.
+        \href{https://ru.wikipedia.org/wiki/\%D0\%A1\%D1\%80\%D0\%B0\%D0\%B2\%D0\%BD\%D0\%B5\%D0\%BD\%D0\%B8\%D0\%B5_\%D1\%81_\%D0\%BE\%D0\%B1\%D0\%BC\%D0\%B5\%D0\%BD\%D0\%BE\%D0\%BC\#\%D0\%97\%D0\%B0\%D1\%87\%D0\%B5\%D0\%BC_\%D1\%8D\%D1\%82\%D0\%BE_\%D0\%BD\%D1\%83\%D0\%B6\%D0\%BD\%D0\%BE}{Для чего она?..}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Условные переходы I}
+    По результату \(R\) или итогам сравнения \(A ? B\), в зависимости от
+    получившихся значений флагов.
+
+    Беззнаковые
+
+    \begin{itemize}
+        \tightlist
+        \item
+        JA/JNBE --- если \(A > B\);
+        \item
+        JAE/JNB/JNC --- если \(A \ge B\);
+        \item
+        JB/JNAE/JC --- если \(A < B\);
+        \item
+        JBE/JNA --- если \(A \le B\).
+    \end{itemize}
+
+    Знаковые
+
+    \begin{itemize}
+        \tightlist
+        \item
+        JG/JNLE --- если \(A > B\);
+        \item
+        JGE/JNL --- если \(A \ge B\);
+        \item
+        JL/JNGE --- если \(A < B\);
+        \item
+        JLE/JNG --- если \(A \le B\);
+        \item
+        JNS --- если \(R\ge 0\);
+        \item
+        JS --- если \(R<0\).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Условные переходы II}
+    По результату \(R\) или итогам сравнения \(A ? B\), в зависимости от
+    получившихся значений флагов.
+
+    \begin{itemize}
+        \item
+        JE/JZ --- если \(A=B \lor R = 0\);
+        \item
+        JNE/JNZ --- если \(A \not = B \lor R \not = 0\);
+        \item
+        JNO --- \(\neg OF\);
+        \item
+        JO --- \(OF\);
+        \item
+        JCXZ --- \(CX = 0\) --- для организации циклов\\
+        \texttt{do\ ...\ while(-\/-CX);};
+        \item
+        JNP/JPO --- \(\neg PF\);
+        \item
+        JP/JPE --- \(PF\).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Вызовы и прерывания}
+    \begin{itemize}
+        \tightlist
+        \item
+        Вызовы
+
+        \begin{itemize}
+            \tightlist
+            \item
+            CALL адрес
+        \end{itemize}
+        \item
+        Прерывания
+
+        \begin{itemize}
+            \tightlist
+            \item
+            Управление STI, CLI
+            \item
+            Ожидание (HALT)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Команды ввода-вывода}
+    IN (mem/DX), OUT (mem/DX) --- с AL
+\end{frame}
+
+\begin{frame}{Команды обработки строк (микроциклы)}
+    \begin{itemize}
+        \item
+        REP, REPE, REPZ, REPNE, REPNZ
+        \item
+        LODS (загружает в аккумулятор),\\
+        STOS (пишет из аккумулятора),\\
+        MOVS (B-W-D --- пересылка память-память),\\
+        CMPS(сравнение память-память),\\
+        SCAS (вычитает из аккумулятора)
+    \end{itemize}
+
+    \pause
+
+    Команды учитывают DF --- флаг направления. Выставив его «неправильно»
+    можно быстро размножить участок памяти
+\end{frame}
+
+\begin{frame}{Команды математического сопроцессора и математического блока}
+    \begin{block}{Стековые}
+        \begin{itemize}
+        \tightlist
+        \item
+        FLD, FSTP --- загрузить из памяти / выгрузить в память, формат
+        \item
+        FILD, FLD, ... --- загрузить из регистра целое / выгрузить в регистр целое
+        \item
+        FMUL, ... --- операции и функции
+        \item
+        FWAIT --- соинхронизация для старых процессоров
+        \end{itemize}
+    \end{block}
+    \begin{block}{Регистровые}
+        MULSD, MULSF --- работают с векторными регистрами (появились в Pentium MMX, позволяют производить по несколько операций с числами разной длины)
+    \end{block}
+\end{frame}
+
+\begin{frame}{«Привелегированные» команды}
+        Загрузка таблиц страниц и дескрипторов, изменение режимов работы
+        процессора
+\end{frame}
+
+%----------------------------------------------
+
+\section{Архитектура и система команд RISC-V}
+
+\subsection{Регистры}
+
+\subsection{Соглашение о вызовах}
+
+\subsection{Команды и формат машинного кода}
+
+%==============================================
+
+\section*{}
+
+\begin{frame}{Вопросы и упражнения}
+    \begin{block}{Вопросы}
+        \protect\hypertarget{ux432ux43eux43fux440ux43eux441ux44b}{}
+        \begin{enumerate}
+            \tightlist
+            \item
+            Приведите примеры арифметико-логических команд x86
+            \item
+            Что такое микроциклы?
+            \item
+            Приведите примеры и опишите работу нескольких команд условного
+            перехода
+            \item
+            Что такое лексема?
+            \item
+            Что такое синтаксическое дерево?
+            \item
+            Назовите обязательный стадии трансляции
+            \item
+            Назовите опциональные стадии трансляции
+        \end{enumerate}
+    \end{block}
+
+    \begin{block}{Упражнения}
+        \protect\hypertarget{ux443ux43fux440ux430ux436ux43dux435ux43dux438ux44f}{}
+        \begin{enumerate}
+            \tightlist
+            \item
+            Попробуйте воспользоваться претрансляцией для любого языка (Scheme,
+            Julia, Nemerle, \ldots)
+            \item
+            Скомпилируйте программу из примера для любой незнакомой архитектуры;
+            пользуясь справочниками, объясните действия всех машинных команд
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+\postamble
+
+\end{document}
