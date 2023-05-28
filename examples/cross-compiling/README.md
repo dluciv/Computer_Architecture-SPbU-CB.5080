@@ -39,7 +39,7 @@
 * На хосте поднимаем какой-нибудь FTP-сервер
     * `uftpd -n -o ftp=2222 .` — в каталоге, в который будем собирать софт
 * Запускаем BuildRoot
-    * `cd <<<<<<buildroot>>>>>>output/images`
+    * `cd <<<buildroot>>>/output/images`
     * `./start-qemu.sh`
     * В виртуальной машине:
         * `uname -a` — Ура!
