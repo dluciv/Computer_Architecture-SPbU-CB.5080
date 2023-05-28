@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define DOUBLE_PI 3.14159265358979323846
 
 int sizeofint()
 {
@@ -13,8 +14,23 @@ int factorial(int n)
   return r;
 }
 
+double ipow(int pow, double base)
+{
+  double res = 1, tmp = base;
+  while(pow)
+  {
+    if(pow & 1)
+      res *= tmp;
+    tmp *= tmp;
+    pow >>= 1;
+  }
+  return res;
+}
+
 int main()
 {
-  printf("%d\n", factorial(6));
+  printf("sizeof(int): %d\n", sizeofint());
+  printf("factorial(6): %d.\n", factorial(6));
+  printf("Pi^5: %lf\n", ipow(5, DOUBLE_PI));
   return 0;
 }

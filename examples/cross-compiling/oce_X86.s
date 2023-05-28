@@ -6,12 +6,13 @@ cce_X86.o:     формат файла elf32-i386
 
 00000000 <.group>:
 #include <stdio.h>
+#define DOUBLE_PI 3.14159265358979323846
 
 int sizeofint()
 {
    0:	01 00                	add    DWORD PTR [eax],eax
    2:	00 00                	add    BYTE PTR [eax],al
-   4:	08 00                	or     BYTE PTR [eax],al
+   4:	09 00                	or     DWORD PTR [eax],eax
 	...
 
 Дизассемблирование раздела .group:
@@ -19,7 +20,15 @@ int sizeofint()
 00000000 <.group>:
    0:	01 00                	add    DWORD PTR [eax],eax
    2:	00 00                	add    BYTE PTR [eax],al
-   4:	09 00                	or     DWORD PTR [eax],eax
+   4:	0a 00                	or     al,BYTE PTR [eax]
+	...
+
+Дизассемблирование раздела .group:
+
+00000000 <.group>:
+   0:	01 00                	add    DWORD PTR [eax],eax
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	0b 00                	or     eax,DWORD PTR [eax]
 	...
 
 Дизассемблирование раздела .text:
@@ -64,49 +73,141 @@ int factorial(int n)
   48:	c9                   	leave
   49:	c3                   	ret
 
-0000004a <main>:
+0000004a <ipow>:
+
+double ipow(int pow, double base)
+{
+  4a:	55                   	push   ebp
+  4b:	89 e5                	mov    ebp,esp
+  4d:	83 ec 18             	sub    esp,0x18
+  50:	e8 fc ff ff ff       	call   51 <ipow+0x7>
+  55:	81 c1 02 00 00 00    	add    ecx,0x2
+  5b:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  5e:	8b 55 10             	mov    edx,DWORD PTR [ebp+0x10]
+  61:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+  64:	89 55 ec             	mov    DWORD PTR [ebp-0x14],edx
+  double res = 1, tmp = base;
+  67:	d9 e8                	fld1
+  69:	dd 5d f0             	fstp   QWORD PTR [ebp-0x10]
+  6c:	dd 45 e8             	fld    QWORD PTR [ebp-0x18]
+  6f:	dd 5d f8             	fstp   QWORD PTR [ebp-0x8]
+  while(pow)
+  72:	eb 1e                	jmp    92 <ipow+0x48>
+  {
+    if(pow & 1)
+  74:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  77:	83 e0 01             	and    eax,0x1
+  7a:	85 c0                	test   eax,eax
+  7c:	74 09                	je     87 <ipow+0x3d>
+      res *= tmp;
+  7e:	dd 45 f0             	fld    QWORD PTR [ebp-0x10]
+  81:	dc 4d f8             	fmul   QWORD PTR [ebp-0x8]
+  84:	dd 5d f0             	fstp   QWORD PTR [ebp-0x10]
+    tmp *= tmp;
+  87:	dd 45 f8             	fld    QWORD PTR [ebp-0x8]
+  8a:	d8 c8                	fmul   st,st(0)
+  8c:	dd 5d f8             	fstp   QWORD PTR [ebp-0x8]
+    pow >>= 1;
+  8f:	d1 7d 08             	sar    DWORD PTR [ebp+0x8],1
+  while(pow)
+  92:	83 7d 08 00          	cmp    DWORD PTR [ebp+0x8],0x0
+  96:	75 dc                	jne    74 <ipow+0x2a>
+  }
+  return res;
+  98:	dd 45 f0             	fld    QWORD PTR [ebp-0x10]
+}
+  9b:	c9                   	leave
+  9c:	c3                   	ret
+
+0000009d <main>:
 
 int main()
 {
-  4a:	8d 4c 24 04          	lea    ecx,[esp+0x4]
-  4e:	83 e4 f0             	and    esp,0xfffffff0
-  51:	ff 71 fc             	push   DWORD PTR [ecx-0x4]
-  54:	55                   	push   ebp
-  55:	89 e5                	mov    ebp,esp
-  57:	53                   	push   ebx
-  58:	51                   	push   ecx
-  59:	e8 fc ff ff ff       	call   5a <main+0x10>
-  5e:	81 c3 02 00 00 00    	add    ebx,0x2
-  printf("%d\n", factorial(6));
-  64:	6a 06                	push   0x6
-  66:	e8 fc ff ff ff       	call   67 <main+0x1d>
-  6b:	83 c4 04             	add    esp,0x4
-  6e:	83 ec 08             	sub    esp,0x8
-  71:	50                   	push   eax
-  72:	8d 83 00 00 00 00    	lea    eax,[ebx+0x0]
-  78:	50                   	push   eax
-  79:	e8 fc ff ff ff       	call   7a <main+0x30>
-  7e:	83 c4 10             	add    esp,0x10
+  9d:	8d 4c 24 04          	lea    ecx,[esp+0x4]
+  a1:	83 e4 f0             	and    esp,0xfffffff0
+  a4:	ff 71 fc             	push   DWORD PTR [ecx-0x4]
+  a7:	55                   	push   ebp
+  a8:	89 e5                	mov    ebp,esp
+  aa:	53                   	push   ebx
+  ab:	51                   	push   ecx
+  ac:	e8 fc ff ff ff       	call   ad <main+0x10>
+  b1:	81 c3 02 00 00 00    	add    ebx,0x2
+  printf("sizeof(int): %d\n", sizeofint());
+  b7:	e8 fc ff ff ff       	call   b8 <main+0x1b>
+  bc:	83 ec 08             	sub    esp,0x8
+  bf:	50                   	push   eax
+  c0:	8d 83 00 00 00 00    	lea    eax,[ebx+0x0]
+  c6:	50                   	push   eax
+  c7:	e8 fc ff ff ff       	call   c8 <main+0x2b>
+  cc:	83 c4 10             	add    esp,0x10
+  printf("factorial(6): %d.\n", factorial(6));
+  cf:	83 ec 0c             	sub    esp,0xc
+  d2:	6a 06                	push   0x6
+  d4:	e8 fc ff ff ff       	call   d5 <main+0x38>
+  d9:	83 c4 10             	add    esp,0x10
+  dc:	83 ec 08             	sub    esp,0x8
+  df:	50                   	push   eax
+  e0:	8d 83 11 00 00 00    	lea    eax,[ebx+0x11]
+  e6:	50                   	push   eax
+  e7:	e8 fc ff ff ff       	call   e8 <main+0x4b>
+  ec:	83 c4 10             	add    esp,0x10
+  printf("Pi^5: %lf\n", ipow(5, DOUBLE_PI));
+  ef:	83 ec 04             	sub    esp,0x4
+  f2:	dd 83 30 00 00 00    	fld    QWORD PTR [ebx+0x30]
+  f8:	8d 64 24 f8          	lea    esp,[esp-0x8]
+  fc:	dd 1c 24             	fstp   QWORD PTR [esp]
+  ff:	6a 05                	push   0x5
+ 101:	e8 fc ff ff ff       	call   102 <main+0x65>
+ 106:	83 c4 10             	add    esp,0x10
+ 109:	83 ec 04             	sub    esp,0x4
+ 10c:	8d 64 24 f8          	lea    esp,[esp-0x8]
+ 110:	dd 1c 24             	fstp   QWORD PTR [esp]
+ 113:	8d 83 24 00 00 00    	lea    eax,[ebx+0x24]
+ 119:	50                   	push   eax
+ 11a:	e8 fc ff ff ff       	call   11b <main+0x7e>
+ 11f:	83 c4 10             	add    esp,0x10
   return 0;
-  81:	b8 00 00 00 00       	mov    eax,0x0
+ 122:	b8 00 00 00 00       	mov    eax,0x0
 }
-  86:	8d 65 f8             	lea    esp,[ebp-0x8]
-  89:	59                   	pop    ecx
-  8a:	5b                   	pop    ebx
-  8b:	5d                   	pop    ebp
-  8c:	8d 61 fc             	lea    esp,[ecx-0x4]
-  8f:	c3                   	ret
+ 127:	8d 65 f8             	lea    esp,[ebp-0x8]
+ 12a:	59                   	pop    ecx
+ 12b:	5b                   	pop    ebx
+ 12c:	5d                   	pop    ebp
+ 12d:	8d 61 fc             	lea    esp,[ecx-0x4]
+ 130:	c3                   	ret
 
 Дизассемблирование раздела .rodata:
 
 00000000 <.rodata>:
-   0:	25                   	.byte 0x25
-   1:	64 0a 00             	or     al,BYTE PTR fs:[eax]
+   0:	73 69                	jae    6b <ipow+0x21>
+   2:	7a 65                	jp     69 <ipow+0x1f>
+   4:	6f                   	outs   dx,DWORD PTR ds:[esi]
+   5:	66 28 69 6e          	data16 sub BYTE PTR [ecx+0x6e],ch
+   9:	74 29                	je     34 <.rodata+0x34>
+   b:	3a 20                	cmp    ah,BYTE PTR [eax]
+   d:	25 64 0a 00 66       	and    eax,0x66000a64
+  12:	61                   	popa
+  13:	63 74 6f 72          	arpl   WORD PTR [edi+ebp*2+0x72],si
+  17:	69 61 6c 28 36 29 3a 	imul   esp,DWORD PTR [ecx+0x6c],0x3a293628
+  1e:	20 25 64 2e 0a 00    	and    BYTE PTR ds:0xa2e64,ah
+  24:	50                   	push   eax
+  25:	69 5e 35 3a 20 25 6c 	imul   ebx,DWORD PTR [esi+0x35],0x6c25203a
+  2c:	66 0a 00             	data16 or al,BYTE PTR [eax]
+  2f:	00 18                	add    BYTE PTR [eax],bl
+  31:	2d 44 54 fb 21       	sub    eax,0x21fb5444
+  36:	09                   	.byte 0x9
+  37:	40                   	inc    eax
 
 Дизассемблирование раздела .text.__x86.get_pc_thunk.ax:
 
 00000000 <__x86.get_pc_thunk.ax>:
    0:	8b 04 24             	mov    eax,DWORD PTR [esp]
+   3:	c3                   	ret
+
+Дизассемблирование раздела .text.__x86.get_pc_thunk.cx:
+
+00000000 <__x86.get_pc_thunk.cx>:
+   0:	8b 0c 24             	mov    ecx,DWORD PTR [esp]
    3:	c3                   	ret
 
 Дизассемблирование раздела .text.__x86.get_pc_thunk.bx:
@@ -119,116 +220,169 @@ int main()
 
 00000000 <.debug_info>:
 {
-   0:	f4                   	hlt
-   1:	00 00                	add    BYTE PTR [eax],al
+   0:	4b                   	dec    ebx
+   1:	01 00                	add    DWORD PTR [eax],eax
    3:	00 05 00 01 04 00    	add    BYTE PTR ds:0x40100,al
    9:	00 00                	add    BYTE PTR [eax],al
-   b:	00 02                	add    BYTE PTR [edx],al
+   b:	00 05 1b 00 00 00    	add    BYTE PTR ds:0x1b,al
   return sizeof(int);
-   d:	1b 00                	sbb    eax,DWORD PTR [eax]
-   f:	00 00                	add    BYTE PTR [eax],al
   11:	1d 60 00 00 00       	sbb    eax,0x60
 	...
 {
-  1e:	90                   	nop
-  1f:	00 00                	add    BYTE PTR [eax],al
-  21:	00 00                	add    BYTE PTR [eax],al
-  23:	00 00                	add    BYTE PTR [eax],al
+  1e:	31 01                	xor    DWORD PTR [ecx],eax
+  20:	00 00                	add    BYTE PTR [eax],al
+  22:	00 00                	add    BYTE PTR [eax],al
   int r = 1;
-  25:	00 01                	add    BYTE PTR [ecx],al
-  27:	04 07                	add    al,0x7
+  24:	00 00                	add    BYTE PTR [eax],al
+  26:	01 04 07             	add    DWORD PTR [edi+eax*1],eax
   29:	0e                   	push   cs
   2a:	00 00                	add    BYTE PTR [eax],al
   while(n > 1)
   2c:	00 01                	add    BYTE PTR [ecx],al
     r *= n--;
   2e:	01 06                	add    DWORD PTR [esi],eax
-  30:	8b 00                	mov    eax,DWORD PTR [eax]
-  32:	00 00                	add    BYTE PTR [eax],al
-  34:	03 2d 00 00 00 01    	add    ebp,DWORD PTR ds:0x1000000
+  30:	90                   	nop
+  31:	00 00                	add    BYTE PTR [eax],al
+  33:	00 06                	add    BYTE PTR [esi],al
+  35:	2d 00 00 00 01       	sub    eax,0x1000000
   3a:	01 08                	add    DWORD PTR [eax],ecx
-  3c:	90                   	nop
+  3c:	95                   	xchg   ebp,eax
   3d:	00 00                	add    BYTE PTR [eax],al
   while(n > 1)
   3f:	00 01                	add    BYTE PTR [ecx],al
   41:	02 07                	add    al,BYTE PTR [edi]
-  43:	b6 00                	mov    dh,0x0
+  43:	c2 00 00             	ret    0x0
   return r;
-  45:	00 00                	add    BYTE PTR [eax],al
-  47:	01 04 07             	add    DWORD PTR [edi+eax*1],eax
+  46:	00 01                	add    BYTE PTR [ecx],al
+}
+  48:	04 07                	add    al,0x7
 {
   4a:	62 00                	bound  eax,QWORD PTR [eax]
   4c:	00 00                	add    BYTE PTR [eax],al
   4e:	01 01                	add    DWORD PTR [ecx],eax
   50:	06                   	push   es
-  51:	da 00                	fiadd  DWORD PTR [eax]
+  51:	eb 00                	jmp    53 <.debug_info+0x53>
   53:	00 00                	add    BYTE PTR [eax],al
   55:	01 02                	add    DWORD PTR [edx],eax
-  57:	05 d0 00 00 00       	add    eax,0xd0
-  5c:	04 04                	add    al,0x4
-  5e:	05 69 6e 74 00       	add    eax,0x746e69
-  63:	01 08                	add    DWORD PTR [eax],ecx
-  printf("%d\n", factorial(6));
-  65:	05 00 00 00 00       	add    eax,0x0
+  57:	05 dc 00 00 00       	add    eax,0xdc
+  5c:	07                   	pop    es
+  5d:	04 05                	add    al,0x5
+  5f:	69 6e 74 00 01 08 05 	imul   ebp,DWORD PTR [esi+0x74],0x5080100
+  66:	00 00                	add    BYTE PTR [eax],al
+  double res = 1, tmp = base;
+  68:	00 00                	add    BYTE PTR [eax],al
   6a:	01 08                	add    DWORD PTR [eax],ecx
   6c:	07                   	pop    es
   6d:	74 00                	je     6f <.debug_info+0x6f>
   6f:	00 00                	add    BYTE PTR [eax],al
-  71:	01 04 05 a3 00 00 00 	add    DWORD PTR [eax*1+0xa3],eax
-  78:	05 c9 00 00 00       	add    eax,0xc9
-  7d:	02 64 01 0c          	add    ah,BYTE PTR [ecx+eax*1+0xc]
-  return 0;
-  81:	5c                   	pop    esp
+  71:	01 04 05 a8 00 00 00 	add    DWORD PTR [eax*1+0xa8],eax
+    if(pow & 1)
+  78:	08 d5                	or     ch,dl
+  7a:	00 00                	add    BYTE PTR [eax],al
+  7c:	00 02                	add    BYTE PTR [edx],al
+      res *= tmp;
+  7e:	64 01 0c 5c          	add    DWORD PTR fs:[esp+ebx*2],ecx
   82:	00 00                	add    BYTE PTR [eax],al
-  84:	00 90 00 00 00 06    	add    BYTE PTR [eax+0x6000000],dl
-}
+  84:	00 90 00 00 00 09    	add    BYTE PTR [eax+0x9000000],dl
+    tmp *= tmp;
   8a:	90                   	nop
   8b:	00 00                	add    BYTE PTR [eax],al
-  8d:	00 07                	add    BYTE PTR [edi],al
-  8f:	00 08                	add    BYTE PTR [eax],cl
+  8d:	00 0a                	add    BYTE PTR [edx],cl
+    pow >>= 1;
+  8f:	00 0b                	add    BYTE PTR [ebx],cl
   91:	04 34                	add    al,0x34
+  while(pow)
   93:	00 00                	add    BYTE PTR [eax],al
-  95:	00 09                	add    BYTE PTR [ecx],cl
-  97:	9e                   	sahf
+  95:	00 0c a3             	add    BYTE PTR [ebx+eiz*4],cl
+  return res;
   98:	00 00                	add    BYTE PTR [eax],al
   9a:	00 01                	add    BYTE PTR [ecx],al
-  9c:	10 05 5c 00 00 00    	adc    BYTE PTR ds:0x5c,al
-  a2:	4a                   	dec    edx
+}
+  9c:	1e                   	push   ds
+{
+  9d:	05 5c 00 00 00       	add    eax,0x5c
+  a2:	9d                   	popf
   a3:	00 00                	add    BYTE PTR [eax],al
-  a5:	00 46 00             	add    BYTE PTR [esi+0x0],al
-  a8:	00 00                	add    BYTE PTR [eax],al
-  aa:	01 9c 0a ac 00 00 00 	add    DWORD PTR [edx+ecx*1+0xac],ebx
-  b1:	01 08                	add    DWORD PTR [eax],ecx
-  b3:	05 5c 00 00 00       	add    eax,0x5c
-  b8:	14 00                	adc    al,0x0
-  ba:	00 00                	add    BYTE PTR [eax],al
-  bc:	36 00 00             	add    BYTE PTR ss:[eax],al
-  bf:	00 01                	add    BYTE PTR [ecx],al
-  c1:	9c                   	pushf
-  c2:	e1 00                	loope  c4 <.debug_info+0xc4>
-  c4:	00 00                	add    BYTE PTR [eax],al
-  c6:	0b 6e 00             	or     ebp,DWORD PTR [esi+0x0]
-  c9:	01 08                	add    DWORD PTR [eax],ecx
-  cb:	13 5c 00 00          	adc    ebx,DWORD PTR [eax+eax*1+0x0]
+  a5:	00 94 00 00 00 01 9c 	add    BYTE PTR [eax+eax*1-0x63ff0000],dl
+  ac:	03 e6                	add    esp,esi
+  ae:	00 00                	add    BYTE PTR [eax],al
+  b0:	00 11                	add    BYTE PTR [ecx],dl
+  b2:	08 ff                	or     bh,bh
+  b4:	00 00                	add    BYTE PTR [eax],al
+  b6:	00 4a 00             	add    BYTE PTR [edx+0x0],cl
+  printf("sizeof(int): %d\n", sizeofint());
+  b9:	00 00                	add    BYTE PTR [eax],al
+  bb:	53                   	push   ebx
+  bc:	00 00                	add    BYTE PTR [eax],al
+  be:	00 01                	add    BYTE PTR [ecx],al
+  c0:	9c                   	pushf
+  c1:	ff 00                	inc    DWORD PTR [eax]
+  c3:	00 00                	add    BYTE PTR [eax],al
+  c5:	04 70                	add    al,0x70
+  c7:	6f                   	outs   dx,DWORD PTR ds:[esi]
+  c8:	77 00                	ja     ca <.debug_info+0xca>
+  ca:	11 11                	adc    DWORD PTR [ecx],edx
+  cc:	5c                   	pop    esp
+  cd:	00 00                	add    BYTE PTR [eax],al
+  printf("factorial(6): %d.\n", factorial(6));
   cf:	00 02                	add    BYTE PTR [edx],al
   d1:	91                   	xchg   ecx,eax
-  d2:	00 0c 72             	add    BYTE PTR [edx+esi*2],cl
-  d5:	00 01                	add    BYTE PTR [ecx],al
-  d7:	0a 07                	or     al,BYTE PTR [edi]
-  d9:	5c                   	pop    esp
-  da:	00 00                	add    BYTE PTR [eax],al
-  dc:	00 02                	add    BYTE PTR [edx],al
-  de:	91                   	xchg   ecx,eax
-  df:	74 00                	je     e1 <.debug_info+0xe1>
-  e1:	0d 58 00 00 00       	or     eax,0x58
-  e6:	01 03                	add    DWORD PTR [ebx],eax
-  e8:	05 5c 00 00 00       	add    eax,0x5c
-  ed:	00 00                	add    BYTE PTR [eax],al
-  ef:	00 00                	add    BYTE PTR [eax],al
-  f1:	14 00                	adc    al,0x0
-  f3:	00 00                	add    BYTE PTR [eax],al
-  f5:	01                   	.byte 0x1
-  f6:	9c                   	pushf
+  d2:	00 0d 8b 00 00 00    	add    BYTE PTR ds:0x8b,cl
+  d8:	01 11                	add    DWORD PTR [ecx],edx
+  da:	1d ff 00 00 00       	sbb    eax,0xff
+  df:	02 91 60 02 72 65    	add    dl,BYTE PTR [ecx+0x65720260]
+  e5:	73 00                	jae    e7 <.debug_info+0xe7>
+  e7:	13 0a                	adc    ecx,DWORD PTR [edx]
+  e9:	ff 00                	inc    DWORD PTR [eax]
+  eb:	00 00                	add    BYTE PTR [eax],al
+  ed:	02 91 68 02 74 6d    	add    dl,BYTE PTR [ecx+0x6d740268]
+  printf("Pi^5: %lf\n", ipow(5, DOUBLE_PI));
+  f3:	70 00                	jo     f5 <.debug_info+0xf5>
+  f5:	13 13                	adc    edx,DWORD PTR [ebx]
+  f7:	ff 00                	inc    DWORD PTR [eax]
+  f9:	00 00                	add    BYTE PTR [eax],al
+  fb:	02 91 70 00 01 08    	add    dl,BYTE PTR [ecx+0x8010070]
+ 101:	04 bb                	add    al,0xbb
+ 103:	00 00                	add    BYTE PTR [eax],al
+ 105:	00 03                	add    BYTE PTR [ebx],al
+ 107:	b1 00                	mov    cl,0x0
+ 109:	00 00                	add    BYTE PTR [eax],al
+ 10b:	09 05 5c 00 00 00    	or     DWORD PTR ds:0x5c,eax
+ 111:	14 00                	adc    al,0x0
+ 113:	00 00                	add    BYTE PTR [eax],al
+ 115:	36 00 00             	add    BYTE PTR ss:[eax],al
+ 118:	00 01                	add    BYTE PTR [ecx],al
+ 11a:	9c                   	pushf
+ 11b:	38 01                	cmp    BYTE PTR [ecx],al
+ 11d:	00 00                	add    BYTE PTR [eax],al
+ 11f:	04 6e                	add    al,0x6e
+ 121:	00 09                	add    BYTE PTR [ecx],cl
+  return 0;
+ 123:	13 5c 00 00          	adc    ebx,DWORD PTR [eax+eax*1+0x0]
+}
+ 127:	00 02                	add    BYTE PTR [edx],al
+ 129:	91                   	xchg   ecx,eax
+ 12a:	00 02                	add    BYTE PTR [edx],al
+ 12c:	72 00                	jb     12e <.debug_info+0x12e>
+ 12e:	0b 07                	or     eax,DWORD PTR [edi]
+ 130:	5c                   	pop    esp
+ 131:	00 00                	add    BYTE PTR [eax],al
+ 133:	00 02                	add    BYTE PTR [edx],al
+ 135:	91                   	xchg   ecx,eax
+ 136:	74 00                	je     138 <.debug_info+0x138>
+ 138:	0e                   	push   cs
+ 139:	58                   	pop    eax
+ 13a:	00 00                	add    BYTE PTR [eax],al
+ 13c:	00 01                	add    BYTE PTR [ecx],al
+ 13e:	04 05                	add    al,0x5
+ 140:	5c                   	pop    esp
+ 141:	00 00                	add    BYTE PTR [eax],al
+ 143:	00 00                	add    BYTE PTR [eax],al
+ 145:	00 00                	add    BYTE PTR [eax],al
+ 147:	00 14 00             	add    BYTE PTR [eax+eax*1],dl
+ 14a:	00 00                	add    BYTE PTR [eax],al
+ 14c:	01                   	.byte 0x1
+ 14d:	9c                   	pushf
 	...
 
 Дизассемблирование раздела .debug_abbrev:
@@ -240,106 +394,128 @@ int main()
    5:	3e 0b 03             	or     eax,DWORD PTR ds:[ebx]
    8:	0e                   	push   cs
    9:	00 00                	add    BYTE PTR [eax],al
-   b:	02 11                	add    dl,BYTE PTR [ecx]
+   b:	02 34 00             	add    dh,BYTE PTR [eax+eax*1]
   return sizeof(int);
-   d:	01 25 0e 13 0b 03    	add    DWORD PTR ds:0x30b130e,esp
+   e:	03 08                	add    ecx,DWORD PTR [eax]
+  10:	3a 21                	cmp    ah,BYTE PTR [ecx]
 }
-  13:	1f                   	pop    ds
+  12:	01 3b                	add    DWORD PTR [ebx],edi
 {
-  14:	1b 1f                	sbb    ebx,DWORD PTR [edi]
-  16:	11 01                	adc    DWORD PTR [ecx],eax
-  18:	12 06                	adc    al,BYTE PTR [esi]
-  1a:	10 17                	adc    BYTE PTR [edi],dl
-  1c:	00 00                	add    BYTE PTR [eax],al
-  1e:	03 26                	add    esp,DWORD PTR [esi]
-  20:	00 49 13             	add    BYTE PTR [ecx+0x13],cl
-  23:	00 00                	add    BYTE PTR [eax],al
+  14:	0b 39                	or     edi,DWORD PTR [ecx]
+  16:	0b 49 13             	or     ecx,DWORD PTR [ecx+0x13]
+  19:	02 18                	add    bl,BYTE PTR [eax]
+  1b:	00 00                	add    BYTE PTR [eax],al
+  1d:	03 2e                	add    ebp,DWORD PTR [esi]
+  1f:	01 3f                	add    DWORD PTR [edi],edi
+  21:	19 03                	sbb    DWORD PTR [ebx],eax
+  23:	0e                   	push   cs
   int r = 1;
-  25:	04 24                	add    al,0x24
-  27:	00 0b                	add    BYTE PTR [ebx],cl
-  29:	0b 3e                	or     edi,DWORD PTR [esi]
+  24:	3a 21                	cmp    ah,BYTE PTR [ecx]
+  26:	01 3b                	add    DWORD PTR [ebx],edi
+  28:	0b 39                	or     edi,DWORD PTR [ecx]
+  2a:	0b 27                	or     esp,DWORD PTR [edi]
   while(n > 1)
-  2b:	0b 03                	or     eax,DWORD PTR [ebx]
+  2c:	19 49 13             	sbb    DWORD PTR [ecx+0x13],ecx
     r *= n--;
-  2d:	08 00                	or     BYTE PTR [eax],al
-  2f:	00 05 2e 01 3f 19    	add    BYTE PTR ds:0x193f012e,al
-  35:	03 0e                	add    ecx,DWORD PTR [esi]
-  37:	3a 0b                	cmp    cl,BYTE PTR [ebx]
-  39:	3b 05 39 0b 27 19    	cmp    eax,DWORD PTR ds:0x19270b39
+  2f:	11 01                	adc    DWORD PTR [ecx],eax
+  31:	12 06                	adc    al,BYTE PTR [esi]
+  33:	40                   	inc    eax
+  34:	18 7a 19             	sbb    BYTE PTR [edx+0x19],bh
+  37:	01 13                	add    DWORD PTR [ebx],edx
+  39:	00 00                	add    BYTE PTR [eax],al
+  3b:	04 05                	add    al,0x5
+  3d:	00 03                	add    BYTE PTR [ebx],al
   while(n > 1)
-  3f:	49                   	dec    ecx
-  40:	13 3c 19             	adc    edi,DWORD PTR [ecx+ebx*1]
-  43:	01 13                	add    DWORD PTR [ebx],edx
+  3f:	08 3a                	or     BYTE PTR [edx],bh
+  41:	21 01                	and    DWORD PTR [ecx],eax
+  43:	3b 0b                	cmp    ecx,DWORD PTR [ebx]
   return r;
-  45:	00 00                	add    BYTE PTR [eax],al
-  47:	06                   	push   es
+  45:	39 0b                	cmp    DWORD PTR [ebx],ecx
+  47:	49                   	dec    ecx
 }
-  48:	05 00 49 13 00       	add    eax,0x134900
+  48:	13 02                	adc    eax,DWORD PTR [edx]
 {
-  4d:	00 07                	add    BYTE PTR [edi],al
-  4f:	18 00                	sbb    BYTE PTR [eax],al
-  51:	00 00                	add    BYTE PTR [eax],al
-  53:	08 0f                	or     BYTE PTR [edi],cl
-  55:	00 0b                	add    BYTE PTR [ebx],cl
-  57:	0b 49 13             	or     ecx,DWORD PTR [ecx+0x13]
-  5a:	00 00                	add    BYTE PTR [eax],al
-  5c:	09 2e                	or     DWORD PTR [esi],ebp
-  5e:	00 3f                	add    BYTE PTR [edi],bh
-  60:	19 03                	sbb    DWORD PTR [ebx],eax
-  62:	0e                   	push   cs
-  63:	3a 0b                	cmp    cl,BYTE PTR [ebx]
-  printf("%d\n", factorial(6));
-  65:	3b 0b                	cmp    ecx,DWORD PTR [ebx]
-  67:	39 0b                	cmp    DWORD PTR [ebx],ecx
-  69:	49                   	dec    ecx
-  6a:	13 11                	adc    edx,DWORD PTR [ecx]
-  6c:	01 12                	add    DWORD PTR [edx],edx
-  6e:	06                   	push   es
-  6f:	40                   	inc    eax
-  70:	18 7c 19 00          	sbb    BYTE PTR [ecx+ebx*1+0x0],bh
-  74:	00 0a                	add    BYTE PTR [edx],cl
-  76:	2e 01 3f             	add    DWORD PTR cs:[edi],edi
-  79:	19 03                	sbb    DWORD PTR [ebx],eax
-  7b:	0e                   	push   cs
-  7c:	3a 0b                	cmp    cl,BYTE PTR [ebx]
-  7e:	3b 0b                	cmp    ecx,DWORD PTR [ebx]
-  80:	39 0b                	cmp    DWORD PTR [ebx],ecx
-  return 0;
-  82:	27                   	daa
-  83:	19 49 13             	sbb    DWORD PTR [ecx+0x13],ecx
+  4a:	18 00                	sbb    BYTE PTR [eax],al
+  4c:	00 05 11 01 25 0e    	add    BYTE PTR ds:0xe250111,al
+  52:	13 0b                	adc    ecx,DWORD PTR [ebx]
+  54:	03 1f                	add    ebx,DWORD PTR [edi]
+  56:	1b 1f                	sbb    ebx,DWORD PTR [edi]
+  58:	11 01                	adc    DWORD PTR [ecx],eax
+  5a:	12 06                	adc    al,BYTE PTR [esi]
+  5c:	10 17                	adc    BYTE PTR [edi],dl
+  5e:	00 00                	add    BYTE PTR [eax],al
+  60:	06                   	push   es
+  61:	26 00 49 13          	add    BYTE PTR es:[ecx+0x13],cl
+  65:	00 00                	add    BYTE PTR [eax],al
+  double res = 1, tmp = base;
+  67:	07                   	pop    es
+  68:	24 00                	and    al,0x0
+  6a:	0b 0b                	or     ecx,DWORD PTR [ebx]
+  6c:	3e 0b 03             	or     eax,DWORD PTR ds:[ebx]
+  6f:	08 00                	or     BYTE PTR [eax],al
+  71:	00 08                	add    BYTE PTR [eax],cl
+  while(pow)
+  73:	2e 01 3f             	add    DWORD PTR cs:[edi],edi
+    if(pow & 1)
+  76:	19 03                	sbb    DWORD PTR [ebx],eax
+  78:	0e                   	push   cs
+  79:	3a 0b                	cmp    cl,BYTE PTR [ebx]
+  7b:	3b 05 39 0b 27 19    	cmp    eax,DWORD PTR ds:0x19270b39
+      res *= tmp;
+  81:	49                   	dec    ecx
+  82:	13 3c 19             	adc    edi,DWORD PTR [ecx+ebx*1]
+  85:	01 13                	add    DWORD PTR [ebx],edx
+    tmp *= tmp;
+  87:	00 00                	add    BYTE PTR [eax],al
+  89:	09 05 00 49 13 00    	or     DWORD PTR ds:0x134900,eax
+    pow >>= 1;
+  8f:	00 0a                	add    BYTE PTR [edx],cl
+  91:	18 00                	sbb    BYTE PTR [eax],al
+  while(pow)
+  93:	00 00                	add    BYTE PTR [eax],al
+  95:	0b 0f                	or     ecx,DWORD PTR [edi]
+  97:	00 0b                	add    BYTE PTR [ebx],cl
+  return res;
+  99:	0b 49 13             	or     ecx,DWORD PTR [ecx+0x13]
 }
-  86:	11 01                	adc    DWORD PTR [ecx],eax
-  88:	12 06                	adc    al,BYTE PTR [esi]
-  8a:	40                   	inc    eax
-  8b:	18 7a 19             	sbb    BYTE PTR [edx+0x19],bh
-  8e:	01 13                	add    DWORD PTR [ebx],edx
-  90:	00 00                	add    BYTE PTR [eax],al
-  92:	0b 05 00 03 08 3a    	or     eax,DWORD PTR ds:0x3a080300
-  98:	0b 3b                	or     edi,DWORD PTR [ebx]
-  9a:	0b 39                	or     edi,DWORD PTR [ecx]
-  9c:	0b 49 13             	or     ecx,DWORD PTR [ecx+0x13]
-  9f:	02 18                	add    bl,BYTE PTR [eax]
-  a1:	00 00                	add    BYTE PTR [eax],al
-  a3:	0c 34                	or     al,0x34
-  a5:	00 03                	add    BYTE PTR [ebx],al
-  a7:	08 3a                	or     BYTE PTR [edx],bh
-  a9:	0b 3b                	or     edi,DWORD PTR [ebx]
-  ab:	0b 39                	or     edi,DWORD PTR [ecx]
-  ad:	0b 49 13             	or     ecx,DWORD PTR [ecx+0x13]
-  b0:	02 18                	add    bl,BYTE PTR [eax]
-  b2:	00 00                	add    BYTE PTR [eax],al
-  b4:	0d 2e 00 3f 19       	or     eax,0x193f002e
-  b9:	03 0e                	add    ecx,DWORD PTR [esi]
-  bb:	3a 0b                	cmp    cl,BYTE PTR [ebx]
-  bd:	3b 0b                	cmp    ecx,DWORD PTR [ebx]
-  bf:	39 0b                	cmp    DWORD PTR [ebx],ecx
-  c1:	49                   	dec    ecx
-  c2:	13 11                	adc    edx,DWORD PTR [ecx]
-  c4:	01 12                	add    DWORD PTR [edx],edx
-  c6:	06                   	push   es
-  c7:	40                   	inc    eax
-  c8:	18 7a 19             	sbb    BYTE PTR [edx+0x19],bh
-  cb:	00 00                	add    BYTE PTR [eax],al
+  9c:	00 00                	add    BYTE PTR [eax],al
+{
+  9e:	0c 2e                	or     al,0x2e
+  a0:	00 3f                	add    BYTE PTR [edi],bh
+  a2:	19 03                	sbb    DWORD PTR [ebx],eax
+  a4:	0e                   	push   cs
+  a5:	3a 0b                	cmp    cl,BYTE PTR [ebx]
+  a7:	3b 0b                	cmp    ecx,DWORD PTR [ebx]
+  a9:	39 0b                	cmp    DWORD PTR [ebx],ecx
+  ab:	49                   	dec    ecx
+  ac:	13 11                	adc    edx,DWORD PTR [ecx]
+  ae:	01 12                	add    DWORD PTR [edx],edx
+  b0:	06                   	push   es
+  b1:	40                   	inc    eax
+  b2:	18 7c 19 00          	sbb    BYTE PTR [ecx+ebx*1+0x0],bh
+  b6:	00 0d 05 00 03 0e    	add    BYTE PTR ds:0xe030005,cl
+  printf("sizeof(int): %d\n", sizeofint());
+  bc:	3a 0b                	cmp    cl,BYTE PTR [ebx]
+  be:	3b 0b                	cmp    ecx,DWORD PTR [ebx]
+  c0:	39 0b                	cmp    DWORD PTR [ebx],ecx
+  c2:	49                   	dec    ecx
+  c3:	13 02                	adc    eax,DWORD PTR [edx]
+  c5:	18 00                	sbb    BYTE PTR [eax],al
+  c7:	00 0e                	add    BYTE PTR [esi],cl
+  c9:	2e 00 3f             	add    BYTE PTR cs:[edi],bh
+  cc:	19 03                	sbb    DWORD PTR [ebx],eax
+  ce:	0e                   	push   cs
+  printf("factorial(6): %d.\n", factorial(6));
+  cf:	3a 0b                	cmp    cl,BYTE PTR [ebx]
+  d1:	3b 0b                	cmp    ecx,DWORD PTR [ebx]
+  d3:	39 0b                	cmp    DWORD PTR [ebx],ecx
+  d5:	49                   	dec    ecx
+  d6:	13 11                	adc    edx,DWORD PTR [ecx]
+  d8:	01 12                	add    DWORD PTR [edx],edx
+  da:	06                   	push   es
+  db:	40                   	inc    eax
+  dc:	18 7a 19             	sbb    BYTE PTR [edx+0x19],bh
+  df:	00 00                	add    BYTE PTR [eax],al
 	...
 
 Дизассемблирование раздела .debug_aranges:
@@ -354,16 +530,16 @@ int main()
    a:	04 00                	add    al,0x0
 	...
 {
-  14:	90                   	nop
+  14:	31 01                	xor    DWORD PTR [ecx],eax
 	...
 
 Дизассемблирование раздела .debug_line:
 
 00000000 <.debug_line>:
 {
-   0:	79 00                	jns    2 <.debug_line+0x2>
-   2:	00 00                	add    BYTE PTR [eax],al
-   4:	05 00 04 00 33       	add    eax,0x33000400
+   0:	ab                   	stos   DWORD PTR es:[edi],eax
+   1:	00 00                	add    BYTE PTR [eax],al
+   3:	00 05 00 04 00 33    	add    BYTE PTR ds:0x33000400,al
    9:	00 00                	add    BYTE PTR [eax],al
    b:	00 01                	add    BYTE PTR [ecx],al
   return sizeof(int);
@@ -401,25 +577,50 @@ int main()
   return r;
   46:	00 00                	add    BYTE PTR [eax],al
 }
-  48:	15 05 0a c9 05       	adc    eax,0x5c90a05
+  48:	16                   	push   ss
+  49:	05 0a c9 05 01       	add    eax,0x105c90a
 {
-  4d:	01 59 31             	add    DWORD PTR [ecx+0x31],ebx
-  50:	05 07 f3 05 08       	add    eax,0x805f307
+  4e:	59                   	pop    ecx
+  4f:	31 05 07 f3 05 08    	xor    DWORD PTR ds:0x805f307,eax
   55:	75 05                	jne    5c <.debug_line+0x5c>
   57:	0b 2f                	or     ebp,DWORD PTR [edi]
   59:	05 07 90 05 0b       	add    eax,0xb059007
   5e:	8f 05 0a 68 05 01    	pop    DWORD PTR ds:0x105680a
-  printf("%d\n", factorial(6));
-  64:	3d 31 05 03 08       	cmp    eax,0x8030531
-  69:	91                   	xchg   ecx,eax
-  6a:	00 02                	add    BYTE PTR [edx],al
-  6c:	04 01                	add    al,0x1
-  6e:	06                   	push   es
-  6f:	9e                   	sahf
-  70:	05 0a 06 08 2f       	add    eax,0x2f08060a
-  75:	05 01 59 02 0a       	add    eax,0xa025901
-  7a:	00 01                	add    BYTE PTR [ecx],al
-  7c:	01                   	.byte 0x1
+  64:	3d 31 05 0a 08       	cmp    eax,0x80a0531
+  double res = 1, tmp = base;
+  69:	bb 05 13 58 05       	mov    ebx,0x5581305
+  6e:	08 67 05             	or     BYTE PTR [edi+0x5],ah
+  71:	0c 30                	or     al,0x30
+  while(pow)
+  73:	05 07 66 05 0b       	add    eax,0xb056607
+    if(pow & 1)
+  78:	4b                   	dec    ebx
+  79:	05 09 91 83 37       	add    eax,0x37839109
+      res *= tmp;
+  7e:	05 0a 6d 05 01       	add    eax,0x1056d0a
+  83:	3d 31 05 03 08       	cmp    eax,0x8030531
+    tmp *= tmp;
+  88:	91                   	xchg   ecx,eax
+  89:	00 02                	add    BYTE PTR [edx],al
+  8b:	04 01                	add    al,0x1
+  8d:	06                   	push   es
+  8e:	58                   	pop    eax
+    pow >>= 1;
+  8f:	06                   	push   es
+  90:	08 2f                	or     BYTE PTR [edi],ch
+  while(pow)
+  92:	00 02                	add    BYTE PTR [edx],al
+  94:	04 01                	add    al,0x1
+  96:	06                   	push   es
+  97:	c8 06 08 2f          	enter  0x806,0x2f
+}
+  9b:	00 02                	add    BYTE PTR [edx],al
+{
+  9d:	04 01                	add    al,0x1
+  9f:	06                   	push   es
+  a0:	08 90 05 0a 06 08    	or     BYTE PTR [eax+0x8060a05],dl
+  a6:	83 05 01 59 02 0a 00 	add    DWORD PTR ds:0xa025901,0x0
+  ad:	01 01                	add    DWORD PTR [ecx],eax
 
 Дизассемблирование раздела .debug_str:
 
@@ -472,58 +673,72 @@ int main()
   5c:	6f                   	outs   dx,DWORD PTR ds:[esi]
   5d:	66 69 6e 74 00 6c    	imul   bp,WORD PTR [esi+0x74],0x6c00
   63:	6f                   	outs   dx,DWORD PTR ds:[esi]
-  printf("%d\n", factorial(6));
   64:	6e                   	outs   dx,BYTE PTR ds:[esi]
   65:	67 20 75 6e          	and    BYTE PTR [di+0x6e],dh
+  double res = 1, tmp = base;
   69:	73 69                	jae    d4 <.debug_str+0xd4>
   6b:	67 6e                	outs   dx,BYTE PTR ds:[si]
   6d:	65 64 20 69 6e       	gs and BYTE PTR fs:[ecx+0x6e],ch
+  while(pow)
   72:	74 00                	je     74 <.debug_str+0x74>
+    if(pow & 1)
   74:	6c                   	ins    BYTE PTR es:[edi],dx
   75:	6f                   	outs   dx,DWORD PTR ds:[esi]
   76:	6e                   	outs   dx,BYTE PTR ds:[esi]
   77:	67 20 6c 6f          	and    BYTE PTR [si+0x6f],ch
   7b:	6e                   	outs   dx,BYTE PTR ds:[esi]
   7c:	67 20 75 6e          	and    BYTE PTR [di+0x6e],dh
-  80:	73 69                	jae    eb <main+0xa1>
-  return 0;
+      res *= tmp;
+  80:	73 69                	jae    eb <.debug_str+0xeb>
   82:	67 6e                	outs   dx,BYTE PTR ds:[si]
   84:	65 64 20 69 6e       	gs and BYTE PTR fs:[ecx+0x6e],ch
-}
+    tmp *= tmp;
   89:	74 00                	je     8b <.debug_str+0x8b>
-  8b:	63 68 61             	arpl   WORD PTR [eax+0x61],bp
-  8e:	72 00                	jb     90 <.debug_str+0x90>
-  90:	75 6e                	jne    100 <main+0xb6>
-  92:	73 69                	jae    fd <main+0xb3>
-  94:	67 6e                	outs   dx,BYTE PTR ds:[si]
-  96:	65 64 20 63 68       	gs and BYTE PTR fs:[ebx+0x68],ah
-  9b:	61                   	popa
-  9c:	72 00                	jb     9e <.debug_str+0x9e>
-  9e:	6d                   	ins    DWORD PTR es:[edi],dx
-  9f:	61                   	popa
-  a0:	69 6e 00 6c 6f 6e 67 	imul   ebp,DWORD PTR [esi+0x0],0x676e6f6c
-  a7:	20 69 6e             	and    BYTE PTR [ecx+0x6e],ch
-  aa:	74 00                	je     ac <.debug_str+0xac>
-  ac:	66 61                	popaw
-  ae:	63 74 6f 72          	arpl   WORD PTR [edi+ebp*2+0x72],si
-  b2:	69 61 6c 00 73 68 6f 	imul   esp,DWORD PTR [ecx+0x6c],0x6f687300
-  b9:	72 74                	jb     12f <main+0xe5>
-  bb:	20 75 6e             	and    BYTE PTR [ebp+0x6e],dh
-  be:	73 69                	jae    129 <main+0xdf>
-  c0:	67 6e                	outs   dx,BYTE PTR ds:[si]
-  c2:	65 64 20 69 6e       	gs and BYTE PTR fs:[ecx+0x6e],ch
-  c7:	74 00                	je     c9 <.debug_str+0xc9>
-  c9:	70 72                	jo     13d <main+0xf3>
-  cb:	69 6e 74 66 00 73 68 	imul   ebp,DWORD PTR [esi+0x74],0x68730066
-  d2:	6f                   	outs   dx,DWORD PTR ds:[esi]
-  d3:	72 74                	jb     149 <main+0xff>
-  d5:	20 69 6e             	and    BYTE PTR [ecx+0x6e],ch
-  d8:	74 00                	je     da <.debug_str+0xda>
-  da:	73 69                	jae    145 <main+0xfb>
-  dc:	67 6e                	outs   dx,BYTE PTR ds:[si]
-  de:	65 64 20 63 68       	gs and BYTE PTR fs:[ebx+0x68],ah
-  e3:	61                   	popa
-  e4:	72 00                	jb     e6 <main+0x9c>
+  8b:	62 61 73             	bound  esp,QWORD PTR [ecx+0x73]
+  8e:	65 00 63 68          	add    BYTE PTR gs:[ebx+0x68],ah
+  while(pow)
+  92:	61                   	popa
+  93:	72 00                	jb     95 <.debug_str+0x95>
+  95:	75 6e                	jne    105 <main+0x68>
+  97:	73 69                	jae    102 <main+0x65>
+  return res;
+  99:	67 6e                	outs   dx,BYTE PTR ds:[si]
+}
+  9b:	65 64 20 63 68       	gs and BYTE PTR fs:[ebx+0x68],ah
+{
+  a0:	61                   	popa
+  a1:	72 00                	jb     a3 <.debug_str+0xa3>
+  a3:	6d                   	ins    DWORD PTR es:[edi],dx
+  a4:	61                   	popa
+  a5:	69 6e 00 6c 6f 6e 67 	imul   ebp,DWORD PTR [esi+0x0],0x676e6f6c
+  ac:	20 69 6e             	and    BYTE PTR [ecx+0x6e],ch
+  af:	74 00                	je     b1 <.debug_str+0xb1>
+  b1:	66 61                	popaw
+  b3:	63 74 6f 72          	arpl   WORD PTR [edi+ebp*2+0x72],si
+  printf("sizeof(int): %d\n", sizeofint());
+  b7:	69 61 6c 00 64 6f 75 	imul   esp,DWORD PTR [ecx+0x6c],0x756f6400
+  be:	62 6c 65 00          	bound  ebp,QWORD PTR [ebp+eiz*2+0x0]
+  c2:	73 68                	jae    12c <main+0x8f>
+  c4:	6f                   	outs   dx,DWORD PTR ds:[esi]
+  c5:	72 74                	jb     13b <main+0x9e>
+  c7:	20 75 6e             	and    BYTE PTR [ebp+0x6e],dh
+  ca:	73 69                	jae    135 <main+0x98>
+  cc:	67 6e                	outs   dx,BYTE PTR ds:[si]
+  ce:	65 64 20 69 6e       	gs and BYTE PTR fs:[ecx+0x6e],ch
+  printf("factorial(6): %d.\n", factorial(6));
+  d3:	74 00                	je     d5 <.debug_str+0xd5>
+  d5:	70 72                	jo     149 <main+0xac>
+  d7:	69 6e 74 66 00 73 68 	imul   ebp,DWORD PTR [esi+0x74],0x68730066
+  de:	6f                   	outs   dx,DWORD PTR ds:[esi]
+  df:	72 74                	jb     155 <main+0xb8>
+  e1:	20 69 6e             	and    BYTE PTR [ecx+0x6e],ch
+  e4:	74 00                	je     e6 <.debug_str+0xe6>
+  e6:	69 70 6f 77 00 73 69 	imul   esi,DWORD PTR [eax+0x6f],0x69730077
+  ed:	67 6e                	outs   dx,BYTE PTR ds:[si]
+  printf("Pi^5: %lf\n", ipow(5, DOUBLE_PI));
+  ef:	65 64 20 63 68       	gs and BYTE PTR fs:[ebx+0x68],ah
+  f4:	61                   	popa
+  f5:	72 00                	jb     f7 <main+0x5a>
 
 Дизассемблирование раздела .debug_line_str:
 
@@ -580,58 +795,66 @@ int main()
   55:	2d 63 6f 6d 70       	sub    eax,0x706d6f63
   5a:	69 6c 69 6e 67 00 63 63 	imul   ebp,DWORD PTR [ecx+ebp*2+0x6e],0x63630067
   62:	65 2e 63 00          	gs arpl WORD PTR cs:[eax],ax
-  printf("%d\n", factorial(6));
   66:	2f                   	das
+  double res = 1, tmp = base;
   67:	68 6f 6d 65 2f       	push   0x2f656d6f
   6c:	64 2f                	fs das
   6e:	5f                   	pop    edi
   6f:	2f                   	das
   70:	73 61                	jae    d3 <.debug_line_str+0xd3>
+  while(pow)
   72:	66 65 5f             	gs pop di
+    if(pow & 1)
   75:	77 66                	ja     dd <.debug_line_str+0xdd>
   77:	2f                   	das
-  78:	77 6f                	ja     e9 <main+0x9f>
-  7a:	72 6b                	jb     e7 <main+0x9d>
+  78:	77 6f                	ja     e9 <main+0x4c>
+  7a:	72 6b                	jb     e7 <main+0x4a>
   7c:	2f                   	das
   7d:	53                   	push   ebx
+      res *= tmp;
   7e:	50                   	push   eax
   7f:	62 55 2f             	bound  edx,QWORD PTR [ebp+0x2f]
-  return 0;
   82:	63 6f 75             	arpl   WORD PTR [edi+0x75],bp
-  85:	72 73                	jb     fa <main+0xb0>
-}
+  85:	72 73                	jb     fa <main+0x5d>
+    tmp *= tmp;
   87:	65 73 2f             	gs jae b9 <.debug_line_str+0xb9>
   8a:	43                   	inc    ebx
   8b:	6f                   	outs   dx,DWORD PTR ds:[esi]
   8c:	6d                   	ins    DWORD PTR es:[edi],dx
-  8d:	70 75                	jo     104 <main+0xba>
-  8f:	74 65                	je     f6 <main+0xac>
-  91:	72 5f                	jb     f2 <main+0xa8>
+  8d:	70 75                	jo     104 <main+0x67>
+    pow >>= 1;
+  8f:	74 65                	je     f6 <main+0x59>
+  91:	72 5f                	jb     f2 <main+0x55>
+  while(pow)
   93:	41                   	inc    ecx
-  94:	72 63                	jb     f9 <main+0xaf>
+  94:	72 63                	jb     f9 <main+0x5c>
   96:	68 69 74 65 63       	push   0x63657469
-  9b:	74 75                	je     112 <main+0xc8>
-  9d:	72 65                	jb     104 <main+0xba>
+}
+  9b:	74 75                	je     112 <main+0x75>
+{
+  9d:	72 65                	jb     104 <main+0x67>
   9f:	2d 53 50 62 55       	sub    eax,0x55625053
   a4:	2d 43 42 2e 35       	sub    eax,0x352e4243
   a9:	30 38                	xor    BYTE PTR [eax],bh
   ab:	30 2f                	xor    BYTE PTR [edi],ch
-  ad:	65 78 61             	gs js  111 <main+0xc7>
+  ad:	65 78 61             	gs js  111 <main+0x74>
   b0:	6d                   	ins    DWORD PTR es:[edi],dx
-  b1:	70 6c                	jo     11f <main+0xd5>
+  b1:	70 6c                	jo     11f <main+0x82>
   b3:	65 73 2f             	gs jae e5 <.debug_line_str+0xe5>
   b6:	63 72 6f             	arpl   WORD PTR [edx+0x6f],si
-  b9:	73 73                	jae    12e <main+0xe4>
+  printf("sizeof(int): %d\n", sizeofint());
+  b9:	73 73                	jae    12e <main+0x91>
   bb:	2d 63 6f 6d 70       	sub    eax,0x706d6f63
   c0:	69 6c 69 6e 67 00 2f 75 	imul   ebp,DWORD PTR [ecx+ebp*2+0x6e],0x752f0067
-  c8:	73 72                	jae    13c <main+0xf2>
+  c8:	73 72                	jae    13c <main+0x9f>
   ca:	2f                   	das
   cb:	69 6e 63 6c 75 64 65 	imul   ebp,DWORD PTR [esi+0x63],0x6564756c
+  printf("factorial(6): %d.\n", factorial(6));
   d2:	00 63 63             	add    BYTE PTR [ebx+0x63],ah
   d5:	65 2e 63 00          	gs arpl WORD PTR cs:[eax],ax
   d9:	63 63 65             	arpl   WORD PTR [ebx+0x65],sp
   dc:	2e 63 00             	arpl   WORD PTR cs:[eax],ax
-  df:	73 74                	jae    155 <main+0x10b>
+  df:	73 74                	jae    155 <main+0xb8>
   e1:	64                   	fs
   e2:	69                   	.byte 0x69
   e3:	6f                   	outs   dx,DWORD PTR ds:[esi]
@@ -673,12 +896,12 @@ int main()
    f:	00 02                	add    BYTE PTR [edx],al
   11:	00 01                	add    BYTE PTR [ecx],al
   13:	c0 04 00 00          	rol    BYTE PTR [eax+eax*1],0x0
-  17:	00 00                	add    BYTE PTR [eax],al
+  17:	00 01                	add    BYTE PTR [ecx],al
   19:	00 00                	add    BYTE PTR [eax],al
   1b:	00 01                	add    BYTE PTR [ecx],al
   1d:	00 01                	add    BYTE PTR [ecx],al
   1f:	c0 04 00 00          	rol    BYTE PTR [eax+eax*1],0x0
-  23:	00 01                	add    BYTE PTR [ecx],al
+  23:	00 03                	add    BYTE PTR [ebx],al
   25:	00 00                	add    BYTE PTR [eax],al
 	...
 
@@ -723,43 +946,68 @@ int main()
   51:	72 c5                	jb     18 <.eh_frame+0x18>
   53:	0c 04                	or     al,0x4
   55:	04 00                	add    al,0x0
-  57:	00 30                	add    BYTE PTR [eax],dh
-  59:	00 00                	add    BYTE PTR [eax],al
-  5b:	00 5c 00 00          	add    BYTE PTR [eax+eax*1+0x0],bl
+  57:	00 1c 00             	add    BYTE PTR [eax+eax*1],bl
+  5a:	00 00                	add    BYTE PTR [eax],al
+  5c:	5c                   	pop    esp
+  5d:	00 00                	add    BYTE PTR [eax],al
   5f:	00 4a 00             	add    BYTE PTR [edx+0x0],cl
   62:	00 00                	add    BYTE PTR [eax],al
-  64:	46                   	inc    esi
+  64:	53                   	push   ebx
   65:	00 00                	add    BYTE PTR [eax],al
   67:	00 00                	add    BYTE PTR [eax],al
-  69:	44                   	inc    esp
-  6a:	0c 01                	or     al,0x1
-  6c:	00 49 10             	add    BYTE PTR [ecx+0x10],cl
-  6f:	05 02 75 00 42       	add    eax,0x42007502
-  74:	0f 03 75 78          	lsl    esi,WORD PTR [ebp+0x78]
-  78:	06                   	push   es
-  79:	10 03                	adc    BYTE PTR [ebx],al
-  7b:	02 75 7c             	add    dh,BYTE PTR [ebp+0x7c]
-  7e:	71 c1                	jno    41 <.eh_frame+0x41>
-  80:	0c 01                	or     al,0x1
-  82:	00 41 c3             	add    BYTE PTR [ecx-0x3d],al
-  85:	41                   	inc    ecx
-  86:	c5 43 0c             	lds    eax,FWORD PTR [ebx+0xc]
-  89:	04 04                	add    al,0x4
-  8b:	00 10                	add    BYTE PTR [eax],dl
-  8d:	00 00                	add    BYTE PTR [eax],al
-  8f:	00 90 00 00 00 00    	add    BYTE PTR [eax+0x0],dl
-  95:	00 00                	add    BYTE PTR [eax],al
-  97:	00 04 00             	add    BYTE PTR [eax+eax*1],al
-  9a:	00 00                	add    BYTE PTR [eax],al
-  9c:	00 00                	add    BYTE PTR [eax],al
-  9e:	00 00                	add    BYTE PTR [eax],al
-  a0:	10 00                	adc    BYTE PTR [eax],al
-  a2:	00 00                	add    BYTE PTR [eax],al
-  a4:	a4                   	movs   BYTE PTR es:[edi],BYTE PTR ds:[esi]
-  a5:	00 00                	add    BYTE PTR [eax],al
-  a7:	00 00                	add    BYTE PTR [eax],al
-  a9:	00 00                	add    BYTE PTR [eax],al
-  ab:	00 04 00             	add    BYTE PTR [eax+eax*1],al
+  69:	41                   	inc    ecx
+  6a:	0e                   	push   cs
+  6b:	08 85 02 42 0d 05    	or     BYTE PTR [ebp+0x50d4202],al
+  71:	02 4f c5             	add    cl,BYTE PTR [edi-0x3b]
+  74:	0c 04                	or     al,0x4
+  76:	04 00                	add    al,0x0
+  78:	30 00                	xor    BYTE PTR [eax],al
+  7a:	00 00                	add    BYTE PTR [eax],al
+  7c:	7c 00                	jl     7e <.eh_frame+0x7e>
+  7e:	00 00                	add    BYTE PTR [eax],al
+  80:	9d                   	popf
+  81:	00 00                	add    BYTE PTR [eax],al
+  83:	00 94 00 00 00 00 44 	add    BYTE PTR [eax+eax*1+0x44000000],dl
+  8a:	0c 01                	or     al,0x1
+  8c:	00 49 10             	add    BYTE PTR [ecx+0x10],cl
+  8f:	05 02 75 00 42       	add    eax,0x42007502
+  94:	0f 03 75 78          	lsl    esi,WORD PTR [ebp+0x78]
+  98:	06                   	push   es
+  99:	10 03                	adc    BYTE PTR [ebx],al
+  9b:	02 75 7c             	add    dh,BYTE PTR [ebp+0x7c]
+  9e:	02 7f c1             	add    bh,BYTE PTR [edi-0x3f]
+  a1:	0c 01                	or     al,0x1
+  a3:	00 41 c3             	add    BYTE PTR [ecx-0x3d],al
+  a6:	41                   	inc    ecx
+  a7:	c5 43 0c             	lds    eax,FWORD PTR [ebx+0xc]
+  aa:	04 04                	add    al,0x4
+  ac:	10 00                	adc    BYTE PTR [eax],al
   ae:	00 00                	add    BYTE PTR [eax],al
-  b0:	00 00                	add    BYTE PTR [eax],al
+  b0:	b0 00                	mov    al,0x0
+  b2:	00 00                	add    BYTE PTR [eax],al
+  b4:	00 00                	add    BYTE PTR [eax],al
+  b6:	00 00                	add    BYTE PTR [eax],al
+  b8:	04 00                	add    al,0x0
+  ba:	00 00                	add    BYTE PTR [eax],al
+  bc:	00 00                	add    BYTE PTR [eax],al
+  be:	00 00                	add    BYTE PTR [eax],al
+  c0:	10 00                	adc    BYTE PTR [eax],al
+  c2:	00 00                	add    BYTE PTR [eax],al
+  c4:	c4 00                	les    eax,FWORD PTR [eax]
+  c6:	00 00                	add    BYTE PTR [eax],al
+  c8:	00 00                	add    BYTE PTR [eax],al
+  ca:	00 00                	add    BYTE PTR [eax],al
+  cc:	04 00                	add    al,0x0
+  ce:	00 00                	add    BYTE PTR [eax],al
+  d0:	00 00                	add    BYTE PTR [eax],al
+  d2:	00 00                	add    BYTE PTR [eax],al
+  d4:	10 00                	adc    BYTE PTR [eax],al
+  d6:	00 00                	add    BYTE PTR [eax],al
+  d8:	d8 00                	fadd   DWORD PTR [eax]
+  da:	00 00                	add    BYTE PTR [eax],al
+  dc:	00 00                	add    BYTE PTR [eax],al
+  de:	00 00                	add    BYTE PTR [eax],al
+  e0:	04 00                	add    al,0x0
+  e2:	00 00                	add    BYTE PTR [eax],al
+  e4:	00 00                	add    BYTE PTR [eax],al
 	...
