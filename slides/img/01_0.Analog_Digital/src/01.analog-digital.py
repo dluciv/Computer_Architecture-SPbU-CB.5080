@@ -38,32 +38,32 @@ def plot_x1x2x4():
     plt.xlabel('x')
     plt.legend([x1, x2, x4], ['x', 'x^2', 'x^4'])
 
-    plt.savefig("../01.non-linear.svg")
+    plt.savefig("../non-linear.svg")
 
 
 def plot_mf():
     xs = numpy.r_[0.0 : 10.0 : 1/20.0]
     f, = plt.plot(xs, list(map(mf, xs)))
-    plt.savefig("../01.mod-fun.svg")
+    plt.savefig("../mod-fun.svg")
 
 
 def plot_ma():
     xs = numpy.r_[0.0 : 10.0 : 1/20.0]
     f, = plt.plot(xs, list(map(mf, xs)))
     a, = plt.plot(xs, list(map(ma, xs)))
-    plt.savefig("../01.mod-amp.svg")
+    plt.savefig("../mod-amp.svg")
 
 def plot_mph():
     xs = numpy.r_[0.0 : 10.0 : 1/20.0]
     f, = plt.plot(xs, list(map(mf, xs)))
     a, = plt.plot(xs, list(map(mph, xs)))
-    plt.savefig("../01.mod-pha.svg")
+    plt.savefig("../mod-pha.svg")
 
 def plot_mfr():
     xs = numpy.r_[0.0 : 10.0 : 1/20.0]
     f, = plt.plot(xs, list(map(mf, xs)))
     a, = plt.plot(xs, list(map(mfr, xs)))
-    plt.savefig("../01.mod-fre.svg")
+    plt.savefig("../mod-fre.svg")
 
 if __name__ == '__main__':
     plt.switch_backend('agg')  # to run headless
