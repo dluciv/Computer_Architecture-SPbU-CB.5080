@@ -386,9 +386,23 @@
     Пример: \href{https://en.wikipedia.org/wiki/OSI_model\#Layer_architecture}{модель ISO/OSI}, в которой высокоуровневые протоколы инкапсулированы в низкоуровневые
 \end{frame}
 
-\subsection{Устаревшие шины ISA и PCI}
+\subsection{Устаревшие шины S-100, ISA и PCI}
 
-\begin{frame}{Industry Standard Architecture (ISA)}
+\begin{frame}{S-100, 1974}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.5\textheight]{img/\jobname/Cromemco_Blitz_Bus.jpg}
+    \end{figure}
+
+    \begin{outline}[itemize]
+        \1 Предложена в Micro Instrumentation and Telemetry Systems, как \href{https://en.wikipedia.org/wiki/S-100_bus}{шина для Altair 8800}
+        \1 Просто плата с разъёмами и стандарт, через какой контакт и какие дорожки что идёт (ккие сигналы и какое питание); вполне буквально фон Неймановская системная шина
+        \pause
+            \2 Советский термин для таких пассивных шин «балалайка» --- напоминают гриф балалайки или гитары
+    \end{outline}
+\end{frame}
+
+\begin{frame}{Industry Standard Architecture (ISA), 1981}
     \begin{itemize}
         \item «Родная» шина IBM PC: \href{https://en.wikipedia.org/wiki/Industry_Standard_Architecture}{разъёмы ISA} позволяли непосредственно подключить устройство к системной шине
         \item 8, затем 16-разрядная
@@ -397,10 +411,12 @@
         \pause
         \item Изредка используется до сих пор
     \end{itemize}
+    \pause
+    Исходно по стандарту такая же «пассивная», как S-100, но в конкретных реализациях, например PC, немного «помогает» DMA и другим механизмам
 \end{frame}
 
 
-\begin{frame}{Peripheral Component Interconnect (PCI)}
+\begin{frame}{Peripheral Component Interconnect (PCI), 1992}
     \begin{itemize}
         \item \href{https://en.wikipedia.org/wiki/Peripheral_Component_Interconnect}{32-разрядная} (немногие реализации --- 64-разрядные)
         \item \alert<2->{Отделена от процессора:}
