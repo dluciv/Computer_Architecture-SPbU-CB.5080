@@ -164,7 +164,7 @@
 
 \subsection{Диски: жёсткие и не очень}
 
-\begin{frame}{Магнитные устройства: Диски (I)}
+\begin{frame}{Магнитные устройства: Диски дискеты и прочие друзья (I)}
 \begin{itemize}
 \tightlist
 \item
@@ -200,7 +200,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Магнитные устройства: Диски (II)}
+\begin{frame}{Магнитные устройства: Жёсткие диски (I)}
 
 \begin{itemize}
 \item
@@ -221,42 +221,22 @@
 звук}
 \end{frame}
 
-\begin{frame}{Магнитные устройства: Диски (III)}
+\begin{frame}{Магнитные устройства:  Жёсткие диски (II)}
 
-\begin{itemize}
-\tightlist
-\item
-  ЖМД
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Жесткий --- твердый и несменный
-  \item
-    Быстрые, высокая плотность
-  \item
-    Многократная перезапись, обычно экранолетные головки
-  \item
-    Пример сменных --- ZIPdrive --- не слишком удачный
-  \item
-    История
-
-    \begin{itemize}
+\begin{outline}
     \tightlist
-    \item
-      Первый --- \href{https://en.wikipedia.org/wiki/IBM_305_RAMAC}{IBM
-      350 RAMAC}, 1956 г., 1 тонна, 5 мегабайт.
-    \item
-      1980 --- 5,25 Winchester, Shugart ST-506, 5 МиБ
-    \item
-      2006 --- перпендикулярная запись
-    \item
-      2006 --- гибридные --- диск + несколько ГиБ Flash --- во Flash ---
-      КЭШ write-back, мотор стоит, ноутбук работает дольше. Промышленный
-      образец --- Seagate Momentus XT --- 20\jobname/
-    \end{itemize}
-  \end{itemize}
-\end{itemize}
+    \1 Жесткий --- твердый и несменный
+    \1 Быстрые, высокая плотность
+    \1 Многократная перезапись, обычно экранолетные головки
+    \1 Пример сменных --- ZIPdrive --- не слишком удачный
+    \1 История:
+        \2 Первый --- \href{https://en.wikipedia.org/wiki/IBM_305_RAMAC}{IBM 350 RAMAC}, 1956 г., 1 тонна, 5 мегабайт --- для мейнфреймов и табуляторов
+        \2 1980 --- 5,25 Winchester, Shugart ST-506, 5 МиБ
+        \2 2006 --- гибридные --- диск + несколько ГиБ Flash --- во Flash --- КЭШ write-back, мотор стоит, ноутбук работает дольше. Промышленный образец --- Seagate Momentus XT --- 2010/
+        \2 Вектор записи
+            \3 2006 --- перпендикулярная запись
+            \3 2013 --- «\href{https://en.wikipedia.org/wiki/Shingled\_magnetic\_recording}{черепичная запись}» --- для изменения приходится перезаписать сектора нескольких дорожек
+\end{outline}
 \end{frame}
 
 \subsection{Оптические носители}
@@ -273,8 +253,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-    \begin{block}{CD}
+\begin{frame}{CD}
         \begin{itemize}
             \tightlist
             \item
@@ -290,11 +269,9 @@
         \end{itemize}
 
         RW --- пузырьками в пластике
-    \end{block}
 \end{frame}
 
-\begin{frame}
-    \begin{block}{DVD}
+\begin{frame}{DVD}
         \begin{itemize}
             \tightlist
             \item
@@ -306,11 +283,9 @@
             \item
             Коды регионов
         \end{itemize}
-    \end{block}
 \end{frame}
 
-\begin{frame}
-    \begin{block}{ВluRay и HD DVD}
+\begin{frame}{ВluRay и HD DVD}
         \begin{itemize}
             \tightlist
             \item
@@ -331,6 +306,29 @@
             \end{itemize}
         \end{itemize}
 
+\end{frame}
+
+\begin{frame}{Долговечность}
+    \begin{block}{Ширпотреб}
+        \begin{outline}
+            \1 Самые долговечные --- заводские
+            \1 Самые недолговечные --- RW
+            \1 Долговечность CD/DVD R
+                \2 CD-R и DVD-R --- 10--25 лет, органический носитель данных
+                \2 BD-R --- 25--50 лет, металлический носитель данных
+        \end{outline}
+    \end{block}
+    \pause
+    А если хочется подольше?
+    \pause
+    \begin{block}{M-DISC}
+        Полностью --- \href{https://ru.wikipedia.org/wiki/M-DISC}{Millennial Disc}
+        \begin{itemize}
+            \item DVD- и BD-R
+            \item Слой с данными специального состава, обещают сотни лет
+            \item Требует более мощного лазера для записи
+        \end{itemize}
+        Тоже почти ширпотреб: болванки дороже раз в пять, привод --- раза в 2--3
     \end{block}
 \end{frame}
 
