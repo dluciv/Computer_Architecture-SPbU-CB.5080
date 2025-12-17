@@ -1,3 +1,4 @@
 Слайды и примеры к курсу «Архитектура ЭВМ», программа бакалавриата «Программная инженерия», Матмех СПбГУ.
 
-[Больше информации](https://edu.dluciv.name/Home/architecture)
+* [Больше информации](https://edu.dluciv.name/Home/architecture)
+* [Слайды](./slides.pdf)
