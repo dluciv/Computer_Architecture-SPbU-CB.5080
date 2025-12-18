@@ -1,3 +1,5 @@
+[Информация о курсе](https://edu.dluciv.name/Home/architecture/?utm_source=github&utm_campaign=socials)
+
 Слайды
 
 1. [Аналоговые и цифровые вычислительные системы](01_0.Analog_Digital.pdf)
