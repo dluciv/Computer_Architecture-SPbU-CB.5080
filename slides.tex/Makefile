@@ -17,7 +17,7 @@ all: ../slides.pdf/01_0.Analog_Digital.pdf ../slides.pdf/02_0.Prehistoric_Aiken_
 
 clean:
 	-rm *.aux *.log *.nav *.out *.toc *.vrb *.snm *.synctex.gz *.fls *.fdb_latexmk *.xdv
-	-rm -rf _minted-* svg-inkscape
+	-rm -rf _minted _minted-* svg-inkscape
 
 cleanall: clean
 	-rm ../slides.pdf/*.pdf
