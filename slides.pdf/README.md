@@ -1,4 +1,4 @@
-[Информация о курсе](https://edu.dluciv.name/Home/architecture/?utm_source=github&utm_campaign=socials)
+[Информация о курсе](https://edu.dluciv.name/Home/comparch-b24?utm_source=github&utm_campaign=socials)
 
 Слайды
 
