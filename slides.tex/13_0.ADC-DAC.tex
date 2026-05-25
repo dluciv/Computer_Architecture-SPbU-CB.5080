@@ -1,0 +1,199 @@
+\documentclass[xetex,aspectratio=43]{beamer}
+
+\usepackage{res/lections}
+
+\preamble
+
+\title{ЦАП и АЦП}
+
+\begin{document}
+
+    \titleslide
+
+    \tocslide
+
+
+%==============================================
+
+\section{ЦАП}
+
+\subsection{Электронные преобразователи}
+
+\begin{frame}{ЦАП R-2R}
+
+\href{http://en.wikipedia.org/wiki/Resistor_ladder}{R-2R}
+
+Достоинства:
+\begin{itemize}
+\item Работает за константу по времени
+\item Устроен просто
+\item Для $N$ уровней сложность схемы пропорциональна $\log_2 N$
+\end{itemize}
+\pause
+
+Недостатки:
+\begin{itemize}
+\item Из-за необходимости в точных резисторах стоил дорого
+\item Неравномерная нагрузка на резисторы и входные каналы
+\end{itemize}
+\pause
+\begin{itemize}
+\item Мощные точные резисторы --- практически оксюморон (из-за этого дороговизна)
+\end{itemize}
+
+Использовался, как дешёвый синтезатор звука: \href{https://en.wikipedia.org/wiki/Covox_Speech_Thing}{Covox Speech Thing},
+поддерживался играми Wolfenstein 3D и Space Quest. Платформы Specturm,  БК и PC (через LPT).
+\end{frame}
+
+\begin{frame}{Широтно-импульсный модулятор}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\includegraphics[height=0.9\textheight]{img/\jobname/wim}
+\end{column}
+\begin{column}{0.6\textwidth}
+  \begin{itemize}
+  \item Работает небыстро (пропорционально количеству значений)
+  \item Хорошо масштабируем (меняется только разрядность счётчика)
+  \item Схема сглаживания может вызывать «нелинейность», но её легче всего компенсировать цифровой калибровкой.
+  \end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Пространственные манипуляторы}
+\begin{frame}
+  \begin{itemize}
+  \item Высокой точности
+    \begin{itemize}
+    \item \href{https://en.wikipedia.org/wiki/Stepper_motor}{Шаговый двигатель}
+    \end{itemize}
+  \item Больших скорости и диапазона
+    \begin{itemize}
+    \item Лифт
+    \item Подъёмный кран и даже строительный вертолёт
+    \end{itemize}
+  \item Гибридные
+    \begin{itemize}
+    \item Приблизительное позиционирование низкой точности, фиксация, затем точная подстройка, требующая обратной связи при помощи \hyperlink{adc}{АЦП} и
+          \hyperlink{cybcontrollers}{кибернетических регуляторов}.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\hypertarget{adc}{\section{АЦП}}
+\subsection{Электронные преобразователи}
+\begin{frame}{Компаратор}
+\begin{center}
+\includegraphics[width=0.7\textwidth]{img/\jobname/comparaor}
+\end{center}
+\end{frame}
+
+\begin{frame}{Прямой АЦП}
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\includegraphics[width=\textwidth]{img/\jobname/directadc}
+\end{column}
+\begin{column}{0.4\textwidth}
+  \begin{itemize}
+  \item Работает за линейное время (но быстро, аналоговая схема)
+  \item Сложность схемы пропорциональна количеству позиций
+  \end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Компенсационный}
+\begin{center}
+\includegraphics[height=0.9\textheight]{img/\jobname/compenseadc}
+\end{center}
+Обычно подбирает значение бинарным поиском. Сложность логарифмическая.
+\end{frame}
+
+\begin{frame}{Широтно-импульсный демодулятор}
+Можно измерять время разрядки конденсатора через резистор. Когда конденсатор разрядится ниже определённой разности потенциалов, должен остановиться счётчик.
+\end{frame}
+
+\subsection{Пространственные датчики}
+
+\begin{frame}{Коды Грея и Де-Брёйна в датчиках координат}
+
+\begin{block}{\href{https://en.wikipedia.org/wiki/Gray_code}{Код Грея}}
+\begin{itemize}
+\tightlist
+\item Используются в механических и оптико-механических датчиках
+\item Представляет собой обычные двоичные числа упорядоченные таким образом, что при переходе к следующему значению меняется только 1 бит. Код Грея устраняет неоднозначность при дребезге АЦП
+\item Используется при параллельной пространственной маркировке
+\end{itemize}
+\end{block}
+
+\begin{block}{\href{https://en.wikipedia.org/wiki/De_Bruijn_sequence}{Последовательность де Брёйна}}
+\begin{itemize}
+\tightlist
+\item Последовательность битов $N$, любой отрезок которой длиной не менее $M$ битов уникален
+\item Используется при последовательной пространственной маркировке, например в \emph{линейных энкодерах}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Датчик угловой и линейной скоростей}
+Используется, например, в механических и старых (требующих специального коврика) оптических «мышах».
+
+\href{https://en.wikipedia.org/wiki/Computer_mouse\#Mechanical_mice}{Мышь}
+\end{frame}
+
+\begin{frame}{Интерферометрические: нониус и «родственники»}
+  \begin{itemize}
+  \item \href{https://en.wikipedia.org/wiki/Vernier_scale\#Functioning}{Штангенциркуль}
+  \item \href{https://skbis.ru/catalog}{Линейные энкодеры с аналоговой составляющей}
+  \end{itemize}
+\end{frame}
+
+\hypertarget{cybcontrollers}{\section{Кибернетические регуляторы}}
+
+\begin{frame}{Регулятор}
+
+\defn{Регулятор}{математическая модель учёта данных обратной связи,
+позволяющая оптимизировать параметры функции с целью минимизации нежелательных
+эффектов}
+
+А какие могут быть нежелательные эффекты?
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Сильное запаздывание
+\item
+  Слишком резкое изменение функции
+\item
+  Колебания
+\end{itemize}
+
+А почему они нежелательные?
+
+\pause
+
+Представьте себе, что они проявляются:
+
+\begin{itemize}
+\tightlist
+\item
+  при управлении лифтом
+\item
+  при управлении отоплением
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Пример: ПИД-регулятор}
+
+Один из способов улучшить ситуацию --- применить подходящий регулятор, наример, \href{https://en.wikipedia.org/wiki/PID_controller}{ПИД}
+
+\end{frame}
+
+\postamble
+
+\end{document}
