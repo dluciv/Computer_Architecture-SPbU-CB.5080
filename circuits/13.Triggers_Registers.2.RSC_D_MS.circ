@@ -2,7 +2,11 @@
 <project source="5.0.0" version="1.0">
   This file is intended to be loaded by Logisim-evolution v5.0.0(https://github.com/logisim-evolution/).
 
-  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
@@ -181,6 +185,7 @@ end TCL_Generic;&#13;
     <comp lib="1" loc="(110,520)" name="Buffer"/>
     <comp lib="1" loc="(140,520)" name="Buffer"/>
     <comp lib="1" loc="(150,800)" name="NOT Gate"/>
+    <comp lib="1" loc="(150,980)" name="NOT Gate"/>
     <comp lib="1" loc="(170,520)" name="Buffer"/>
     <comp lib="1" loc="(200,120)" name="AND Gate">
       <a name="size" val="30"/>
@@ -189,7 +194,6 @@ end TCL_Generic;&#13;
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(210,520)" name="NOT Gate"/>
-    <comp lib="1" loc="(240,980)" name="NOT Gate"/>
     <comp lib="1" loc="(250,530)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
@@ -211,11 +215,11 @@ end TCL_Generic;&#13;
     <comp lib="1" loc="(370,560)" name="NOR Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="5" loc="(170,980)" name="D Flip-Flop">
-      <a name="appearance" val="classic"/>
-      <a name="trigger" val="high"/>
-    </comp>
     <comp lib="5" loc="(180,1130)" name="D Flip-Flop">
+      <a name="appearance" val="classic"/>
+      <a name="trigger" val="low"/>
+    </comp>
+    <comp lib="5" loc="(210,980)" name="D Flip-Flop">
       <a name="appearance" val="classic"/>
       <a name="trigger" val="high"/>
     </comp>
@@ -228,27 +232,27 @@ end TCL_Generic;&#13;
     </comp>
     <comp lib="5" loc="(310,1130)" name="D Flip-Flop">
       <a name="appearance" val="classic"/>
-      <a name="trigger" val="low"/>
+      <a name="trigger" val="high"/>
     </comp>
-    <comp lib="9" loc="(145,905)" name="Text">
+    <comp lib="9" loc="(139,921)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="4.а. MS (Master-Slave) связка"/>
     </comp>
-    <comp lib="9" loc="(155,1055)" name="Text">
+    <comp lib="9" loc="(165,1068)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="4.b. Обозначение срабатывания по спаду"/>
     </comp>
-    <comp lib="9" loc="(195,390)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="2. Синхронизация по фронту тактового сигнала"/>
-    </comp>
-    <comp lib="9" loc="(200,730)" name="Text">
+    <comp lib="9" loc="(197,744)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="3. D-триггер (базовый элемент статической памяти)"/>
     </comp>
     <comp lib="9" loc="(205,30)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="1. Синхронизация по высокому уровню тактового сигнала"/>
+    </comp>
+    <comp lib="9" loc="(286,401)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="2. Синхронизация по фронту тактового сигнала при помощи прерывания сигнала"/>
     </comp>
     <comp lib="9" loc="(360,110)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -317,8 +321,8 @@ end TCL_Generic;&#13;
     <wire from="(100,1110)" to="(110,1110)"/>
     <wire from="(100,1150)" to="(140,1150)"/>
     <wire from="(100,960)" to="(100,980)"/>
-    <wire from="(100,960)" to="(200,960)"/>
-    <wire from="(100,980)" to="(130,980)"/>
+    <wire from="(100,960)" to="(240,960)"/>
+    <wire from="(100,980)" to="(120,980)"/>
     <wire from="(110,1110)" to="(110,1130)"/>
     <wire from="(110,1110)" to="(210,1110)"/>
     <wire from="(110,1130)" to="(140,1130)"/>
@@ -328,23 +332,23 @@ end TCL_Generic;&#13;
     <wire from="(110,800)" to="(120,800)"/>
     <wire from="(140,520)" to="(150,520)"/>
     <wire from="(150,800)" to="(190,800)"/>
+    <wire from="(150,980)" to="(170,980)"/>
     <wire from="(170,520)" to="(180,520)"/>
     <wire from="(170,790)" to="(170,820)"/>
     <wire from="(170,790)" to="(190,790)"/>
-    <wire from="(170,980)" to="(180,980)"/>
-    <wire from="(180,1000)" to="(260,1000)"/>
     <wire from="(180,1130)" to="(190,1130)"/>
-    <wire from="(180,980)" to="(180,1000)"/>
     <wire from="(190,1130)" to="(190,1150)"/>
     <wire from="(190,1150)" to="(270,1150)"/>
     <wire from="(200,120)" to="(270,120)"/>
     <wire from="(200,200)" to="(270,200)"/>
-    <wire from="(200,960)" to="(200,980)"/>
-    <wire from="(200,980)" to="(210,980)"/>
     <wire from="(210,1110)" to="(210,1130)"/>
     <wire from="(210,1130)" to="(270,1130)"/>
     <wire from="(210,520)" to="(220,520)"/>
+    <wire from="(210,980)" to="(220,980)"/>
+    <wire from="(220,1000)" to="(260,1000)"/>
+    <wire from="(220,980)" to="(220,1000)"/>
     <wire from="(230,780)" to="(250,780)"/>
+    <wire from="(240,960)" to="(240,980)"/>
     <wire from="(240,980)" to="(260,980)"/>
     <wire from="(250,150)" to="(250,180)"/>
     <wire from="(250,150)" to="(320,150)"/>
@@ -381,7 +385,7 @@ end TCL_Generic;&#13;
     <wire from="(80,520)" to="(90,520)"/>
     <wire from="(80,530)" to="(80,540)"/>
     <wire from="(80,540)" to="(220,540)"/>
-    <wire from="(90,1000)" to="(130,1000)"/>
+    <wire from="(90,1000)" to="(170,1000)"/>
     <wire from="(90,110)" to="(170,110)"/>
     <wire from="(90,130)" to="(170,130)"/>
     <wire from="(90,130)" to="(90,160)"/>
